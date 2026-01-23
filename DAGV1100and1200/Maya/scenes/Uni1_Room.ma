@@ -1,36 +1,37 @@
 //Maya ASCII 2026 scene
 //Name: Uni1_Room.ma
-//Last modified: Mon, Jan 19, 2026 02:45:28 PM
+//Last modified: Fri, Jan 23, 2026 04:41:50 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" -nodeType "aiImagerDenoiserOidn"
 		 "mtoa" "5.5.4.2";
 requires -nodeType "usdPreviewSurface" -dataType "pxrUsdStageData" "mayaUsdPlugin" "0.34.0";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "6DAD6EDE-4808-32FF-D0C1-4CBE660496DA";
+fileInfo "UUID" "EB42D1A5-42BF-3BB1-C4DF-FCB22E7365C1";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "085F7F77-45F2-3945-4180-15827FC1D084";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 6.4773879274413568 7.7543424132333616 -12.864546754610918 ;
-	setAttr ".r" -type "double3" -18.612901923251371 -202.36537445330507 0 ;
+	setAttr ".t" -type "double3" 22.744560464794077 5.3713185362605245 2.9393912752288145 ;
+	setAttr ".r" -type "double3" -9.0129019231741125 -281.96537445307905 0 ;
 	setAttr ".rp" -type "double3" -1.7763568394002505e-15 8.8817841970012523e-16 0 ;
 	setAttr ".rpt" -type "double3" 2.6075989885005089e-15 1.9061184902701247e-16 1.4383099564246105e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "25F4977B-43BB-7627-AD7A-A0BE6202DD2C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 9.5506578937979327;
+	setAttr ".coi" 33.890239698286706;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 5.4240731031305325 6.2548404568918192 -7.7411130367746832 ;
+	setAttr ".tp" -type "double3" -10 0.062179669737815857 -4 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "659C25C0-4392-3606-CF18-F3875B06903D";
@@ -82,11 +83,11 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "pCube2";
+createNode transform -n "Table";
 	rename -uid "19744E29-449B-62DF-2207-F7ABD0B55CA0";
 	setAttr ".t" -type "double3" 2.6066265976222223 2 -1.991746724539837 ;
 	setAttr ".s" -type "double3" 3.6651601144313171 3.6651601144313171 3.6651601144313171 ;
-createNode mesh -n "pCubeShape2" -p "pCube2";
+createNode mesh -n "TableShape" -p "Table";
 	rename -uid "4229F7C3-4195-0E4B-7DDD-E19CE12E180C";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -97,29 +98,16 @@ createNode mesh -n "pCubeShape2" -p "pCube2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 19 ".pt";
-	setAttr ".pt[32]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[33]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[34]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[35]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[36]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[37]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[38]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[39]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[40]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[41]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[42]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[43]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[44]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[45]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[46]" -type "float3" 0 -0.93498313 0 ;
-	setAttr ".pt[47]" -type "float3" 0 -0.93498313 0 ;
+	setAttr -s 16 ".pt[32:47]" -type "float3"  0 -0.93498313 0 0 -0.93498313 
+		0 0 -0.93498313 0 0 -0.93498313 0 0 -0.93498313 0 0 -0.93498313 0 0 -0.93498313 0 
+		0 -0.93498313 0 0 -0.93498313 0 0 -0.93498313 0 0 -0.93498313 0 0 -0.93498313 0 0 
+		-0.93498313 0 0 -0.93498313 0 0 -0.93498313 0 0 -0.93498313 0;
 	setAttr ".dr" 1;
-createNode transform -n "pPlane2";
+createNode transform -n "Chair";
 	rename -uid "1F3750B8-4EEB-7A86-C0D5-A1A2825902BF";
 	setAttr ".t" -type "double3" -2.0597055178312953 2 -1.5926068961390989 ;
 	setAttr ".s" -type "double3" 1.7121319094073562 1.7121319094073562 1.7121319094073562 ;
-createNode mesh -n "pPlaneShape2" -p "pPlane2";
+createNode mesh -n "ChairShape" -p "Chair";
 	rename -uid "8CA3837C-4971-D29B-DFB0-96A5C615109E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -130,16 +118,13 @@ createNode mesh -n "pPlaneShape2" -p "pPlane2";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 5 ".pt";
-	setAttr ".pt[290]" -type "float3" 0 0 0.94756579 ;
-	setAttr ".pt[291]" -type "float3" 0 0 0.94756579 ;
-	setAttr ".pt[292]" -type "float3" 0 0 0.94756579 ;
-	setAttr ".pt[293]" -type "float3" 0 0 0.94756579 ;
+	setAttr -s 4 ".pt[290:293]" -type "float3"  0 0 0.94756579 0 0 0.94756579 
+		0 0 0.94756579 0 0 0.94756579;
 createNode transform -n "Super_Mario_Bros_Wonder___Wonder_Flower:scene";
 	rename -uid "CF604A3F-42E7-4090-AAF3-E2BB0E75F384";
 	addAttr -ci true -sn "USD_kind" -ln "USD_kind" -nn "kind" -dt "string";
 	setAttr ".t" -type "double3" 3.1538468571201408 3.9463523516927141 -2.5135244978094393 ;
-	setAttr ".r" -type "double3" 0 141.02646022127044 0 ;
+	setAttr ".r" -type "double3" 0 141.02646022127047 0 ;
 	setAttr ".s" -type "double3" 0.5 0.5 0.5 ;
 	setAttr ".USD_kind" -type "string" "component";
 createNode transform -n "Super_Mario_Bros_Wonder___Wonder_Flower:SkinnedMeshes" -p
@@ -10678,10 +10663,10 @@ createNode mesh -n "Super_Mario_Bros_Wonder___Wonder_Flower:polySurfaceShape8_re
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode transform -n "pPlane3";
+createNode transform -n "Floor";
 	rename -uid "896E31A5-4141-3787-53F0-0E8E15865DE1";
-	setAttr ".s" -type "double3" 16.710229507110839 16.710229507110839 16.710229507110839 ;
-createNode mesh -n "pPlaneShape3" -p "pPlane3";
+	setAttr ".s" -type "double3" 24 16.710229507110839 25.090099938031067 ;
+createNode mesh -n "FloorShape" -p "Floor";
 	rename -uid "DEFF1D9F-4754-26DD-9717-64B4CF0AF039";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
@@ -10691,21 +10676,148 @@ createNode mesh -n "pPlaneShape3" -p "pPlane3";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+createNode transform -n "Wall1";
+	rename -uid "77DC69EC-4F70-BFE8-21B0-65899A0231A4";
+	setAttr ".t" -type "double3" -12 0 0 ;
+	setAttr ".rp" -type "double3" -0.5 0 -12 ;
+	setAttr ".sp" -type "double3" -0.5 0 -12 ;
+createNode mesh -n "WallShape1" -p "Wall1";
+	rename -uid "05B46244-41F4-BEA3-CC40-7CB8A50DB94F";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 5 ".pt";
+	setAttr ".pt[12]" -type "float3" 0 13.359481 0 ;
+	setAttr ".pt[13]" -type "float3" 0 13.359481 0 ;
+	setAttr ".pt[14]" -type "float3" 0 13.359481 0 ;
+	setAttr ".pt[15]" -type "float3" 0 13.359481 0 ;
+createNode transform -n "Wall2";
+	rename -uid "98DE00AF-4F61-CA00-A86E-7E8ED1954385";
+	setAttr ".t" -type "double3" -12 0 24 ;
+	setAttr ".r" -type "double3" 0 89.999999999999972 0 ;
+	setAttr ".rp" -type "double3" -0.5 0 -12 ;
+	setAttr ".rpt" -type "double3" -3.3750779948604759e-14 0 7.1054273576010019e-14 ;
+	setAttr ".sp" -type "double3" -0.5 0 -12 ;
+createNode mesh -n "WallShape2" -p "Wall2";
+	rename -uid "9011E1B4-417F-14CB-73A5-F889CC325CDC";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr -s 6 ".gtag";
+	setAttr ".gtag[0].gtagnm" -type "string" "back";
+	setAttr ".gtag[0].gtagcmp" -type "componentList" 1 "f[2]";
+	setAttr ".gtag[1].gtagnm" -type "string" "bottom";
+	setAttr ".gtag[1].gtagcmp" -type "componentList" 1 "f[3]";
+	setAttr ".gtag[2].gtagnm" -type "string" "front";
+	setAttr ".gtag[2].gtagcmp" -type "componentList" 1 "f[0]";
+	setAttr ".gtag[3].gtagnm" -type "string" "left";
+	setAttr ".gtag[3].gtagcmp" -type "componentList" 1 "f[5]";
+	setAttr ".gtag[4].gtagnm" -type "string" "right";
+	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
+	setAttr ".gtag[5].gtagnm" -type "string" "top";
+	setAttr ".gtag[5].gtagcmp" -type "componentList" 2 "f[1]" "f[6:13]";
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 22 ".uvst[0].uvsp[0:21]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25 0.375 0.25 0.625 0.25 0.625 0.5 0.375 0.5 0.375 0.25
+		 0.625 0.25 0.625 0.5 0.375 0.5;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 5 ".pt";
+	setAttr ".pt[12]" -type "float3" 0 13.359481 0 ;
+	setAttr ".pt[13]" -type "float3" 0 13.359481 0 ;
+	setAttr ".pt[14]" -type "float3" 0 13.359481 0 ;
+	setAttr ".pt[15]" -type "float3" 0 13.359481 0 ;
+	setAttr -s 16 ".vt[0:15]"  -0.5 0 12 0 0 12 -0.5 0.5 12 0 0.5 12 -0.5 0.5 -12
+		 0 0.5 -12 -0.5 0 -12 0 0 -12 -0.5 0.64051914 12 -0.057798386 0.64051926 12.000000953674
+		 -0.057798386 0.64051926 -12.000000953674 -0.5 0.64051914 -12 -0.5 0.64051914 12 -0.057798386 0.64051926 12.000000953674
+		 -0.057798386 0.64051926 -12.000000953674 -0.5 0.64051914 -12;
+	setAttr -s 28 ".ed[0:27]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0 2 8 0 3 9 0 8 9 0 5 10 0 9 10 0 4 11 0 11 10 0 8 11 0
+		 8 12 0 9 13 0 12 13 0 10 14 0 13 14 0 11 15 0 15 14 0 12 15 0;
+	setAttr -s 14 -ch 56 ".fc[0:13]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 22 24 -27 -28
+		mu 0 4 18 19 20 21
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13
+		f 4 1 13 -15 -13
+		mu 0 4 2 3 15 14
+		f 4 7 15 -17 -14
+		mu 0 4 3 5 16 15
+		f 4 -3 17 18 -16
+		mu 0 4 5 4 17 16
+		f 4 -7 12 19 -18
+		mu 0 4 4 2 14 17
+		f 4 14 21 -23 -21
+		mu 0 4 14 15 19 18
+		f 4 16 23 -25 -22
+		mu 0 4 15 16 20 19
+		f 4 -19 25 26 -24
+		mu 0 4 16 17 21 20
+		f 4 -20 20 27 -26
+		mu 0 4 17 14 18 21;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+createNode transform -n "pCube1";
+	rename -uid "45A1702F-4988-05B7-ECE9-789D74D39554";
+	setAttr ".t" -type "double3" -10 0 0 ;
+createNode mesh -n "pCubeShape1" -p "pCube1";
+	rename -uid "1BDDFA89-4A35-27EF-FE17-00A827EA43AC";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 9 ".pt";
+	setAttr ".pt[16]" -type "float3" 0 2.8756409 0 ;
+	setAttr ".pt[17]" -type "float3" 0 2.8756409 0 ;
+	setAttr ".pt[18]" -type "float3" 0 2.8756409 0 ;
+	setAttr ".pt[19]" -type "float3" 0 2.8756409 0 ;
+	setAttr ".pt[20]" -type "float3" 0 2.8756409 0 ;
+	setAttr ".pt[21]" -type "float3" 0 2.8756409 0 ;
+	setAttr ".pt[22]" -type "float3" 0 2.8756409 0 ;
+	setAttr ".pt[23]" -type "float3" 0 2.8756409 0 ;
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "DE3F8AE0-4606-E60F-B428-0ABEF302E60F";
+	rename -uid "8E058488-47AB-1AAF-D3B6-24A59433505E";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "6E83E05F-42DB-FC99-FAF6-0DB8D0C8A464";
+	rename -uid "80C0690A-435D-3F9E-CF28-F682AA86B508";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "936E16A0-4943-C3E8-8E92-50BA34B6F26C";
+	rename -uid "B0571A7B-43C7-8716-2BB1-0592C6C8DDCA";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "04CA2AAE-46F3-9FA7-DE20-2C97A6E667B2";
+	rename -uid "144A22B7-475A-3AF4-E47F-DCBBD9EE4BE0";
+	setAttr ".cdl" 1;
+	setAttr ".dli[1]"  1;
+	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "60E73FF1-4040-4C19-03D8-9CA1EFFED7FA";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "1158026C-440D-E1D1-AF98-F5B0F9E2479E";
+	rename -uid "7FC50D8E-44BE-5AD5-38FD-D7BF090600E8";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "9186FAD3-47E3-2181-0FCE-B5B9F73A7059";
 	setAttr ".g" yes;
@@ -10715,17 +10827,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 754\n            -height 413\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 754\n            -height 412\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 754\n            -height 412\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
-		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
+		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1257\n            -height 915\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1813\n            -height 915\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -10753,8 +10865,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
 		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
 		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1257\\n    -height 915\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1257\\n    -height 915\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1813\\n    -height 915\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1813\\n    -height 915\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -10864,23 +10976,10 @@ createNode polyExtrudeFace -n "polyExtrudeFace6";
 createNode polyTweak -n "polyTweak3";
 	rename -uid "9D56933F-4CAE-5A84-8910-889FA705138C";
 	setAttr ".uopa" yes;
-	setAttr -s 19 ".tk";
-	setAttr ".tk[16]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[17]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[18]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[19]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[20]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[21]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[22]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[23]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[24]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[25]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[26]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[27]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[28]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[29]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[30]" -type "float3" 0 -0.039889053 0 ;
-	setAttr ".tk[31]" -type "float3" 0 -0.039889053 0 ;
+	setAttr -s 16 ".tk[16:31]" -type "float3"  0 -0.039889053 0 0 -0.039889053
+		 0 0 -0.039889053 0 0 -0.039889053 0 0 -0.039889053 0 0 -0.039889053 0 0 -0.039889053
+		 0 0 -0.039889053 0 0 -0.039889053 0 0 -0.039889053 0 0 -0.039889053 0 0 -0.039889053
+		 0 0 -0.039889053 0 0 -0.039889053 0 0 -0.039889053 0 0 -0.039889053 0;
 createNode polyPlane -n "polyPlane2";
 	rename -uid "26A516ED-471A-A9ED-723A-FD98E6B3EC0A";
 	setAttr ".cuv" 2;
@@ -10967,128 +11066,27 @@ createNode polyExtrudeFace -n "polyExtrudeFace8";
 createNode polyTweak -n "polyTweak5";
 	rename -uid "C5E015F0-4564-A372-E3D9-2AA778787521";
 	setAttr ".uopa" yes;
-	setAttr -s 123 ".tk";
-	setAttr ".tk[121]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[122]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[123]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[124]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[125]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[126]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[127]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[128]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[129]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[130]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[131]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[132]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[133]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[134]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[135]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[136]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[137]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[138]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[139]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[140]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[141]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[142]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[143]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[144]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[145]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[146]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[147]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[148]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[149]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[150]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[151]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[152]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[153]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[154]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[155]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[156]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[157]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[158]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[159]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[160]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[161]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[162]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[163]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[164]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[165]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[166]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[167]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[168]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[169]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[170]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[171]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[172]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[173]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[174]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[175]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[176]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[177]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[178]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[179]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[180]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[181]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[182]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[183]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[184]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[185]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[186]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[187]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[188]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[189]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[190]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[191]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[192]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[193]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[194]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[195]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[196]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[197]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[198]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[199]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[200]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[201]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[202]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[203]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[204]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[205]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[206]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[207]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[208]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[209]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[210]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[211]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[212]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[213]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[214]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[215]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[216]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[217]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[218]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[219]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[220]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[221]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[222]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[223]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[224]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[225]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[226]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[227]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[228]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[229]" -type "float3" 0 0.1168226 0 ;
-	setAttr ".tk[230]" -type "float3" 0 0.1168226 0 ;
-	setAttr ".tk[231]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[232]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[233]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[234]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[235]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[236]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[237]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[238]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[239]" -type "float3" 0 0.11682272 0 ;
-	setAttr ".tk[240]" -type "float3" 0 0.1168226 0 ;
-	setAttr ".tk[241]" -type "float3" 0 0.1168226 0 ;
+	setAttr -s 121 ".tk[121:241]" -type "float3"  0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.1168226 0 0 0.1168226
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272
+		 0 0 0.11682272 0 0 0.11682272 0 0 0.11682272 0 0 0.1168226 0 0 0.1168226 0;
 createNode polyExtrudeFace -n "polyExtrudeFace9";
 	rename -uid "DF4241E8-4807-D247-AEC0-07887EAD8873";
 	setAttr ".ics" -type "componentList" 4 "f[0]" "f[30]" "f[60]" "f[90]";
@@ -11104,23 +11102,10 @@ createNode polyExtrudeFace -n "polyExtrudeFace9";
 createNode polyTweak -n "polyTweak6";
 	rename -uid "10421C61-4243-9403-110E-FFBC4AE854F5";
 	setAttr ".uopa" yes;
-	setAttr -s 19 ".tk";
-	setAttr ".tk[242]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[243]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[244]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[245]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[246]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[247]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[248]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[249]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[250]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[251]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[252]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[253]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[254]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[255]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[256]" -type "float3" 0 -1.0013498 0 ;
-	setAttr ".tk[257]" -type "float3" 0 -1.0013498 0 ;
+	setAttr -s 16 ".tk[242:257]" -type "float3"  0 -1.0013498068 0 0 -1.0013498068
+		 0 0 -1.0013498068 0 0 -1.0013498068 0 0 -1.0013498068 0 0 -1.0013498068 0 0 -1.0013498068
+		 0 0 -1.0013498068 0 0 -1.0013498068 0 0 -1.0013498068 0 0 -1.0013498068 0 0 -1.0013498068
+		 0 0 -1.0013498068 0 0 -1.0013498068 0 0 -1.0013498068 0 0 -1.0013498068 0;
 createNode polySplit -n "polySplit16";
 	rename -uid "9CF845E9-4AB5-551B-234A-6EB5E27F7040";
 	setAttr -s 5 ".e[0:4]"  0.89999998 0.89999998 0.89999998 0.89999998
@@ -11131,23 +11116,12 @@ createNode polySplit -n "polySplit16";
 createNode polyTweak -n "polyTweak7";
 	rename -uid "8412619B-4C95-A4D9-8F7B-21A532C4EA50";
 	setAttr ".uopa" yes;
-	setAttr -s 17 ".tk";
-	setAttr ".tk[258]" -type "float3" 0 1.3250754 9.9920072e-16 ;
-	setAttr ".tk[259]" -type "float3" 0 1.3250754 9.9920072e-16 ;
-	setAttr ".tk[260]" -type "float3" 0 1.3250754 1.0547119e-15 ;
-	setAttr ".tk[261]" -type "float3" 0 1.3250754 1.0547119e-15 ;
-	setAttr ".tk[262]" -type "float3" 0 1.3250754 1.0269563e-15 ;
-	setAttr ".tk[263]" -type "float3" 0 1.3250754 1.0269563e-15 ;
-	setAttr ".tk[264]" -type "float3" 0 1.3250754 1.0408341e-15 ;
-	setAttr ".tk[265]" -type "float3" 0 1.3250754 1.0408341e-15 ;
-	setAttr ".tk[266]" -type "float3" 0 1.3250754 1.0408341e-15 ;
-	setAttr ".tk[267]" -type "float3" 0 1.3250754 1.0408341e-15 ;
-	setAttr ".tk[268]" -type "float3" 0 1.3250754 1.0269563e-15 ;
-	setAttr ".tk[269]" -type "float3" 0 1.3250754 1.0269563e-15 ;
-	setAttr ".tk[270]" -type "float3" 0 1.3250754 1.0547119e-15 ;
-	setAttr ".tk[271]" -type "float3" 0 1.3250754 1.0547119e-15 ;
-	setAttr ".tk[272]" -type "float3" 0 1.3250754 9.9920072e-16 ;
-	setAttr ".tk[273]" -type "float3" 0 1.3250754 9.9920072e-16 ;
+	setAttr -s 16 ".tk[258:273]" -type "float3"  0 1.32507539 9.9920072e-16
+		 0 1.32507539 9.9920072e-16 0 1.32507539 1.0547119e-15 0 1.32507539 1.0547119e-15
+		 0 1.32507539 1.0269563e-15 0 1.32507539 1.0269563e-15 0 1.32507539 1.0408341e-15
+		 0 1.32507539 1.0408341e-15 0 1.32507539 1.0408341e-15 0 1.32507539 1.0408341e-15
+		 0 1.32507539 1.0269563e-15 0 1.32507539 1.0269563e-15 0 1.32507539 1.0547119e-15
+		 0 1.32507539 1.0547119e-15 0 1.32507539 9.9920072e-16 0 1.32507539 9.9920072e-16;
 createNode polySplit -n "polySplit17";
 	rename -uid "E0DA938E-49B6-CF94-D86D-CEAE147B4C9F";
 	setAttr -s 5 ".e[0:4]"  0.89999998 0.89999998 0.89999998 0.89999998
@@ -11184,16 +11158,16 @@ createNode polyExtrudeFace -n "polyExtrudeFace10";
 createNode dagPose -n "Super_Mario_Bros_Wonder___Wonder_Flower:skeleton_bindPose";
 	rename -uid "0CE1A34F-4C47-6BE7-66B6-AB891F609CC1";
 	setAttr -s 18 ".wm";
-	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 -0
+	setAttr ".wm[0]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 0
 		 0 0 0 1;
-	setAttr ".wm[1]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 -0
+	setAttr ".wm[1]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 0
 		 0 0.64158481359481812 0.34158653020858759 1;
-	setAttr ".wm[2]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 -0
+	setAttr ".wm[2]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 0
 		 0.13253691792488098 0.77402311563491821 0.63351637125015259 1;
 	setAttr ".wm[3]" -type "matrix" 1 0 0 0 0 -0.99999999999997713 1.509958025280832e-07 0
 		 0 -1.509958025280832e-07 -0.99999999999997713 0 -0.12569816410541532 0.77338609688236326 0.63111323361333349 1;
 	setAttr ".wm[4]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".wm[5]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 -0
+	setAttr ".wm[5]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 0
 		 -3.0422210329561494e-05 0.91467785835266113 0.59511524438858021 1;
 	setAttr ".wm[6]" -type "matrix" 6.1232342629258393e-17 1 3.9081390907171357e-40 0
 		 -1 6.1232342629258393e-17 -6.1232342629258393e-17 0 -6.1232342629258393e-17 3.7493997838668946e-33 1 0
@@ -11204,20 +11178,20 @@ createNode dagPose -n "Super_Mario_Bros_Wonder___Wonder_Flower:skeleton_bindPose
 	setAttr ".wm[8]" -type "matrix" -0.95105749607325529 0.30901753218217426 -1.164709544616152e-16 0
 		 -0.30901753218217426 -0.95105749607325529 2.3388675648451483e-17 0 -1.0354283480974447e-16 5.8235410618557113e-17 1 0
 		 -0.27717408508323088 0.96866984514124588 0.53194719552993763 1;
-	setAttr ".wm[9]" -type "matrix" -0.95105749607325529 -0.30901753218217426 1.164709544616152e-16 -0
-		 0.30901753218217426 -0.95105749607325529 2.3388675648451483e-17 0 1.0354283480974447e-16 5.8235410618557113e-17 1 -0
+	setAttr ".wm[9]" -type "matrix" -0.95105749607325529 -0.30901753218217426 1.164709544616152e-16 0
+		 0.30901753218217426 -0.95105749607325529 2.3388675648451483e-17 0 1.0354283480974447e-16 5.8235410618557113e-17 1 0
 		 -0.27717407968760321 0.79630994924494558 0.56238114833831787 1;
 	setAttr ".wm[10]" -type "matrix" -0.58778554663797444 -0.80901741210572864 7.198296963029094e-17 0
-		 0.80901741210572864 -0.58778554663797444 -3.784368906927198e-17 0 7.2926673899208446e-17 3.5991462799760459e-17 0.99999999999999989 -0
+		 0.80901741210572864 -0.58778554663797444 -3.784368906927198e-17 0 7.2926673899208446e-17 3.5991462799760459e-17 0.99999999999999989 0
 		 -0.17131467802604869 0.65686812004561734 0.58700269460678089 0.99999999999999989;
 	setAttr ".wm[11]" -type "matrix" 1.1920927533992484e-07 -0.99999976158146353 -8.7016351004950423e-31 0
-		 0.99999976158146353 1.1920927533992484e-07 -6.1232328030333756e-17 0 6.1232341265219527e-17 7.2994647699215029e-24 1 -0
+		 0.99999976158146353 1.1920927533992484e-07 -6.1232328030333756e-17 0 6.1232341265219527e-17 7.2994647699215029e-24 1 0
 		 -3.0422210076622454e-05 0.60358939084897001 0.59690779447555542 1;
 	setAttr ".wm[12]" -type "matrix" 0.58778516824491556 -0.80901722648620489 -2.4937280622263563e-25 0
-		 0.80901722648620489 0.58778516824491556 -6.1232347701133308e-17 0 4.9538009297921801e-17 3.5991455035097029e-17 1 -0
+		 0.80901722648620489 0.58778516824491556 -6.1232347701133308e-17 0 4.9538009297921801e-17 3.5991455035097029e-17 1 0
 		 0.17125371690687216 0.6568680766877254 0.58700275421142578 1;
 	setAttr ".wm[13]" -type "matrix" 0.9510564310691918 -0.30901727413912 -9.5144268286702454e-25 0
-		 0.30901727413912 0.9510564310691918 -6.1232337780563049e-17 0 1.8921851608446067e-17 5.8235413246988413e-17 1 -0
+		 0.30901727413912 0.9510564310691918 -6.1232337780563049e-17 0 1.8921851608446067e-17 5.8235413246988413e-17 1 0
 		 0.27711323009312566 0.79630994887906426 0.56238120794296265 1;
 	setAttr ".wm[14]" -type "matrix" 0.95105645291754282 0.30901714266205876 -8.9038431975811015e-25 0
 		 -0.30901714266205876 0.95105645291754282 -6.1232340302555123e-17 0 -1.8921841512893689e-17 5.8235408291250463e-17 1 0
@@ -11225,7 +11199,7 @@ createNode dagPose -n "Super_Mario_Bros_Wonder___Wonder_Flower:skeleton_bindPose
 	setAttr ".wm[15]" -type "matrix" 0.58778518809455083 0.80901735827988619 1.1108697638220691e-24 0
 		 -0.80901735827988619 0.58778518809455083 -6.123235567634319e-17 0 -4.9538012014328108e-17 3.5991452360900345e-17 1 0
 		 0.1712538540337025 1.1081117401860077 0.50732529163360596 1;
-	setAttr ".wm[16]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 -0
+	setAttr ".wm[16]" -type "matrix" 1 0 0 0 0 1 -6.1232342629258393e-17 0 0 6.1232342629258393e-17 1 0
 		 0.03606177493929863 0.0057012792676687241 -2.6055952439933579e-26 1;
 	setAttr ".wm[17]" -type "matrix" 1 0 0 0 0 -0.99999999999997713 1.509958025280832e-07 0
 		 0 -1.509958025280832e-07 -0.99999999999997713 0 -0.036061801016330712 0.0057012801989912987 -3.2991800946656235e-18 1;
@@ -11247,12 +11221,12 @@ createNode dagPose -n "Super_Mario_Bros_Wonder___Wonder_Flower:skeleton_bindPose
 		 0 0 1 0 -0.27714365720748901 -0.11836791038513184 -0.032734096050262451 1;
 	setAttr ".xm[10]" -type "matrix" -0.58778583117740324 -0.80901780498906206 0 0 0.80901780498906206 -0.58778583117740324 0 0
 		 0 0 1 0 -0.17128424346446991 -0.25780975818634033 -0.0081125497817993164 1;
-	setAttr ".xm[11]" -type "matrix" -1.3435885648505064e-07 -0.99999996577145112 -0 0
-		 0.99999996577145112 -1.3435885648505064e-07 0 0 0 -0 1 0 0 -0.3110884428024292 0.0017925500869750977 1;
+	setAttr ".xm[11]" -type "matrix" -1.3435885648505064e-07 -0.99999996577145112 0 0
+		 0.99999996577145112 -1.3435885648505064e-07 0 0 0 0 1 0 0 -0.3110884428024292 0.0017925500869750977 1;
 	setAttr ".xm[12]" -type "matrix" 0.58778500075168694 -0.80901730000270788 0 0 0.80901730000270788 0.58778500075168694 0 0
-		 -0 0 1 0 0.17128416895866394 -0.25780975818634033 -0.008112490177154541 1;
+		 0 0 1 0 0.17128416895866394 -0.25780975818634033 -0.008112490177154541 1;
 	setAttr ".xm[13]" -type "matrix" 0.95105641595993795 -0.30901733665320563 0 0 0.30901733665320563 0.95105641595993795 0 0
-		 -0 0 1 0 0.27714365720748901 -0.11836791038513184 -0.032734036445617676 1;
+		 0 0 1 0 0.27714365720748901 -0.11836791038513184 -0.032734036445617676 1;
 	setAttr ".xm[14]" -type "matrix" 0.95105645325685195 0.30901721891157052 0 0 -0.30901721891157052 0.95105645325685195 0 0
 		 0 0 1 0 0.27714383602142334 0.053991794586181641 -0.063168227672576904 1;
 	setAttr ".xm[15]" -type "matrix" 0.58778505487158661 0.80901713865478087 0 0 -0.80901713865478087 0.58778505487158661 0 0
@@ -11404,16 +11378,16 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		1 2 1
 		1 2 1;
 	setAttr -s 18 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
-		 0 0 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+		 0 0 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 0 -0.64158481359481812 -0.34158653020858765 1;
-	setAttr ".pm[2]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.13253691792488098 -0.77402311563491821 -0.63351637125015259 1;
-	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
+	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
 	setAttr ".pm[4]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".pm[5]" -type "matrix" 1 0 0 -0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[5]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 3.0422210329561494e-05 -0.91467785835266113 -0.59511524438858032 1;
 	setAttr ".pm[6]" -type "matrix" 6.1232342629258393e-17 -1 -6.1232342629258393e-17 0
 		 1 6.1232342629258393e-17 3.7493993930529855e-33 0 0 -6.1232342629258393e-17 1 0 -1.1613737344741821 -3.0422210329561494e-05 -0.49792075157165527 1;
@@ -11423,14 +11397,14 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 	setAttr ".pm[8]" -type "matrix" -0.95105540752410889 -0.30901685357093811 -1.0354283610213768e-16 0
 		 0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 -1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.5629432201385498 0.83560723066329956 -0.53194719552993774 1;
-	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 -0
+	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 0
 		 -0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.017534712329506857 0.84298634529113792 -0.56238114833831787 1;
 	setAttr ".pm[10]" -type "matrix" -0.58778494596481334 0.80901658535003662 7.2926678022398288e-17 0
 		 -0.80901658535003662 -0.58778494596481334 3.599146555896215e-17 0 7.1982891413254885e-17 -3.7843648681921475e-17 1 0
 		 0.43072101473808294 0.52469360828399647 -0.58700269460678101 1;
 	setAttr ".pm[11]" -type "matrix" 1.192093321833454e-07 1.0000002384185791 6.1232342629258393e-17 0
-		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.469368639177196e-39 -6.1232355864148194e-17 1 0
+		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.4693686391771963e-39 -6.1232355864148194e-17 1 0
 		 0.6035895347595216 3.0350263841683048e-05 -0.59690779447555542 1;
 	setAttr ".pm[12]" -type "matrix" 0.58778500556945801 0.80901700258255005 4.953801054484096e-17 0
 		 -0.80901700258255005 0.58778500556945801 3.5991455632794799e-17 0 -6.1629741163736061e-33 -6.1232329394368592e-17 1 0
@@ -11439,15 +11413,15 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		 -0.30901727080345148 0.95105642080306985 5.823540771297467e-17 0 -3.0814878777566399e-33 -6.123234262925838e-17 1 0
 		 -0.017476789653301277 -0.84296846389770497 -0.56238120794296265 1;
 	setAttr ".pm[14]" -type "matrix" 0.95105648040771484 -0.30901715159416199 -1.8921842538934214e-17 0
-		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 -0 0 -6.1232336011813505e-17 1 0
+		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 0 0 -6.1232336011813505e-17 1 0
 		 -0.56288599967956543 -0.83562672138214122 -0.53194701671600331 1;
 	setAttr ".pm[15]" -type "matrix" 0.58778488636016846 -0.80901694297790538 -4.9538013853563416e-17 0
 		 0.80901694297790538 0.58778488636016846 3.5991452324072337e-17 0 -6.162972658329451e-33 -6.1232322776923691e-17 1 0
 		 -0.99714159965515148 -0.51278406381607067 -0.50732529163360596 1;
-	setAttr ".pm[16]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[16]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.03606177493929863 -0.0057012792676687241 -3.4910265948702624e-19 1;
-	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
+	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 18 ".ma";
 	setAttr ".nw" 0;
@@ -11508,16 +11482,16 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		1 3 1
 		1 3 1;
 	setAttr -s 18 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
-		 0 0 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+		 0 0 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 0 -0.64158481359481812 -0.34158653020858765 1;
-	setAttr ".pm[2]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.13253691792488098 -0.77402311563491821 -0.63351637125015259 1;
-	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
+	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
 	setAttr ".pm[4]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".pm[5]" -type "matrix" 1 0 0 -0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[5]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 3.0422210329561494e-05 -0.91467785835266113 -0.59511524438858032 1;
 	setAttr ".pm[6]" -type "matrix" 6.1232342629258393e-17 -1 -6.1232342629258393e-17 0
 		 1 6.1232342629258393e-17 3.7493993930529855e-33 0 0 -6.1232342629258393e-17 1 0 -1.1613737344741821 -3.0422210329561494e-05 -0.49792075157165527 1;
@@ -11527,14 +11501,14 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 	setAttr ".pm[8]" -type "matrix" -0.95105540752410889 -0.30901685357093811 -1.0354283610213768e-16 0
 		 0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 -1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.5629432201385498 0.83560723066329956 -0.53194719552993774 1;
-	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 -0
+	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 0
 		 -0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.017534712329506857 0.84298634529113792 -0.56238114833831787 1;
 	setAttr ".pm[10]" -type "matrix" -0.58778494596481334 0.80901658535003662 7.2926678022398288e-17 0
 		 -0.80901658535003662 -0.58778494596481334 3.599146555896215e-17 0 7.1982891413254885e-17 -3.7843648681921475e-17 1 0
 		 0.43072101473808294 0.52469360828399647 -0.58700269460678101 1;
 	setAttr ".pm[11]" -type "matrix" 1.192093321833454e-07 1.0000002384185791 6.1232342629258393e-17 0
-		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.469368639177196e-39 -6.1232355864148194e-17 1 0
+		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.4693686391771963e-39 -6.1232355864148194e-17 1 0
 		 0.6035895347595216 3.0350263841683048e-05 -0.59690779447555542 1;
 	setAttr ".pm[12]" -type "matrix" 0.58778500556945801 0.80901700258255005 4.953801054484096e-17 0
 		 -0.80901700258255005 0.58778500556945801 3.5991455632794799e-17 0 -6.1629741163736061e-33 -6.1232329394368592e-17 1 0
@@ -11543,15 +11517,15 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		 -0.30901727080345148 0.95105642080306985 5.823540771297467e-17 0 -3.0814878777566399e-33 -6.123234262925838e-17 1 0
 		 -0.017476789653301277 -0.84296846389770497 -0.56238120794296265 1;
 	setAttr ".pm[14]" -type "matrix" 0.95105648040771484 -0.30901715159416199 -1.8921842538934214e-17 0
-		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 -0 0 -6.1232336011813505e-17 1 0
+		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 0 0 -6.1232336011813505e-17 1 0
 		 -0.56288599967956543 -0.83562672138214122 -0.53194701671600331 1;
 	setAttr ".pm[15]" -type "matrix" 0.58778488636016846 -0.80901694297790538 -4.9538013853563416e-17 0
 		 0.80901694297790538 0.58778488636016846 3.5991452324072337e-17 0 -6.162972658329451e-33 -6.1232322776923691e-17 1 0
 		 -0.99714159965515148 -0.51278406381607067 -0.50732529163360596 1;
-	setAttr ".pm[16]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[16]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.03606177493929863 -0.0057012792676687241 -3.4910265948702624e-19 1;
-	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
+	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 18 ".ma";
 	setAttr ".nw" 0;
@@ -11646,16 +11620,16 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		1 1 1
 		1 1 1;
 	setAttr -s 18 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
-		 0 0 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+		 0 0 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 0 -0.64158481359481812 -0.34158653020858765 1;
-	setAttr ".pm[2]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.13253691792488098 -0.77402311563491821 -0.63351637125015259 1;
-	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
+	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
 	setAttr ".pm[4]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".pm[5]" -type "matrix" 1 0 0 -0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[5]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 3.0422210329561494e-05 -0.91467785835266113 -0.59511524438858032 1;
 	setAttr ".pm[6]" -type "matrix" 6.1232342629258393e-17 -1 -6.1232342629258393e-17 0
 		 1 6.1232342629258393e-17 3.7493993930529855e-33 0 0 -6.1232342629258393e-17 1 0 -1.1613737344741821 -3.0422210329561494e-05 -0.49792075157165527 1;
@@ -11665,14 +11639,14 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 	setAttr ".pm[8]" -type "matrix" -0.95105540752410889 -0.30901685357093811 -1.0354283610213768e-16 0
 		 0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 -1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.5629432201385498 0.83560723066329956 -0.53194719552993774 1;
-	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 -0
+	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 0
 		 -0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.017534712329506857 0.84298634529113792 -0.56238114833831787 1;
 	setAttr ".pm[10]" -type "matrix" -0.58778494596481334 0.80901658535003662 7.2926678022398288e-17 0
 		 -0.80901658535003662 -0.58778494596481334 3.599146555896215e-17 0 7.1982891413254885e-17 -3.7843648681921475e-17 1 0
 		 0.43072101473808294 0.52469360828399647 -0.58700269460678101 1;
 	setAttr ".pm[11]" -type "matrix" 1.192093321833454e-07 1.0000002384185791 6.1232342629258393e-17 0
-		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.469368639177196e-39 -6.1232355864148194e-17 1 0
+		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.4693686391771963e-39 -6.1232355864148194e-17 1 0
 		 0.6035895347595216 3.0350263841683048e-05 -0.59690779447555542 1;
 	setAttr ".pm[12]" -type "matrix" 0.58778500556945801 0.80901700258255005 4.953801054484096e-17 0
 		 -0.80901700258255005 0.58778500556945801 3.5991455632794799e-17 0 -6.1629741163736061e-33 -6.1232329394368592e-17 1 0
@@ -11681,15 +11655,15 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		 -0.30901727080345148 0.95105642080306985 5.823540771297467e-17 0 -3.0814878777566399e-33 -6.123234262925838e-17 1 0
 		 -0.017476789653301277 -0.84296846389770497 -0.56238120794296265 1;
 	setAttr ".pm[14]" -type "matrix" 0.95105648040771484 -0.30901715159416199 -1.8921842538934214e-17 0
-		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 -0 0 -6.1232336011813505e-17 1 0
+		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 0 0 -6.1232336011813505e-17 1 0
 		 -0.56288599967956543 -0.83562672138214122 -0.53194701671600331 1;
 	setAttr ".pm[15]" -type "matrix" 0.58778488636016846 -0.80901694297790538 -4.9538013853563416e-17 0
 		 0.80901694297790538 0.58778488636016846 3.5991452324072337e-17 0 -6.162972658329451e-33 -6.1232322776923691e-17 1 0
 		 -0.99714159965515148 -0.51278406381607067 -0.50732529163360596 1;
-	setAttr ".pm[16]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[16]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.03606177493929863 -0.0057012792676687241 -3.4910265948702624e-19 1;
-	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
+	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 18 ".ma";
 	setAttr ".nw" 0;
@@ -12344,16 +12318,16 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		1 5 1
 		1 5 1;
 	setAttr -s 18 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
-		 0 0 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+		 0 0 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 0 -0.64158481359481812 -0.34158653020858765 1;
-	setAttr ".pm[2]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.13253691792488098 -0.77402311563491821 -0.63351637125015259 1;
-	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
+	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
 	setAttr ".pm[4]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".pm[5]" -type "matrix" 1 0 0 -0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[5]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 3.0422210329561494e-05 -0.91467785835266113 -0.59511524438858032 1;
 	setAttr ".pm[6]" -type "matrix" 6.1232342629258393e-17 -1 -6.1232342629258393e-17 0
 		 1 6.1232342629258393e-17 3.7493993930529855e-33 0 0 -6.1232342629258393e-17 1 0 -1.1613737344741821 -3.0422210329561494e-05 -0.49792075157165527 1;
@@ -12363,14 +12337,14 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 	setAttr ".pm[8]" -type "matrix" -0.95105540752410889 -0.30901685357093811 -1.0354283610213768e-16 0
 		 0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 -1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.5629432201385498 0.83560723066329956 -0.53194719552993774 1;
-	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 -0
+	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 0
 		 -0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.017534712329506857 0.84298634529113792 -0.56238114833831787 1;
 	setAttr ".pm[10]" -type "matrix" -0.58778494596481334 0.80901658535003662 7.2926678022398288e-17 0
 		 -0.80901658535003662 -0.58778494596481334 3.599146555896215e-17 0 7.1982891413254885e-17 -3.7843648681921475e-17 1 0
 		 0.43072101473808294 0.52469360828399647 -0.58700269460678101 1;
 	setAttr ".pm[11]" -type "matrix" 1.192093321833454e-07 1.0000002384185791 6.1232342629258393e-17 0
-		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.469368639177196e-39 -6.1232355864148194e-17 1 0
+		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.4693686391771963e-39 -6.1232355864148194e-17 1 0
 		 0.6035895347595216 3.0350263841683048e-05 -0.59690779447555542 1;
 	setAttr ".pm[12]" -type "matrix" 0.58778500556945801 0.80901700258255005 4.953801054484096e-17 0
 		 -0.80901700258255005 0.58778500556945801 3.5991455632794799e-17 0 -6.1629741163736061e-33 -6.1232329394368592e-17 1 0
@@ -12379,15 +12353,15 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		 -0.30901727080345148 0.95105642080306985 5.823540771297467e-17 0 -3.0814878777566399e-33 -6.123234262925838e-17 1 0
 		 -0.017476789653301277 -0.84296846389770497 -0.56238120794296265 1;
 	setAttr ".pm[14]" -type "matrix" 0.95105648040771484 -0.30901715159416199 -1.8921842538934214e-17 0
-		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 -0 0 -6.1232336011813505e-17 1 0
+		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 0 0 -6.1232336011813505e-17 1 0
 		 -0.56288599967956543 -0.83562672138214122 -0.53194701671600331 1;
 	setAttr ".pm[15]" -type "matrix" 0.58778488636016846 -0.80901694297790538 -4.9538013853563416e-17 0
 		 0.80901694297790538 0.58778488636016846 3.5991452324072337e-17 0 -6.162972658329451e-33 -6.1232322776923691e-17 1 0
 		 -0.99714159965515148 -0.51278406381607067 -0.50732529163360596 1;
-	setAttr ".pm[16]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[16]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.03606177493929863 -0.0057012792676687241 -3.4910265948702624e-19 1;
-	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
+	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 18 ".ma";
 	setAttr ".nw" 0;
@@ -13045,16 +13019,16 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		2 5 0.050980392843484879 11 0.94901961088180542
 		2 5 0.14901961386203766 11 0.85098040103912354;
 	setAttr -s 18 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
-		 0 0 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+		 0 0 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 0 -0.64158481359481812 -0.34158653020858765 1;
-	setAttr ".pm[2]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.13253691792488098 -0.77402311563491821 -0.63351637125015259 1;
-	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
+	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
 	setAttr ".pm[4]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".pm[5]" -type "matrix" 1 0 0 -0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[5]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 3.0422210329561494e-05 -0.91467785835266113 -0.59511524438858032 1;
 	setAttr ".pm[6]" -type "matrix" 6.1232342629258393e-17 -1 -6.1232342629258393e-17 0
 		 1 6.1232342629258393e-17 3.7493993930529855e-33 0 0 -6.1232342629258393e-17 1 0 -1.1613737344741821 -3.0422210329561494e-05 -0.49792075157165527 1;
@@ -13064,14 +13038,14 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 	setAttr ".pm[8]" -type "matrix" -0.95105540752410889 -0.30901685357093811 -1.0354283610213768e-16 0
 		 0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 -1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.5629432201385498 0.83560723066329956 -0.53194719552993774 1;
-	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 -0
+	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 0
 		 -0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.017534712329506857 0.84298634529113792 -0.56238114833831787 1;
 	setAttr ".pm[10]" -type "matrix" -0.58778494596481334 0.80901658535003662 7.2926678022398288e-17 0
 		 -0.80901658535003662 -0.58778494596481334 3.599146555896215e-17 0 7.1982891413254885e-17 -3.7843648681921475e-17 1 0
 		 0.43072101473808294 0.52469360828399647 -0.58700269460678101 1;
 	setAttr ".pm[11]" -type "matrix" 1.192093321833454e-07 1.0000002384185791 6.1232342629258393e-17 0
-		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.469368639177196e-39 -6.1232355864148194e-17 1 0
+		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.4693686391771963e-39 -6.1232355864148194e-17 1 0
 		 0.6035895347595216 3.0350263841683048e-05 -0.59690779447555542 1;
 	setAttr ".pm[12]" -type "matrix" 0.58778500556945801 0.80901700258255005 4.953801054484096e-17 0
 		 -0.80901700258255005 0.58778500556945801 3.5991455632794799e-17 0 -6.1629741163736061e-33 -6.1232329394368592e-17 1 0
@@ -13080,15 +13054,15 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		 -0.30901727080345148 0.95105642080306985 5.823540771297467e-17 0 -3.0814878777566399e-33 -6.123234262925838e-17 1 0
 		 -0.017476789653301277 -0.84296846389770497 -0.56238120794296265 1;
 	setAttr ".pm[14]" -type "matrix" 0.95105648040771484 -0.30901715159416199 -1.8921842538934214e-17 0
-		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 -0 0 -6.1232336011813505e-17 1 0
+		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 0 0 -6.1232336011813505e-17 1 0
 		 -0.56288599967956543 -0.83562672138214122 -0.53194701671600331 1;
 	setAttr ".pm[15]" -type "matrix" 0.58778488636016846 -0.80901694297790538 -4.9538013853563416e-17 0
 		 0.80901694297790538 0.58778488636016846 3.5991452324072337e-17 0 -6.162972658329451e-33 -6.1232322776923691e-17 1 0
 		 -0.99714159965515148 -0.51278406381607067 -0.50732529163360596 1;
-	setAttr ".pm[16]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[16]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.03606177493929863 -0.0057012792676687241 -3.4910265948702624e-19 1;
-	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
+	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 18 ".ma";
 	setAttr ".nw" 0;
@@ -13152,16 +13126,16 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		1 16 1
 		1 16 1;
 	setAttr -s 18 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
-		 0 0 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+		 0 0 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 0 -0.64158481359481812 -0.34158653020858765 1;
-	setAttr ".pm[2]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.13253691792488098 -0.77402311563491821 -0.63351637125015259 1;
-	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
+	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
 	setAttr ".pm[4]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".pm[5]" -type "matrix" 1 0 0 -0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[5]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 3.0422210329561494e-05 -0.91467785835266113 -0.59511524438858032 1;
 	setAttr ".pm[6]" -type "matrix" 6.1232342629258393e-17 -1 -6.1232342629258393e-17 0
 		 1 6.1232342629258393e-17 3.7493993930529855e-33 0 0 -6.1232342629258393e-17 1 0 -1.1613737344741821 -3.0422210329561494e-05 -0.49792075157165527 1;
@@ -13171,14 +13145,14 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 	setAttr ".pm[8]" -type "matrix" -0.95105540752410889 -0.30901685357093811 -1.0354283610213768e-16 0
 		 0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 -1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.5629432201385498 0.83560723066329956 -0.53194719552993774 1;
-	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 -0
+	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 0
 		 -0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.017534712329506857 0.84298634529113792 -0.56238114833831787 1;
 	setAttr ".pm[10]" -type "matrix" -0.58778494596481334 0.80901658535003662 7.2926678022398288e-17 0
 		 -0.80901658535003662 -0.58778494596481334 3.599146555896215e-17 0 7.1982891413254885e-17 -3.7843648681921475e-17 1 0
 		 0.43072101473808294 0.52469360828399647 -0.58700269460678101 1;
 	setAttr ".pm[11]" -type "matrix" 1.192093321833454e-07 1.0000002384185791 6.1232342629258393e-17 0
-		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.469368639177196e-39 -6.1232355864148194e-17 1 0
+		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.4693686391771963e-39 -6.1232355864148194e-17 1 0
 		 0.6035895347595216 3.0350263841683048e-05 -0.59690779447555542 1;
 	setAttr ".pm[12]" -type "matrix" 0.58778500556945801 0.80901700258255005 4.953801054484096e-17 0
 		 -0.80901700258255005 0.58778500556945801 3.5991455632794799e-17 0 -6.1629741163736061e-33 -6.1232329394368592e-17 1 0
@@ -13187,15 +13161,15 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		 -0.30901727080345148 0.95105642080306985 5.823540771297467e-17 0 -3.0814878777566399e-33 -6.123234262925838e-17 1 0
 		 -0.017476789653301277 -0.84296846389770497 -0.56238120794296265 1;
 	setAttr ".pm[14]" -type "matrix" 0.95105648040771484 -0.30901715159416199 -1.8921842538934214e-17 0
-		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 -0 0 -6.1232336011813505e-17 1 0
+		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 0 0 -6.1232336011813505e-17 1 0
 		 -0.56288599967956543 -0.83562672138214122 -0.53194701671600331 1;
 	setAttr ".pm[15]" -type "matrix" 0.58778488636016846 -0.80901694297790538 -4.9538013853563416e-17 0
 		 0.80901694297790538 0.58778488636016846 3.5991452324072337e-17 0 -6.162972658329451e-33 -6.1232322776923691e-17 1 0
 		 -0.99714159965515148 -0.51278406381607067 -0.50732529163360596 1;
-	setAttr ".pm[16]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[16]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.03606177493929863 -0.0057012792676687241 -3.4910265948702624e-19 1;
-	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
+	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 18 ".ma";
 	setAttr ".nw" 0;
@@ -13259,16 +13233,16 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		1 17 1
 		1 17 1;
 	setAttr -s 18 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
-		 0 0 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+		 0 0 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 0 -0.64158481359481812 -0.34158653020858765 1;
-	setAttr ".pm[2]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.13253691792488098 -0.77402311563491821 -0.63351637125015259 1;
-	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
+	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
 	setAttr ".pm[4]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".pm[5]" -type "matrix" 1 0 0 -0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[5]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 3.0422210329561494e-05 -0.91467785835266113 -0.59511524438858032 1;
 	setAttr ".pm[6]" -type "matrix" 6.1232342629258393e-17 -1 -6.1232342629258393e-17 0
 		 1 6.1232342629258393e-17 3.7493993930529855e-33 0 0 -6.1232342629258393e-17 1 0 -1.1613737344741821 -3.0422210329561494e-05 -0.49792075157165527 1;
@@ -13278,14 +13252,14 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 	setAttr ".pm[8]" -type "matrix" -0.95105540752410889 -0.30901685357093811 -1.0354283610213768e-16 0
 		 0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 -1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.5629432201385498 0.83560723066329956 -0.53194719552993774 1;
-	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 -0
+	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 0
 		 -0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.017534712329506857 0.84298634529113792 -0.56238114833831787 1;
 	setAttr ".pm[10]" -type "matrix" -0.58778494596481334 0.80901658535003662 7.2926678022398288e-17 0
 		 -0.80901658535003662 -0.58778494596481334 3.599146555896215e-17 0 7.1982891413254885e-17 -3.7843648681921475e-17 1 0
 		 0.43072101473808294 0.52469360828399647 -0.58700269460678101 1;
 	setAttr ".pm[11]" -type "matrix" 1.192093321833454e-07 1.0000002384185791 6.1232342629258393e-17 0
-		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.469368639177196e-39 -6.1232355864148194e-17 1 0
+		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.4693686391771963e-39 -6.1232355864148194e-17 1 0
 		 0.6035895347595216 3.0350263841683048e-05 -0.59690779447555542 1;
 	setAttr ".pm[12]" -type "matrix" 0.58778500556945801 0.80901700258255005 4.953801054484096e-17 0
 		 -0.80901700258255005 0.58778500556945801 3.5991455632794799e-17 0 -6.1629741163736061e-33 -6.1232329394368592e-17 1 0
@@ -13294,15 +13268,15 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		 -0.30901727080345148 0.95105642080306985 5.823540771297467e-17 0 -3.0814878777566399e-33 -6.123234262925838e-17 1 0
 		 -0.017476789653301277 -0.84296846389770497 -0.56238120794296265 1;
 	setAttr ".pm[14]" -type "matrix" 0.95105648040771484 -0.30901715159416199 -1.8921842538934214e-17 0
-		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 -0 0 -6.1232336011813505e-17 1 0
+		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 0 0 -6.1232336011813505e-17 1 0
 		 -0.56288599967956543 -0.83562672138214122 -0.53194701671600331 1;
 	setAttr ".pm[15]" -type "matrix" 0.58778488636016846 -0.80901694297790538 -4.9538013853563416e-17 0
 		 0.80901694297790538 0.58778488636016846 3.5991452324072337e-17 0 -6.162972658329451e-33 -6.1232322776923691e-17 1 0
 		 -0.99714159965515148 -0.51278406381607067 -0.50732529163360596 1;
-	setAttr ".pm[16]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[16]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.03606177493929863 -0.0057012792676687241 -3.4910265948702624e-19 1;
-	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
+	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 18 ".ma";
 	setAttr ".nw" 0;
@@ -13398,16 +13372,16 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		1 0 1
 		1 0 1;
 	setAttr -s 18 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
-		 0 0 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+		 0 0 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 0 -0.64158481359481812 -0.34158653020858765 1;
-	setAttr ".pm[2]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.13253691792488098 -0.77402311563491821 -0.63351637125015259 1;
-	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
+	setAttr ".pm[3]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.12569816410541532 0.77338600158691428 0.63111335039138794 1;
 	setAttr ".pm[4]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".pm[5]" -type "matrix" 1 0 0 -0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[5]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 3.0422210329561494e-05 -0.91467785835266113 -0.59511524438858032 1;
 	setAttr ".pm[6]" -type "matrix" 6.1232342629258393e-17 -1 -6.1232342629258393e-17 0
 		 1 6.1232342629258393e-17 3.7493993930529855e-33 0 0 -6.1232342629258393e-17 1 0 -1.1613737344741821 -3.0422210329561494e-05 -0.49792075157165527 1;
@@ -13417,14 +13391,14 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 	setAttr ".pm[8]" -type "matrix" -0.95105540752410889 -0.30901685357093811 -1.0354283610213768e-16 0
 		 0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 -1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.5629432201385498 0.83560723066329956 -0.53194719552993774 1;
-	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 -0
+	setAttr ".pm[9]" -type "matrix" -0.95105540752410889 0.30901685357093811 1.0354283610213768e-16 0
 		 -0.30901685357093811 -0.95105540752410889 5.823541433041957e-17 0 1.1647069631194113e-16 2.3388621155443013e-17 1 0
 		 -0.017534712329506857 0.84298634529113792 -0.56238114833831787 1;
 	setAttr ".pm[10]" -type "matrix" -0.58778494596481334 0.80901658535003662 7.2926678022398288e-17 0
 		 -0.80901658535003662 -0.58778494596481334 3.599146555896215e-17 0 7.1982891413254885e-17 -3.7843648681921475e-17 1 0
 		 0.43072101473808294 0.52469360828399647 -0.58700269460678101 1;
 	setAttr ".pm[11]" -type "matrix" 1.192093321833454e-07 1.0000002384185791 6.1232342629258393e-17 0
-		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.469368639177196e-39 -6.1232355864148194e-17 1 0
+		 -1.0000002384185791 1.192093321833454e-07 7.2994640623639113e-24 0 -1.4693686391771963e-39 -6.1232355864148194e-17 1 0
 		 0.6035895347595216 3.0350263841683048e-05 -0.59690779447555542 1;
 	setAttr ".pm[12]" -type "matrix" 0.58778500556945801 0.80901700258255005 4.953801054484096e-17 0
 		 -0.80901700258255005 0.58778500556945801 3.5991455632794799e-17 0 -6.1629741163736061e-33 -6.1232329394368592e-17 1 0
@@ -13433,15 +13407,15 @@ createNode skinCluster -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_W
 		 -0.30901727080345148 0.95105642080306985 5.823540771297467e-17 0 -3.0814878777566399e-33 -6.123234262925838e-17 1 0
 		 -0.017476789653301277 -0.84296846389770497 -0.56238120794296265 1;
 	setAttr ".pm[14]" -type "matrix" 0.95105648040771484 -0.30901715159416199 -1.8921842538934214e-17 0
-		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 -0 0 -6.1232336011813505e-17 1 0
+		 0.30901715159416199 0.95105648040771484 5.8235414330419582e-17 0 0 -6.1232336011813505e-17 1 0
 		 -0.56288599967956543 -0.83562672138214122 -0.53194701671600331 1;
 	setAttr ".pm[15]" -type "matrix" 0.58778488636016846 -0.80901694297790538 -4.9538013853563416e-17 0
 		 0.80901694297790538 0.58778488636016846 3.5991452324072337e-17 0 -6.162972658329451e-33 -6.1232322776923691e-17 1 0
 		 -0.99714159965515148 -0.51278406381607067 -0.50732529163360596 1;
-	setAttr ".pm[16]" -type "matrix" 1 0 0 -0 -0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
+	setAttr ".pm[16]" -type "matrix" 1 0 0 0 0 1 6.1232342629258393e-17 0 0 -6.1232342629258393e-17 1 0
 		 -0.03606177493929863 -0.0057012792676687241 -3.4910265948702624e-19 1;
-	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.509958025280867e-07 0
-		 0 1.509958025280867e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
+	setAttr ".pm[17]" -type "matrix" 1 0 0 0 0 -1.0000000000000002 -1.5099580252808672e-07 0
+		 0 1.5099580252808672e-07 -1.0000000000000002 0 0.036061801016330712 0.0057012801989913004 8.6086937578500076e-10 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 18 ".ma";
 	setAttr ".nw" 0;
@@ -13453,9 +13427,101 @@ createNode groupParts -n "Super_Mario_Bros_Wonder___Wonder_Flower:skinClusterGro
 createNode polyPlane -n "polyPlane3";
 	rename -uid "A0FAEDEB-403C-66FA-ACB3-D887B83AB4AE";
 	setAttr ".cuv" 2;
+createNode polyCube -n "polyCube3";
+	rename -uid "544C4BA1-4C77-D192-BB76-A1BFDC8ABBFC";
+	setAttr ".cuv" 4;
+createNode polyExtrudeFace -n "polyExtrudeFace11";
+	rename -uid "448F50A6-4A06-4311-D931-E0B44B96C3FB";
+	setAttr ".ics" -type "componentList" 1 "f[1]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -12 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -12.25 0.5 0 ;
+	setAttr ".rs" 64397;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -12.5 0.5 -12 ;
+	setAttr ".cbx" -type "double3" -11.99999988079071 0.5 12 ;
+	setAttr ".raf" no;
+createNode polyTweak -n "polyTweak8";
+	rename -uid "0140571A-45F4-447E-509C-409A7F198BFD";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[0:7]" -type "float3"  1.7881393e-07 0.5 11.5 -0.50000006
+		 0.5 11.5 0 0 11.5 -0.49999988 0 11.5 0 0 -11.5 -0.49999988 0 -11.5 1.7881393e-07
+		 0.5 -11.5 -0.50000006 0.5 -11.5;
+createNode polyExtrudeFace -n "polyExtrudeFace12";
+	rename -uid "7903981E-4C11-ED57-FCBD-6793F341A7F8";
+	setAttr ".ics" -type "componentList" 1 "f[1]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -12 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -12.278899 0.6405192 0 ;
+	setAttr ".rs" 56755;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -12.5 0.64051914215087891 -12.000000953674316 ;
+	setAttr ".cbx" -type "double3" -12.057798810303211 0.64051926136016846 12.000000953674316 ;
+	setAttr ".raf" no;
+createNode polyTweak -n "polyTweak9";
+	rename -uid "577D40C9-4E1D-3634-829D-208E6A89FC5F";
+	setAttr ".uopa" yes;
+	setAttr -s 7 ".tk";
+	setAttr ".tk[3]" -type "float3" 0 2.9802322e-08 0 ;
+	setAttr ".tk[5]" -type "float3" 0 2.9802322e-08 0 ;
+	setAttr ".tk[8]" -type "float3" 0 0.14051914 0 ;
+	setAttr ".tk[9]" -type "float3" -0.05779881 0.14051925 1.013279e-06 ;
+	setAttr ".tk[10]" -type "float3" -0.05779881 0.14051925 -1.013279e-06 ;
+	setAttr ".tk[11]" -type "float3" 0 0.14051914 0 ;
+createNode displayLayer -n "Walls";
+	rename -uid "6C86D59E-4041-94A2-DBD1-B2A5EAF4631E";
+	setAttr ".ufem" -type "stringArray" 0  ;
+	setAttr ".do" 1;
+createNode polyCube -n "polyCube4";
+	rename -uid "F1BFC502-4FE8-9EF5-DDAC-46AAF7C7727D";
+	setAttr ".cuv" 4;
+createNode polyExtrudeFace -n "polyExtrudeFace13";
+	rename -uid "9C5CB095-4B16-8867-C6D5-11A35CCED8DD";
+	setAttr ".ics" -type "componentList" 2 "f[0]" "f[2]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -10 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -10 0.06217967 0 ;
+	setAttr ".rs" 35581;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -11 0 -4.5455436706542969 ;
+	setAttr ".cbx" -type "double3" -9 0.12435933947563171 4.5455436706542969 ;
+	setAttr ".raf" no;
+createNode polyTweak -n "polyTweak10";
+	rename -uid "AC11BD09-4503-FE52-1F00-6E94925C42DE";
+	setAttr ".uopa" yes;
+	setAttr -s 8 ".tk[0:7]" -type "float3"  -0.5 0.5 4.045543671 0.5 0.5
+		 4.045543671 -0.5 -0.37564066 4.045543671 0.5 -0.37564066 4.045543671 -0.5 -0.37564066
+		 -4.045543671 0.5 -0.37564066 -4.045543671 -0.5 0.5 -4.045543671 0.5 0.5 -4.045543671;
+createNode polyExtrudeFace -n "polyExtrudeFace14";
+	rename -uid "387422AC-4AFF-3DFC-B6B0-D79971C77CC7";
+	setAttr ".ics" -type "componentList" 2 "f[8]" "f[10]";
+	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 -10 0 0 1;
+	setAttr ".ws" yes;
+	setAttr ".pvt" -type "float3" -10 0.12435931 0 ;
+	setAttr ".rs" 53279;
+	setAttr ".c[0]"  0 1 1;
+	setAttr ".cbn" -type "double3" -11 0.12435930967330933 -5 ;
+	setAttr ".cbx" -type "double3" -9 0.12435930967330933 5 ;
+	setAttr ".raf" no;
+createNode polyTweak -n "polyTweak11";
+	rename -uid "3E121C5E-45C5-B592-1A23-C9B589A3CBAA";
+	setAttr ".uopa" yes;
+	setAttr -s 13 ".tk";
+	setAttr ".tk[2]" -type "float3" 0 -2.9802322e-08 0 ;
+	setAttr ".tk[3]" -type "float3" 0 -2.9802322e-08 0 ;
+	setAttr ".tk[4]" -type "float3" 0 -2.9802322e-08 0 ;
+	setAttr ".tk[5]" -type "float3" 0 -2.9802322e-08 0 ;
+	setAttr ".tk[8]" -type "float3" 0 0 0.45445633 ;
+	setAttr ".tk[9]" -type "float3" 0 0 0.45445633 ;
+	setAttr ".tk[10]" -type "float3" 0 -2.9802322e-08 0.45445633 ;
+	setAttr ".tk[11]" -type "float3" 0 -2.9802322e-08 0.45445633 ;
+	setAttr ".tk[12]" -type "float3" 0 -2.9802322e-08 -0.45445633 ;
+	setAttr ".tk[13]" -type "float3" 0 -2.9802322e-08 -0.45445633 ;
+	setAttr ".tk[14]" -type "float3" 0 0 -0.45445633 ;
+	setAttr ".tk[15]" -type "float3" 0 0 -0.45445633 ;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 28;
+	setAttr ".unw" 28;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -13482,7 +13548,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 3 ".dsm";
+	setAttr -s 6 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -13504,10 +13570,8 @@ select -ne :defaultColorMgtGlobals;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
-connectAttr "polyExtrudeFace6.out" "pCubeShape2.i";
-connectAttr "polyExtrudeFace10.out" "pPlaneShape2.i";
+connectAttr "polyExtrudeFace6.out" "TableShape.i";
+connectAttr "polyExtrudeFace10.out" "ChairShape.i";
 connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:skinClusterGroupId.id" "Super_Mario_Bros_Wonder___Wonder_Flower:WF_Eye_L__WonderFlowerFaceMat_WonderFlowerFaceMat_0Shape.iog.og[0].gid"
 		;
 connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_WF_Eye_L__WonderFlowerFaceMat_WonderFlowerFaceMat_0.og[0]" "Super_Mario_Bros_Wonder___Wonder_Flower:WF_Eye_L__WonderFlowerFaceMat_WonderFlowerFaceMat_0Shape.i"
@@ -13540,7 +13604,10 @@ connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:skinClusterGroupId7.id" "Su
 		;
 connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:skinCluster_WF_LeefA__WonderFlower00Mat_WonderFlower00Mat_0.og[0]" "Super_Mario_Bros_Wonder___Wonder_Flower:WF_LeefA__WonderFlower00Mat_WonderFlower00Mat_0Shape.i"
 		;
-connectAttr "polyPlane3.out" "pPlaneShape3.i";
+connectAttr "polyPlane3.out" "FloorShape.i";
+connectAttr "polyExtrudeFace12.out" "WallShape1.i";
+connectAttr "Walls.di" "Wall2.do";
+connectAttr "polyExtrudeFace14.out" "pCubeShape1.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "Super_Mario_Bros_Wonder___Wonder_Flower:WonderFlowerFaceMat.message" ":defaultLightSet.message";
@@ -13574,18 +13641,18 @@ connectAttr "polySplit12.out" "polySplit13.ip";
 connectAttr "polySplit13.out" "polySplit14.ip";
 connectAttr "polySplit14.out" "polySplit15.ip";
 connectAttr "polySplit15.out" "polyExtrudeFace5.ip";
-connectAttr "pCubeShape2.wm" "polyExtrudeFace5.mp";
+connectAttr "TableShape.wm" "polyExtrudeFace5.mp";
 connectAttr "polyTweak3.out" "polyExtrudeFace6.ip";
-connectAttr "pCubeShape2.wm" "polyExtrudeFace6.mp";
+connectAttr "TableShape.wm" "polyExtrudeFace6.mp";
 connectAttr "polyExtrudeFace5.out" "polyTweak3.ip";
 connectAttr "polyTweak4.out" "polyExtrudeFace7.ip";
-connectAttr "pPlaneShape2.wm" "polyExtrudeFace7.mp";
+connectAttr "ChairShape.wm" "polyExtrudeFace7.mp";
 connectAttr "polyPlane2.out" "polyTweak4.ip";
 connectAttr "polyTweak5.out" "polyExtrudeFace8.ip";
-connectAttr "pPlaneShape2.wm" "polyExtrudeFace8.mp";
+connectAttr "ChairShape.wm" "polyExtrudeFace8.mp";
 connectAttr "polyExtrudeFace7.out" "polyTweak5.ip";
 connectAttr "polyTweak6.out" "polyExtrudeFace9.ip";
-connectAttr "pPlaneShape2.wm" "polyExtrudeFace9.mp";
+connectAttr "ChairShape.wm" "polyExtrudeFace9.mp";
 connectAttr "polyExtrudeFace8.out" "polyTweak6.ip";
 connectAttr "polyTweak7.out" "polySplit16.ip";
 connectAttr "polyExtrudeFace9.out" "polyTweak7.ip";
@@ -13593,7 +13660,7 @@ connectAttr "polySplit16.out" "polySplit17.ip";
 connectAttr "polySplit17.out" "polySplit18.ip";
 connectAttr "polySplit18.out" "polySplit19.ip";
 connectAttr "polySplit19.out" "polyExtrudeFace10.ip";
-connectAttr "pPlaneShape2.wm" "polyExtrudeFace10.mp";
+connectAttr "ChairShape.wm" "polyExtrudeFace10.mp";
 connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:n37.msg" "Super_Mario_Bros_Wonder___Wonder_Flower:skeleton_bindPose.m[0]"
 		;
 connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:n38.msg" "Super_Mario_Bros_Wonder___Wonder_Flower:skeleton_bindPose.m[1]"
@@ -14398,6 +14465,19 @@ connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:skinClusterGroupId7.id" "Su
 		;
 connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:polySurfaceShape8_rest.o" "Super_Mario_Bros_Wonder___Wonder_Flower:skinClusterGroupParts7.ig"
 		;
+connectAttr "polyTweak8.out" "polyExtrudeFace11.ip";
+connectAttr "WallShape1.wm" "polyExtrudeFace11.mp";
+connectAttr "polyCube3.out" "polyTweak8.ip";
+connectAttr "polyTweak9.out" "polyExtrudeFace12.ip";
+connectAttr "WallShape1.wm" "polyExtrudeFace12.mp";
+connectAttr "polyExtrudeFace11.out" "polyTweak9.ip";
+connectAttr "layerManager.dli[1]" "Walls.id";
+connectAttr "polyTweak10.out" "polyExtrudeFace13.ip";
+connectAttr "pCubeShape1.wm" "polyExtrudeFace13.mp";
+connectAttr "polyCube4.out" "polyTweak10.ip";
+connectAttr "polyTweak11.out" "polyExtrudeFace14.ip";
+connectAttr "pCubeShape1.wm" "polyExtrudeFace14.mp";
+connectAttr "polyExtrudeFace13.out" "polyTweak11.ip";
 connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:WonderFlowerFaceMat.pa" ":renderPartition.st"
 		 -na;
 connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:WonderFlowerPetalMat.pa" ":renderPartition.st"
@@ -14439,7 +14519,10 @@ connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:tex_base2.msg" ":defaultTex
 		 -na;
 connectAttr "Super_Mario_Bros_Wonder___Wonder_Flower:tex_normal2.msg" ":defaultTextureList1.tx"
 		 -na;
-connectAttr "pCubeShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pPlaneShape2.iog" ":initialShadingGroup.dsm" -na;
-connectAttr "pPlaneShape3.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "TableShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "ChairShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "FloorShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "WallShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "WallShape2.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "pCubeShape1.iog" ":initialShadingGroup.dsm" -na;
 // End of Uni1_Room.ma
