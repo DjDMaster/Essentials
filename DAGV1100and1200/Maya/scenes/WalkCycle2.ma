@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: WalkCycle2.ma
-//Last modified: Tue, Feb 10, 2026 06:45:24 PM
+//Last modified: Tue, Feb 10, 2026 06:46:25 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Walker_IK_v1_0_1" -rfn "AnimationPage102_117Starter:Ultimate_Walker_IK_v1_0_1RN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Walker_IK_v1.0.1.ma";
@@ -16,12 +16,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "FD747197-450F-1238-7FA8-5D814F680EE1";
+fileInfo "UUID" "213E8A50-481C-F471-E5DD-0594B4B70857";
 createNode transform -s -n "persp";
 	rename -uid "DD5D2AA1-4540-4852-4AF7-A9BB3C8E676F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 25.857332139911957 6.1086390202913723 -2.7983469944923911 ;
-	setAttr ".r" -type "double3" -12.60000000000003 97.199999999998738 0 ;
+	setAttr ".t" -type "double3" 0.7535076056270249 3.9086156313317315 -25.96681939303997 ;
+	setAttr ".r" -type "double3" -7.799999999999617 178.39999999999782 0 ;
 	setAttr ".rpt" -type "double3" 2.7423421461052572e-18 -7.4179764594143831e-17 1.8858776805819756e-17 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "50D9E38F-4445-9730-F737-24987D2009D3";
@@ -84,22 +84,22 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "42E049FE-4432-04C7-A51F-068FF6564319";
+	rename -uid "068A00E0-4BDF-DA30-62F8-9D9655D10614";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "D828ECB2-4C1B-3544-9117-84A1ABDAD4D3";
+	rename -uid "FDE79F36-44D6-0E2A-24D6-45A106629C81";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "434F81C9-4E8F-9472-CC08-B0B6081D9DAB";
+	rename -uid "8C55FC5D-46A0-4FAE-12F3-AE83C6EF0F86";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "7F1A66C4-4D31-EF95-A343-4D85979C6D47";
+	rename -uid "4F39111E-48E9-22DD-9437-E6B6D94FE04C";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "3422CBA8-4BE0-BCCE-9E6B-10AE2FB67BFD";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "DB338835-4AC9-6360-12ED-748F53D99955";
+	rename -uid "578ABB8A-4176-7A3A-ACD3-039F8A5F9591";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "4F80BB85-4F34-F481-F262-869FC840CD99";
 	setAttr ".g" yes;
@@ -841,7 +841,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
-	setAttr -s 2 ".sol";
 connectAttr "AnimationPage102_117Starter:walker_lf_heel_ik_ctrl_pvControl.o" "AnimationPage102_117Starter:Ultimate_Walker_IK_v1_0_1RN.phl[1]"
 		;
 connectAttr "AnimationPage102_117Starter:walker_lf_heel_ik_ctrl_legTwist.o" "AnimationPage102_117Starter:Ultimate_Walker_IK_v1_0_1RN.phl[2]"
