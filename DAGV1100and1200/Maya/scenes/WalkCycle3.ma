@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: WalkCycle.ma
-//Last modified: Tue, Feb 10, 2026 06:45:18 PM
+//Name: WalkCycle3.ma
+//Last modified: Tue, Feb 10, 2026 06:45:32 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Walker_IK_v1_0_1" -rfn "AnimationPage102_117Starter:Ultimate_Walker_IK_v1_0_1RN"
 		 -op "v=0;" -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Walker_IK_v1.0.1.ma";
@@ -16,7 +16,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "CFF5CA67-4987-DF52-6E1D-9EBB1062D6B9";
+fileInfo "UUID" "8A38F7E1-4564-71B4-46D9-6BAD20983759";
 createNode transform -s -n "persp";
 	rename -uid "DD5D2AA1-4540-4852-4AF7-A9BB3C8E676F";
 	setAttr ".v" no;
@@ -933,4 +933,4 @@ connectAttr "AnimationPage102_117Starter2:Ultimate_Walker_IK_v1_0_1:multiplyDivi
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "AnimationPage102_117Starter:defaultRenderLayer.msg" ":defaultRenderingList1.r"
 		 -na;
-// End of WalkCycle.ma
+// End of WalkCycle3.ma
