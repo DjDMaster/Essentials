@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: WinWall.ma
-//Last modified: Tue, Mar 17, 2026 07:35:10 PM
+//Last modified: Tue, Mar 17, 2026 08:53:49 PM
 //Codeset: 1252
 requires maya "2026";
 requires "stereoCamera" "10.0";
@@ -11,7 +11,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "7DAEE8AB-4763-94F1-7B18-67900F8C3D67";
+fileInfo "UUID" "204ECFD6-4E88-74A1-319F-42AA53075B85";
 createNode transform -n "WinWall";
 	rename -uid "FE547870-48FE-CCFF-49F0-6F8838DA39E9";
 	setAttr ".rp" -type "double3" 0 7 13 ;
@@ -19,20 +19,6 @@ createNode transform -n "WinWall";
 createNode mesh -n "WinWallShape" -p "WinWall";
 	rename -uid "5DBFADB6-47AD-DD05-36B7-B19E5E3EEC4C";
 	setAttr -k off ".v";
-	setAttr -s 2 ".iog[0].og";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.5 0.875 ;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "polySurfaceShape1" -p "WinWall";
-	rename -uid "1CB85B4F-4D44-CF15-B1C7-A2A787DCD3FB";
-	setAttr -k off ".v";
-	setAttr ".io" yes;
-	setAttr -s 2 ".iog[0].og";
 	setAttr ".iog[0].og[1].gcl" -type "componentList" 2 "f[0:10]" "f[14:15]";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -53,16 +39,16 @@ createNode mesh -n "polySurfaceShape1" -p "WinWall";
 	setAttr ".gtag[6].gtagcmp" -type "componentList" 3 "f[3]" "f[5:11]" "f[14:15]";
 	setAttr ".pv" -type "double2" 0.5 0.875 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 56 ".uvst[0].uvsp[0:55]" -type "float2" 0.375 0 0.625 0 0.625
-		 0.25 0.375 0.25 0.125 0.25 0.125 0 0.375 0.75 0.625 0.75 0.875 0 0.875 0.25 0.625
-		 0.25 0.375 0.25 0.375 0.5 0.625 0.5 0.375 0.5 0.625 0.5 0.625 0.25 0.375 0.25 0.375
-		 0.5 0.375 0.39488295 0.375 0.39488292 0.375 0.3447004 0.37500003 0.3447004 0.62499994
-		 0.39488292 0.62499994 0.3447004 0.625 0.3447004 0.625 0.39488295 0.625 0.5 0.375
-		 0.375 0.375 0.4302752 0.625 0.4302752 0.625 0.375 0.75 0.25 0.8052752 0.25 0.8052752
-		 0 0.75 0 0.25 0 0.1947248 0 0.1947248 0.25 0.25 0.25 0.375 0.875 0.625 0.875 0.375
-		 0.875 0.62322605 0.8197248 0.625 0.875 0.625 0.8197248 0.375 0.8197248 0.62322605
-		 0.8197248 0.37677398 0.8197248 0.37677395 0.8197248 0.375 0.8197248 0.62499994 0.8197248
-		 0.375 0.8197248 0.375 0.8197248 0.625 0.8197248 0.625 0.8197248;
+	setAttr -s 36 ".uvst[0].uvsp[0:35]" -type "float2" 0.99999988 0.20833331
+		 0.99999988 0.20833331 0.99999988 0.22916663 0.99999988 0.22916663 0 0.22916663 0
+		 0.20833331 0 0.20833331 0 0.22916663 0.99999988 0.23502159 0.99999988 0.23502159
+		 0 0.23502159 -5.9604645e-08 0.23502159 0.99999988 0.79166651 0.99999988 0.79166651
+		 -5.9604645e-08 0.79166651 0 0.79166651 0.42046815 0.60036504 0.42046815 0.60036504
+		 0.6211983 0.60036504 0.6211983 0.60036504 0.6211983 0.39963484 0.6211983 0.39963484
+		 0.42046815 0.39963484 0.42046815 0.39963484 0.6211983 0.40533286 0.42046815 0.40533286
+		 0.6211983 0.40533286 0.42046815 0.40533286 0.6211983 0.39963484 0.61977398 0.40105921
+		 0.61977398 0.40390849 0.6211983 0.40533286 0.42046815 0.39963484 0.42189252 0.40105921
+		 0.42046815 0.40533286 0.42189252 0.40390849;
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
@@ -106,61 +92,61 @@ createNode mesh -n "polySurfaceShape1" -p "WinWall";
 		f 4 -4 4 5 6
 		mu 0 4 0 3 4 5
 		f 4 -9 9 10 -2
-		mu 0 4 1 8 9 2
+		mu 0 4 1 6 7 2
 		f 4 11 12 13 -3
-		mu 0 4 2 10 11 3
+		mu 0 4 2 8 9 3
 		f 4 -6 14 -10 -8
-		mu 0 4 6 12 13 7
+		mu 0 4 5 4 7 6
 		f 4 -14 15 16 -5
-		mu 0 4 3 11 14 12
+		mu 0 4 3 9 10 4
 		f 4 -11 17 18 -12
-		mu 0 4 2 13 15 10
+		mu 0 4 2 7 11 8
 		f 4 19 20 21 -13
-		mu 0 4 10 16 17 11
+		mu 0 4 8 12 13 9
 		f 4 -17 22 -18 -15
-		mu 0 4 12 14 15 13
+		mu 0 4 4 10 11 7
 		f 4 23 24 25 -21
-		mu 0 4 16 27 18 17
+		mu 0 4 12 14 15 13
 		f 4 26 -25 27 -23
-		mu 0 4 14 18 27 15
+		mu 0 4 10 15 14 11
 		f 4 28 29 30 31
-		mu 0 4 28 29 30 31
+		mu 0 4 16 17 18 19
 		f 4 -31 32 33 34
-		mu 0 4 32 33 34 35
+		mu 0 4 19 18 20 21
 		f 4 35 36 -29 37
-		mu 0 4 36 37 38 39
+		mu 0 4 22 23 17 16
 		f 4 -22 -26 -27 -16
-		mu 0 4 11 17 18 14
+		mu 0 4 9 13 15 10
 		h 4 -38 -32 -35 -39
-		mu 0 4 19 20 21 22
+		mu 0 4 22 16 19 21
 		f 4 -28 -24 -20 -19
-		mu 0 4 15 27 16 10
+		mu 0 4 11 14 12 8
 		h 4 -40 -33 -30 -37
-		mu 0 4 23 24 25 26
+		mu 0 4 23 20 18 17
 		f 4 38 41 -43 -41
-		mu 0 4 40 41 44 42
+		mu 0 4 22 21 24 25
 		f 4 -34 43 44 -42
-		mu 0 4 41 54 45 44
+		mu 0 4 21 20 26 24
 		f 4 -36 40 46 -46
-		mu 0 4 50 40 42 52
+		mu 0 4 23 22 25 27
 		f 4 47 48 49 50
-		mu 0 4 51 47 43 55
+		mu 0 4 28 29 30 31
 		f 4 -48 51 52 53
-		mu 0 4 47 51 53 48
+		mu 0 4 29 28 32 33
 		f 4 -53 54 55 56
-		mu 0 4 48 53 46 49
+		mu 0 4 33 32 34 35
 		f 4 -56 57 -50 58
-		mu 0 4 49 46 55 43
+		mu 0 4 35 34 31 30
 		f 6 -47 42 -45 59 -58 60
-		mu 0 6 52 42 44 45 55 46
+		mu 0 6 27 25 24 26 31 34
 		f 4 -54 -57 -59 -49
-		mu 0 4 47 48 49 43
+		mu 0 4 29 33 35 30
 		f 4 39 61 -52 62
-		mu 0 4 54 50 53 51
+		mu 0 4 20 23 32 28
 		f 4 45 -61 -55 -62
-		mu 0 4 50 52 46 53
+		mu 0 4 23 27 34 32
 		f 4 -44 -63 -51 -60
-		mu 0 4 45 54 51 55;
+		mu 0 4 26 20 28 31;
 	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
@@ -234,50 +220,26 @@ createNode displayLayer -n "Walls";
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 1;
 createNode displayLayerManager -n "layerManager";
-	rename -uid "9D3673A6-48EA-BE31-E039-F6ABCD0EE74C";
+	rename -uid "5A895FE1-4509-60A7-A723-3A9669BDB50A";
 	setAttr ".cdl" 2;
 	setAttr -s 8 ".dli[1:7]"  1 2 3 4 5 6 7;
 	setAttr -s 2 ".dli";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "C8C6CCAC-4905-B0CC-619D-24BADE06454C";
+	rename -uid "9A303D2F-4C74-3973-41FE-9FAB507E352E";
 	setAttr -s 2 ".lnk";
 	setAttr -s 2 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "6397E395-4B09-A732-33AD-248742570C2E";
+	rename -uid "24EB11CA-4310-6963-6EA4-32A576891065";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "FB8A5F54-4900-9518-FC41-E68D4019917B";
+	rename -uid "22201487-4D2D-86DE-9767-91B9F1D9C485";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "957ED981-4E7F-DD2F-0685-7BB2C4E1D65E";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "B567F80B-4AA3-E1CD-D94F-88B0209A526D";
+	rename -uid "B216566D-48BA-55C7-D599-8190A9F1B1B1";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "9AC1295C-4A7C-19C2-F17E-68BA5869E17A";
 	setAttr ".g" yes;
-createNode polyMapCut -n "polyMapCut1";
-	rename -uid "C1E0746C-4176-DFCA-DE75-6F9422A514CE";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "e[0:62]";
-createNode groupId -n "groupId1";
-	rename -uid "99EA5428-4890-054E-0991-4C8A78E60D04";
-	setAttr ".ihi" 0;
-createNode groupParts -n "groupParts1";
-	rename -uid "0F0D703A-41A6-1725-D71A-089CF3062D65";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 2 "f[0:10]" "f[14:15]";
-createNode polyMapCut -n "polyMapCut2";
-	rename -uid "19D4D866-4B1E-FCD4-34EF-37A839F95EF1";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 2 "e[0]" "e[6:8]";
-createNode polyPlanarProj -n "polyPlanarProj1";
-	rename -uid "C66BE4A3-4181-AF43-A4A9-C7A7B3131038";
-	setAttr ".uopa" yes;
-	setAttr ".ics" -type "componentList" 1 "f[0:27]";
-	setAttr ".ix" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".ws" yes;
-	setAttr ".pc" -type "double3" -0.5 7 11.603372097015381 ;
-	setAttr ".ps" -type "double2" 24.000001907348633 24.000001907348633 ;
-	setAttr ".cam" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 createNode script -n "uiConfigurationScriptNode";
 	rename -uid "6AECA0D6-4C09-09FD-9DE6-BCB71E51BD8D";
 	setAttr ".b" -type "string" (
@@ -330,7 +292,14 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "0D76FD4D-422A-F086-6C95-B5AA1F1B88B2";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 24 -ast 1 -aet 48 ";
 	setAttr ".st" 6;
+createNode groupId -n "groupId1";
+	rename -uid "55CC89D0-4542-EE11-46B1-5F99A8ED9180";
+	setAttr ".ihi" 0;
 select -ne :time1;
+	setAttr -av -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr ".o" 84;
 	setAttr ".unw" 84;
 select -ne :hardwareRenderingGlobals;
@@ -341,11 +310,29 @@ select -ne :hardwareRenderingGlobals;
 	setAttr ".fprt" yes;
 	setAttr ".rtfm" 1;
 select -ne :renderPartition;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr -s 2 ".st";
+	setAttr -cb on ".an";
+	setAttr -cb on ".pt";
 select -ne :renderGlobalsList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 select -ne :defaultShaderList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr -s 6 ".s";
 select -ne :postProcessList1;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :standardSurface1;
@@ -355,16 +342,52 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
+	setAttr -k on ".mwc";
+	setAttr -cb on ".an";
+	setAttr -cb on ".il";
+	setAttr -cb on ".vo";
+	setAttr -cb on ".eo";
+	setAttr -cb on ".fo";
+	setAttr -cb on ".epo";
 	setAttr ".ro" yes;
-select -ne :initialMaterialInfo;
 select -ne :defaultRenderGlobals;
 	addAttr -ci true -h true -sn "dss" -ln "defaultSurfaceShader" -dt "string";
 	setAttr ".ren" -type "string" "arnold";
 	setAttr ".dss" -type "string" "standardSurface1";
 select -ne :defaultResolution;
-	setAttr ".pa" 1;
+	setAttr -av -k on ".cch";
+	setAttr -k on ".ihi";
+	setAttr -av -k on ".nds";
+	setAttr -k on ".bnm";
+	setAttr -av ".w";
+	setAttr -av ".h";
+	setAttr -av ".pa" 1;
+	setAttr -av -k on ".al";
+	setAttr -av ".dar";
+	setAttr -av -k on ".ldar";
+	setAttr -k on ".dpi";
+	setAttr -av -k on ".off";
+	setAttr -av -k on ".fld";
+	setAttr -av -k on ".zsl";
+	setAttr -k on ".isu";
+	setAttr -k on ".pdu";
 select -ne :defaultColorMgtGlobals;
 	setAttr ".cfe" yes;
 	setAttr ".cfp" -type "string" "<MAYA_RESOURCES>/OCIO-configs/Maya2022-default/config.ocio";
@@ -375,12 +398,41 @@ select -ne :defaultColorMgtGlobals;
 	setAttr ".otn" -type "string" "ACES 1.0 SDR-video (sRGB)";
 	setAttr ".potn" -type "string" "ACES 1.0 SDR-video (sRGB)";
 select -ne :hardwareRenderGlobals;
+	setAttr -k on ".cch";
+	setAttr -cb on ".ihi";
+	setAttr -k on ".nds";
+	setAttr -cb on ".bnm";
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
+	setAttr -k off ".fbfm";
+	setAttr -k off -cb on ".ehql";
+	setAttr -k off -cb on ".eams";
+	setAttr -k off -cb on ".eeaa";
+	setAttr -k off -cb on ".engm";
+	setAttr -k off -cb on ".mes";
+	setAttr -k off -cb on ".emb";
+	setAttr -av -k off -cb on ".mbbf";
+	setAttr -k off -cb on ".mbs";
+	setAttr -k off -cb on ".trm";
+	setAttr -k off -cb on ".tshc";
+	setAttr -k off -cb on ".clmt";
+	setAttr -k off -cb on ".tcov";
+	setAttr -k off -cb on ".lith";
+	setAttr -k off -cb on ".sobc";
+	setAttr -k off -cb on ".cuth";
+	setAttr -k off -cb on ".hgcd";
+	setAttr -k off -cb on ".hgci";
+	setAttr -k off -cb on ".mgcs";
+	setAttr -k off -cb on ".twa";
+	setAttr -k off -cb on ".twz";
+	setAttr -k on ".hwcc";
+	setAttr -k on ".hwdp";
+	setAttr -k on ".hwql";
+select -ne :ikSystem;
+	setAttr -s 4 ".sol";
 connectAttr "Walls.di" "WinWall.do";
 connectAttr "groupId1.id" "WinWallShape.iog.og[1].gid";
 connectAttr ":initialShadingGroup.mwc" "WinWallShape.iog.og[1].gco";
-connectAttr "polyPlanarProj1.out" "WinWallShape.i";
 connectAttr "layerManager.dli[1]" "Walls.id";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -388,12 +440,6 @@ relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defau
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "groupParts1.og" "polyMapCut1.ip";
-connectAttr "polySurfaceShape1.o" "groupParts1.ig";
-connectAttr "groupId1.id" "groupParts1.gi";
-connectAttr "polyMapCut1.out" "polyMapCut2.ip";
-connectAttr "polyMapCut2.out" "polyPlanarProj1.ip";
-connectAttr "WinWallShape.wm" "polyPlanarProj1.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "WinWallShape.iog.og[1]" ":initialShadingGroup.dsm" -na;
 connectAttr "groupId1.msg" ":initialShadingGroup.gn" -na;
