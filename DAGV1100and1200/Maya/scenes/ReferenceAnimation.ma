@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
-//Name: AnimationPage_136-166_Starter.ma
-//Last modified: Thu, Mar 26, 2026 09:21:12 PM
+//Name: ReferenceAnimation.ma
+//Last modified: Thu, Mar 26, 2026 09:27:03 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -dr 1 -rfn "Ultimate_Bony_v1_0_5RN" -op
 		 "v=0;" -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Bony_v1.0.5.ma";
@@ -18,7 +18,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
-fileInfo "UUID" "AC18BB44-425E-2D4B-FEB9-578B5153175A";
+fileInfo "UUID" "E5AE77E7-4794-B344-1AD2-A6A1723C9895";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A99A115B-2B40-A95A-EB94-24A6C71E6B67";
@@ -480,4 +480,4 @@ connectAttr "_UNKNOWN_REF_NODE_.ur" "Ultimate_Bony_v1_0_5RN.ur";
 connectAttr "sharedReferenceNode.sr" "Ultimate_Bony_v1_0_5RN.sr";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Ultimate_Beefy_v1_0_2RN.ur";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-// End of AnimationPage_136-166_Starter.ma
+// End of ReferenceAnimation.ma
