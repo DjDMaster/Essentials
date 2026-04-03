@@ -1,6 +1,6 @@
-//Maya ASCII 2025ff03 scene
+//Maya ASCII 2026 scene
 //Name: ReferenceAnimation.ma
-//Last modified: Mon, Mar 30, 2026 06:48:40 PM
+//Last modified: Thu, Apr 02, 2026 08:09:58 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -dr 1 -rfn "Ultimate_Bony_v1_0_5RN" -op
 		 "v=0;" -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Bony_v1.0.5.ma";
@@ -10,32 +10,33 @@ file -r -ns "Ultimate_Bony_v1_0_5" -dr 1 -rfn "Ultimate_Bony_v1_0_5RN" -op "v=0;
 		 -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Bony_v1.0.5.ma";
 file -r -ns "Ultimate_Beefy_v1_0_2" -dr 1 -rfn "Ultimate_Beefy_v1_0_2RN" -op "v=0;"
 		 -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Beefy_v1.0.2.ma";
-requires maya "2025ff03";
+requires maya "2026";
 requires "stereoCamera" "10.0";
-requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.4.5";
+requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.5.4.2";
+requires "stereoCamera" "10.0";
 currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
-fileInfo "product" "Maya 2025";
-fileInfo "version" "2025";
-fileInfo "cutIdentifier" "202409190603-cbdc5a7e54";
-fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 26200)";
-fileInfo "UUID" "E34EBEDB-4D92-57D9-1A84-98A221268D2D";
+fileInfo "product" "Maya 2026";
+fileInfo "version" "2026";
+fileInfo "cutIdentifier" "202510291147-60ec9eda33";
+fileInfo "osv" "Windows 11 Home v2009 (Build: 26100)";
+fileInfo "UUID" "B6BDECC4-4704-9D66-75F2-0AA6279F727A";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A99A115B-2B40-A95A-EB94-24A6C71E6B67";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 2.5877315168048973 15.07430603611126 55.838539935436849 ;
-	setAttr ".r" -type "double3" -15.000000000000606 361.60000000014509 -1.2428887560792821e-16 ;
+	setAttr ".t" -type "double3" -23.92481062356984 6.4561895109738243 14.219909075333161 ;
+	setAttr ".r" -type "double3" -0.60000000000004095 297.19999999996327 0 ;
 	setAttr ".rpt" -type "double3" 4.1592375606392144e-16 2.0867833704751606e-17 1.1941109430179008e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "23F191FC-AA4C-36B2-3112-5F83AEC65EF3";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 56.21987569025692;
+	setAttr ".coi" 28.055990651661585;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 1.071468428796043 0.52353149417703571 1.5554824579331392 ;
+	setAttr ".tp" -type "double3" 1.0272786170295236 6.1623932337022964 1.3962770733300198 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "FB5DE252-4A49-177F-FEF4-F186C1F000B1";
@@ -89,13 +90,8 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "RenderCam";
 	rename -uid "F403D396-44E2-79F5-DE47-EA83A2565AEF";
-	setAttr ".t" -type "double3" 0 4 17.459474780086026 ;
-	setAttr -l on ".tx";
-	setAttr -l on ".ty";
-	setAttr -l on ".tz";
-	setAttr -l on ".rx";
-	setAttr -l on ".ry";
-	setAttr -l on ".rz";
+	setAttr ".t" -type "double3" 0.20328685587973672 9.5547336843060595 25.480343698516474 ;
+	setAttr ".r" -type "double3" -10.800000000000118 0.40000000000000202 -1.8636516745467287e-17 ;
 createNode camera -n "RenderCamShape" -p "RenderCam";
 	rename -uid "C6AB60D5-404A-4550-A6E9-21AD63D2448F";
 	setAttr -k off ".v";
@@ -103,8 +99,8 @@ createNode camera -n "RenderCamShape" -p "RenderCam";
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
 	setAttr ".ovr" 1.3;
-	setAttr -l on ".coi" 21.097355191020583;
-	setAttr -l on ".ow" 30;
+	setAttr ".coi" 29.644010645281636;
+	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
@@ -118,7 +114,7 @@ createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
 	setAttr ".imn" -type "string" "C:/Users/djdma/OneDrive/Documents/Ref Video/1000227640/referenceSequence.00000.jpg";
 	setAttr ".ufe" yes;
 	setAttr ".cov" -type "short2" 1080 1920 ;
-	setAttr ".ag" 0.87301587289760985;
+	setAttr ".ag" 0;
 	setAttr ".s" -type "double2" 1.41732 0.94488 ;
 	setAttr ".w" 10.8;
 	setAttr ".h" 19.2;
@@ -175,89 +171,6 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG" -p "Ultimate_Beefy_
 	setAttr -k off ".sz";
 	setAttr ".rp" -type "double3" 0 3.7830697858537161 0 ;
 	setAttr ".sp" -type "double3" 0 3.7830697858537161 0 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_ROOTC" -p "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG";
-	rename -uid "96C1E1EA-46F7-183E-AB4E-E1A5F47364CC";
-	setAttr -k off ".v";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 0 3.7830697858537161 0 ;
-	setAttr ".sp" -type "double3" 0 3.7830697858537161 0 ;
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_ROOTCShape" -p "Ultimate_Beefy_v1_0_3:Beefy_ROOTC";
-	rename -uid "EE793E55-4890-EACA-7043-A29FE0997CF3";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.7356353596612741 3.7830697858537161 -1.4524437516386675
-		-2.8003584005309756e-16 3.7830697858537161 -2.0815019937814214
-		-1.7356353596612719 3.7830697858537161 -1.4524437516386683
-		-2.4545590649672757 3.7830697858537161 0.066237188064944247
-		-1.7356353596612728 3.7830697858537161 1.5849181277685576
-		-7.3960654973983992e-16 3.7830697858537161 2.2139763699113106
-		1.735635359661271 3.7830697858537161 1.5849181277685584
-		2.4545590649672757 3.7830697858537161 0.066237188064946023
-		1.7356353596612741 3.7830697858537161 -1.4524437516386675
-		-2.8003584005309756e-16 3.7830697858537161 -2.0815019937814214
-		-1.7356353596612719 3.7830697858537161 -1.4524437516386683
-		;
-createNode transform -n "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_ROOTC";
-	rename -uid "8C1FD117-415B-43D9-51C3-45B4C0E8994D";
-	setAttr -k off ".v" no;
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".rz";
-	setAttr -k off ".ry";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 0 3.7830697858537161 0 ;
-	setAttr ".sp" -type "double3" 0 3.7830697858537161 0 ;
-createNode locator -n "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctrShape" -p "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr";
-	rename -uid "9211FF26-4C92-290A-D981-118EE12707B1";
-	setAttr -k off ".v";
-	setAttr ".lp" -type "double3" 0 3.7830697858537161 0 ;
-createNode aimConstraint -n "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr";
-	rename -uid "26039A87-4C2C-788A-BE15-19BA074479CB";
-	addAttr -ci true -sn "w0" -ln "ArniemidSpineTargetLctrW0" -dv 1 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".a" -type "double3" 0 1 0 ;
-	setAttr ".wut" 4;
-	setAttr ".o" -type "double3" -2.3137507443231651 0 0 ;
-	setAttr -k on ".w0";
-createNode transform -n "Ultimate_Beefy_v1_0_3:BeefymidSpineTargetLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_ROOTC";
-	rename -uid "7F5275C6-47D3-C2FA-7180-2EA5814512B1";
-	setAttr -k off ".v" no;
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" -8.4855716190236681e-16 6.7567879825507093 0.12015169858932469 ;
-	setAttr ".sp" -type "double3" -8.4855716190236681e-16 6.7567879825507093 0.12015169858932469 ;
-createNode locator -n "Ultimate_Beefy_v1_0_3:BeefymidSpineTargetLctrShape" -p "Ultimate_Beefy_v1_0_3:BeefymidSpineTargetLctr";
-	rename -uid "17A6F5A6-4406-C48A-4503-F0B179755B32";
-	setAttr -k off ".v";
-	setAttr ".lp" -type "double3" -8.4855716190236681e-16 6.7567879825507093 0.12015169858932469 ;
 createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG_parentConstraint1" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG";
 	rename -uid "E2ED0FD6-40EC-BFC1-1E73-D39B0213A8CF";
@@ -277,111 +190,16 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG_parentConstra
 	setAttr ".tg[0].tot" -type "double3" 0 3.7830697858537161 0 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
-	rename -uid "F8141B56-426A-3122-BF93-529BE997678C";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 0 3.7830697858537161 0 ;
-	setAttr ".sp" -type "double3" 0 3.7830697858537161 0 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_MainHipC" -p "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG";
-	rename -uid "E2BA657A-4292-48C3-8E4D-A5983A134C0B";
-	addAttr -ci true -sn "spineLength" -ln "spineLength" -at "double";
-	setAttr -k off ".v";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 0 3.7830697858537161 0 ;
-	setAttr ".sp" -type "double3" 0 3.7830697858537161 0 ;
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_MainHipCShape" -p "Ultimate_Beefy_v1_0_3:Beefy_MainHipC";
-	rename -uid "11A61030-4537-43C4-FEB6-7C9DED5F5461";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.2433281666531377 4.29957653807136 -1.1397174860987078
-		-2.0060460607252156e-16 2.9178568476008793 -1.6118039261145634
-		-1.2433281666531366 4.29957653807136 -1.1397174860987085
-		-1.7583315557613417 3.7177998262943155 -4.6706045363759152e-16
-		-1.2433281666531368 4.29957653807136 1.1397174860987083
-		-5.2981961355762628e-16 2.9178568476008788 1.6118039261145636
-		1.2433281666531359 4.29957653807136 1.1397174860987087
-		1.7583315557613417 3.7177998262943155 8.6570303291760314e-16
-		1.2433281666531377 4.29957653807136 -1.1397174860987078
-		-2.0060460607252156e-16 2.9178568476008793 -1.6118039261145634
-		-1.2433281666531366 4.29957653807136 -1.1397174860987085
-		;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01" -p "Ultimate_Beefy_v1_0_3:Beefy_MainHipC";
-	rename -uid "7432D15C-41EF-231C-DCAC-1E8C4B7BEDD7";
-	setAttr ".v" no;
-	setAttr ".rp" -type "double3" 3.9777396935917247e-18 4.0017255356108477 0.020958459738936817 ;
-	setAttr ".sp" -type "double3" 3.9777396935917247e-18 4.0017255356108477 0.020958459738936817 ;
-createNode clusterHandle -n "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Shape" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01";
-	rename -uid "57B4BC0D-484B-4AA2-6F57-E9A15560DAB4";
-	setAttr ".ihi" 0;
-	setAttr -k off ".v";
-	setAttr ".or" -type "double3" 3.9777396935917247e-18 4.0017255356108477 0.020958459738936817 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr" -p "Ultimate_Beefy_v1_0_3:Beefy_MainHipC";
-	rename -uid "17DD0D22-481C-525D-FDCE-19AB5A888CFB";
-	setAttr ".v" no;
-createNode locator -n "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_LctrShape" -p "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr";
-	rename -uid "5B2737EC-4520-26CC-803F-AA85DA78F209";
-	setAttr -k off ".v";
-createNode pointConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr";
-	rename -uid "263E6AF0-4CA9-B6BC-EDF8-05BBB24700D2";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_SpineMidIKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" 2.7048629916423728e-17 5.2699288842022129 0.14251752622477037 ;
-	setAttr -k on ".w0";
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG";
-	rename -uid "A47C4753-4B05-4224-E0BC-679C64AF546B";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_ROOTCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 7.6549418767430808 0 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "45296DEF-4C3C-F690-4A0D-EDA51232D196";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
+	setAttr ".t" -type "double3" 1.110223024625156e-16 4.5264993350279648 0.13603436641461331 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
 	setAttr ".s" -type "double3" 1 1.0000000000000004 1.0000000000000004 ;
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
@@ -389,67 +207,16 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG" -p "Ultimate_B
 	setAttr ".rp" -type "double3" -3.9443045261050599e-31 8.8817841970012563e-16 0 ;
 	setAttr ".sp" -type "double3" -3.9443045261050599e-31 8.8817841970012523e-16 0 ;
 	setAttr ".spt" -type "double3" 0 3.9443045261050608e-31 0 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC" -p "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG";
-	rename -uid "C028DB85-4F60-A18D-D7DC-BAB8CD4C2957";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" -3.9443045261050599e-31 8.8817841970012523e-16 0 ;
-	setAttr ".sp" -type "double3" -3.9443045261050599e-31 8.8817841970012523e-16 0 ;
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCShape" -p "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC";
-	rename -uid "45E29A82-42E7-1F59-814A-31AA38BC580A";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.7252747638809971 0.085056241809490798 -1.526983726024667
-		-1.1701935354230423e-16 0.16230675017572166 -1.6221835515881835
-		-0.72527476388099632 0.085056241809490882 -1.526983726024667
-		-1.0256934075274493 -0.10144298318847944 -1.2413842493341178
-		-0.72527476388099654 -0.28794220818644994 -1.526983726024667
-		-3.0906144124194871e-16 -0.36519271655268082 -1.6221835515881835
-		0.72527476388099599 -0.28794220818645 -1.526983726024667
-		1.0256934075274493 -0.10144298318847966 -1.2413842493341178
-		0.7252747638809971 0.085056241809490798 -1.526983726024667
-		-1.1701935354230423e-16 0.16230675017572166 -1.6221835515881835
-		-0.72527476388099632 0.085056241809490882 -1.526983726024667
-		;
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG";
-	rename -uid "062A95C0-4D59-001B-0F40-B6AF68711503";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_ROOTCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 1.1102230246251521e-16 0.74342954917424953 
-		0.13603436641461331 ;
-	setAttr ".lr" -type "double3" 0 7.6549418767430808 0 ;
-	setAttr ".rst" -type "double3" 1.110223024625156e-16 4.5264993350279648 0.13603436641461331 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "35E7907C-4F55-619A-0DB3-6386273D2737";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
+	setAttr ".t" -type "double3" 2.7048629916423728e-17 5.2699288842022129 0.14251752622477035 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
@@ -459,8 +226,9 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG2" -p "Ultimate
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
 	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".rz";
+	setAttr ".r" -type "double3" 0.19902076644351757 -14.194637298583984 0 ;
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".rz";
 	setAttr -k off ".ry";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
@@ -493,26 +261,6 @@ createNode clusterHandle -n "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr02Shape
 	setAttr ".ihi" 0;
 	setAttr -k off ".v";
 	setAttr ".or" -type "double3" -9.4782780964170452e-17 5.2781147951540799 0.12102062294459726 ;
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG";
-	rename -uid "7D0848F3-4D63-0FC6-3A59-BC85110EB9E3";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_Spine02FKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 -7.9800166830148331 0 ;
-	setAttr ".rst" -type "double3" 2.7048629916423728e-17 5.2699288842022129 0.14251752622477035 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_SpineTopIKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "7E4AB60B-492B-8344-5137-4D9C8C299D4B";
 	setAttr -k off ".v";
@@ -560,151 +308,34 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_SpineTopIKCG_parentC
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 -7.9800166830148394 0 ;
 	setAttr ".rst" -type "double3" -8.4855716190236681e-16 6.7567879825507093 0.1201516985893247 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "DAB360B0-4FC9-F5AE-4A79-F49E6518BD7C";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
+	setAttr ".t" -type "double3" 0 0 2.7755575615628914e-17 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".rp" -type "double3" 2.7048629916423728e-17 5.2699288842022129 0.14251752622477035 ;
 	setAttr ".sp" -type "double3" 2.7048629916423728e-17 5.2699288842022129 0.14251752622477035 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC" -p "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG";
-	rename -uid "C8A478E6-467D-9A24-EC23-FFBB5BF7F156";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 2.7048629916423728e-17 5.2699288842022129 0.14251752622477035 ;
-	setAttr ".sp" -type "double3" 2.7048629916423728e-17 5.2699288842022129 0.14251752622477035 ;
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCShape" -p "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC";
-	rename -uid "6D203EF8-4E23-5FF2-5A2D-42ABB2673FD9";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		0.90061874735231684 5.6346711333032271 -1.4991835808687648
-		-1.1172223886121217e-16 5.7305978903640087 -1.6173991205745433
-		-0.90061874735231584 5.6346711333032289 -1.4991835808687648
-		-1.273667247033113 5.4030834554126379 -1.1445369617514289
-		-0.90061874735231617 5.1714957775220416 -1.4991835808687648
-		-3.5019283383610679e-16 5.0755690204612618 -1.6173991205745433
-		0.90061874735231517 5.1714957775220398 -1.4991835808687648
-		1.273667247033113 5.4030834554126379 -1.1445369617514289
-		0.90061874735231684 5.6346711333032271 -1.4991835808687648
-		-1.1172223886121217e-16 5.7305978903640087 -1.6173991205745433
-		-0.90061874735231584 5.6346711333032289 -1.4991835808687648
-		;
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG";
-	rename -uid "92628404-4E71-EDDE-8947-5994183DD153";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_Spine01FKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -8.3973672546091482e-17 0.74342954917424731 
-		0.0064831598101570687 ;
-	setAttr ".lr" -type "double3" 0 7.6549418767430808 0 ;
-	setAttr ".rst" -type "double3" 0 0 2.7755575615628914e-17 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
-	rename -uid "7BEAEFFB-49BD-385C-BBF9-6684ED6E820E";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" -4.4056153794866466e-16 6.0133584333764611 0.10777984756987358 ;
-	setAttr ".sp" -type "double3" -4.4056153794866466e-16 6.0133584333764611 0.10777984756987358 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC" -p "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG";
-	rename -uid "0A8F05CF-4EFA-F02E-E328-EA91F7C6DF2D";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" -4.4056153794866466e-16 6.0133584333764611 0.10777984756987358 ;
-	setAttr ".sp" -type "double3" -4.4056153794866466e-16 6.0133584333764611 0.10777984756987358 ;
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCShape" -p "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC";
-	rename -uid "43835405-4551-2C01-79E4-A68DDD7FE5F0";
-	setAttr -k off ".v";
-	setAttr ".cc" -type "nurbsCurve" 
-		3 8 2 no 3
-		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
-		11
-		1.211957105502435 7.1118997247748732 -1.5919192321099747
-		-6.1644742948331579e-16 7.2791752025623273 -1.7510011563408694
-		-1.211957105502435 7.1118997247748741 -1.5919192321099747
-		-1.7139661756159823 6.7080609976479613 -1.1146734594172947
-		-1.2119571055024354 6.3042222705210502 -1.5919192321099747
-		-9.3735584148659641e-16 6.1369467927335997 -1.7510011563408694
-		1.2119571055024327 6.3042222705210467 -1.5919192321099747
-		1.713966175615981 6.7080609976479613 -1.1146734594172947
-		1.211957105502435 7.1118997247748732 -1.5919192321099747
-		-6.1644742948331579e-16 7.2791752025623273 -1.7510011563408694
-		-1.211957105502435 7.1118997247748741 -1.5919192321099747
-		;
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG";
-	rename -uid "441D076D-470F-A428-CD0C-41B50CBE097F";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_Spine02FKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -4.6761016786508846e-16 0.74342954917424819 
-		-0.034737678654896798 ;
-	setAttr ".lr" -type "double3" 0 -7.9800166830148331 0 ;
-	setAttr ".rst" -type "double3" -9.8607613152626476e-32 0 0 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "923F4991-4FFB-0BC2-EAD7-F9B88D33C773";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
+	setAttr ".t" -type "double3" 0 0 -1.3877787807814457e-17 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
@@ -744,28 +375,6 @@ createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCShape" -p "Ultim
 		-9.6557651544467107e-16 7.0205377159149105 -1.4030455104269381
 		-0.72527476388099721 6.9432872075486802 -1.3078456848634215
 		;
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG";
-	rename -uid "762DDFF5-4D39-8A66-73CB-49BA8211F4A9";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_Spine03FKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -4.0799562395370205e-16 0.74342954917424819 
-		0.012371851019451111 ;
-	setAttr ".lr" -type "double3" 0 -7.9800166830148367 0 ;
-	setAttr ".rst" -type "double3" 0 0 -1.3877787807814457e-17 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "18D4DC71-4BD0-7B42-02A2-64A8F977C153";
 	setAttr -k off ".v";
@@ -780,48 +389,6 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG" -p "Ultimate_
 	setAttr -k off ".sz";
 	setAttr ".rp" -type "double3" 0.59243178367614668 0.66673350334167458 -0.12531977891921961 ;
 	setAttr ".sp" -type "double3" 0.59243178367614668 0.66673350334167458 -0.12531977891921961 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC" -p "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG";
-	rename -uid "EBEE3CB8-4D16-F3DC-43BD-24977B38920B";
-	addAttr -ci true -sn "SwitchIkFk" -ln "SwitchIkFk" -min 0 -max 1 -at "double";
-	addAttr -ci true -sn "curve" -ln "curve" -min 0 -max 1 -at "double";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 0.59243178367614668 0.66673350334167458 -0.78593763100442438 ;
-	setAttr ".sp" -type "double3" 0.59243178367614668 0.66673350334167458 -0.78593763100442438 ;
-	setAttr -k on ".SwitchIkFk";
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:curveShape27" -p "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC";
-	rename -uid "0F761900-4BC8-1353-1AD8-8F8AC6CD4EE2";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 14;
-	setAttr ".cc" -type "nurbsCurve" 
-		1 14 0 no 3
-		15 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
-		15
-		0.59243178367614668 0.66673350334167458 -0.78593763100442438
-		0.41626702312009212 0.66673350334167458 -0.96210239156047894
-		0.5043494033981194 0.66673350334167458 -0.96210239156047894
-		0.5043494033981194 0.66673350334167458 -1.2263495323945608
-		0.68051416395417397 0.66673350334167458 -1.2263495323945608
-		0.68051416395417397 0.66673350334167458 -0.96210239156047894
-		0.76859654423220125 0.66673350334167458 -0.96210239156047894
-		0.59243178367614668 0.66673350334167458 -0.78593763100442438
-		0.59243178367614668 0.84289826389772915 -0.96210239156047894
-		0.59243178367614668 0.75481588361970187 -0.96210239156047894
-		0.59243178367614668 0.75481588361970187 -1.2263495323945608
-		0.59243178367614668 0.5786511230636473 -1.2263495323945608
-		0.59243178367614668 0.5786511230636473 -0.96210239156047894
-		0.59243178367614668 0.49056874278562002 -0.96210239156047894
-		0.59243178367614668 0.66673350334167458 -0.78593763100442438
-		;
 createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG_parentConstraint1" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG";
 	rename -uid "F236F6A4-406B-70AA-7FF5-7FA38CC03358";
@@ -841,7 +408,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG_parentC
 	setAttr ".tg[0].tot" -type "double3" 1.1102230246251565e-16 -1.1102230246251565e-16 
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" -47.239146822297201 89.999999999997627 0 ;
-	setAttr ".lr" -type "double3" 0.00013764144913455827 10.793794924534236 2.9562588683255018e-05 ;
+	setAttr ".lr" -type "double3" 3.6923088747368408e-07 0.0063489480030359535 0.0019902102812748021 ;
 	setAttr ".rst" -type "double3" 0 -1.1102230246251565e-16 0 ;
 	setAttr ".rsrr" -type "double3" -2.5444437451701946e-14 -3.4286379466176712e-12 
 		-2.0673605429512781e-13 ;
@@ -861,56 +428,6 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG" -p "Ultimate_Bee
 	setAttr -k off ".sz";
 	setAttr ".rp" -type "double3" 0.59243178367614668 1.4244161405940758e-13 -0.12531977891921961 ;
 	setAttr ".sp" -type "double3" 0.59243178367614668 1.4244161405940758e-13 -0.12531977891921961 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC" -p "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG";
-	rename -uid "5A6A6BFB-4170-1108-1A9B-8994EB2E81D0";
-	addAttr -ci true -sn "Stretch" -ln "Stretch" -min 0 -max 1 -at "double";
-	addAttr -ci true -sn "KneeLock" -ln "KneeLock" -min 0 -max 1 -at "double";
-	addAttr -ci true -sn "footTilt" -ln "footTilt" -min -10 -max 10 -at "double";
-	addAttr -ci true -sn "heelBall" -ln "heelBall" -min -10 -max 10 -at "double";
-	addAttr -ci true -sn "toeUpDn" -ln "toeUpDn" -min -10 -max 10 -at "double";
-	addAttr -ci true -sn "ballSwivel" -ln "ballSwivel" -at "double";
-	setAttr -k off ".v";
-	setAttr ".ro" 1;
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 0.59243178367614668 0.66673350334167458 -0.12531977891921961 ;
-	setAttr ".sp" -type "double3" 0.59243178367614668 0.66673350334167458 -0.12531977891921961 ;
-	setAttr -k on ".Stretch";
-	setAttr -k on ".KneeLock";
-	setAttr -k on ".footTilt";
-	setAttr -k on ".heelBall";
-	setAttr -k on ".toeUpDn";
-	setAttr -k on ".ballSwivel";
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCShape" -p "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC";
-	rename -uid "5BC5D696-499F-89B0-58CB-E88E3C18DA41";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 14;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 16 2 no 3
-		21 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
-		19
-		0.90841327682274953 1.4251465207812617e-13 -0.69382947269290318
-		0.4901334105491334 1.4252066984119339e-13 -0.77589028051350373
-		0.15293715028059474 1.4251465207812617e-13 -0.5586899615751425
-		0.12888184327300706 1.4249751493880035e-13 -0.12746250176915205
-		0.41251739195052894 0.16760818647204587 0.23733773169637865
-		0.40912522293172709 0.16760818647204584 0.57988235409539879
-		0.12983435726031284 1.4241136072148547e-13 0.93791789888194355
-		-0.11613515229877591 1.4238571318001482e-13 1.298384982565683
-		0.080378509368344564 1.42368576040689e-13 1.9244194612176573
-		0.54942140905032966 1.4236255827762178e-13 1.9756066397589778
-		0.88679081411210037 1.42368576040689e-13 1.826912769577768
-		1.1785254548172888 1.4238571318001482e-13 1.4875803987961247
-		1.288490804027062 1.4241136072148547e-13 1.0687242602179121
-		1.0634617045742347 0.16760818647204584 0.56924451919724939
-		1.0441668909560948 0.16760818647204587 0.080575254540080132
-		1.1209709175599636 1.4249751493880035e-13 -0.33828088403813206
-		0.90841327682274953 1.4251465207812617e-13 -0.69382947269290318
-		0.4901334105491334 1.4252066984119339e-13 -0.77589028051350373
-		0.15293715028059474 1.4251465207812617e-13 -0.5586899615751425
-		;
 createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG_parentConstraint1" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG";
 	rename -uid "7455BF40-499C-BCAE-B7D6-DB838D2D5B95";
@@ -945,81 +462,10 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG" -p "Ultimate_Bee
 	setAttr -k off ".sz";
 	setAttr ".rp" -type "double3" 0 0 0.14999999999999997 ;
 	setAttr ".sp" -type "double3" 0 0 0.14999999999999997 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC" -p "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG";
-	rename -uid "70271F90-46F9-ED6D-514E-F79A0438E67F";
-	addAttr -ci true -sn "Follow" -ln "Follow" -min 0 -max 3 -en "Main:Foot:Hips:Foot and Hips" 
-		-at "enum";
-	setAttr -k off ".v";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 0 0 1.5260501096152532 ;
-	setAttr ".sp" -type "double3" 0 0 1.5260501096152532 ;
-	setAttr -k on ".Follow";
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:curveShape22" -p "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC";
-	rename -uid "6359F381-4C75-3469-E3E6-47B0932C592F";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 14;
-	setAttr ".cc" -type "nurbsCurve" 
-		1 24 0 no 3
-		25 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
-		25
-		0 0.27250894814558091 1.4742734094675929
-		0.10900357925823237 0.16350536888734857 1.5260501096152532
-		0.054501789629116185 0.16350536888734857 1.5260501096152532
-		0.054501789629116185 0.054501789629116185 1.5614762728741787
-		0.16350536888734857 0.054501789629116185 1.5260501096152532
-		0.16350536888734857 0.10900357925823237 1.5260501096152532
-		0.27250894814558091 0 1.4742734094675929
-		0.16350536888734857 -0.10900357925823237 1.5260501096152532
-		0.16350536888734857 -0.054501789629116185 1.5260501096152532
-		0.054501789629116185 -0.054501789629116185 1.5614762728741787
-		0.054501789629116185 -0.16350536888734857 1.5260501096152532
-		0.10900357925823237 -0.16350536888734857 1.5260501096152532
-		0 -0.27250894814558091 1.4742734094675929
-		-0.10900357925823237 -0.16350536888734857 1.5260501096152532
-		-0.054501789629116185 -0.16350536888734857 1.5260501096152532
-		-0.054501789629116185 -0.054501789629116185 1.5614762728741787
-		-0.16350536888734857 -0.054501789629116185 1.5260501096152532
-		-0.16350536888734857 -0.10900357925823237 1.5260501096152532
-		-0.27250894814558091 0 1.4742734094675929
-		-0.16350536888734857 0.10900357925823237 1.5260501096152532
-		-0.16350536888734857 0.054501789629116185 1.5260501096152532
-		-0.054501789629116185 0.054501789629116185 1.5614762728741787
-		-0.054501789629116185 0.16350536888734857 1.5260501096152532
-		-0.10900357925823237 0.16350536888734857 1.5260501096152532
-		0 0.27250894814558091 1.4742734094675929
-		;
-createNode aimConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC";
-	rename -uid "3B6F0220-439F-B9B9-7504-73855E26BA03";
-	addAttr -ci true -sn "w0" -ln "Arnie_lKneeIKC_TargetLctrW0" -dv 1 -at "double";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".a" -type "double3" 0 0 -1 ;
-	setAttr ".wut" 0;
-	setAttr -k off ".ox";
-	setAttr -k off ".oy";
-	setAttr -k off ".oz";
-	setAttr ".rsrr" -type "double3" -7.6877160194625883e-22 7.5406357324834811e-18 -0.011682666982221947 ;
 createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG";
 	rename -uid "F34850C1-4C73-7F0B-4EA8-5F8C98DE309C";
 	addAttr -ci true -k true -sn "w0" -ln "Arnie_MainCW0" -dv 1 -min 0 -at "double";
-	addAttr -ci true -k true -sn "w1" -ln "Arnie_MainHipCW1" -dv 1 -min 0 -at "double";
 	addAttr -ci true -k true -sn "w2" -ln "Arnie_lBallSwivelW2" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1033,11 +479,9 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentCons
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr -s 3 ".tg";
+	setAttr -s 2 ".tg";
 	setAttr ".tg[0].tot" -type "double3" 0.5918907539529541 1.9691029790283721 0.00029339863920749276 ;
 	setAttr ".tg[0].tor" -type "double3" 2.6927770764881935 -0.1206071883810325 0.011669792651171951 ;
-	setAttr ".tg[1].tot" -type "double3" 0.5918907539529541 -1.8139668068253441 0.00029339863920749276 ;
-	setAttr ".tg[1].tor" -type "double3" 2.6927770764881935 -0.1206071883810325 0.011669792651171951 ;
 	setAttr ".tg[2].tot" -type "double3" -0.00054102972319118874 1.9691029790282295 
 		-0.49094318843637086 ;
 	setAttr ".tg[2].tor" -type "double3" 2.692777076488194 -0.12060718838103252 0.011669792651171955 ;
@@ -1046,8 +490,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentCons
 	setAttr ".rsrr" -type "double3" 2.692777076488194 -0.12060718838103252 0.011669792651171955 ;
 	setAttr ".int" 0;
 	setAttr -k on ".w0";
-	setAttr -k on ".w1";
-	setAttr -k on ".w2";
+	setAttr -k on ".w2" 0;
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_TargetLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "6B18A72E-43C5-F73C-7B7A-C29D3013879E";
 	setAttr ".v" no;
@@ -1092,7 +535,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG" -p "Ultimate_Bee
 	setAttr -k off ".sz";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lBallFKC" -p "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG";
 	rename -uid "DFF91AD0-47B6-82F9-7F45-45BAFAD6427F";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v" no;
 	setAttr ".ove" yes;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -1140,7 +583,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG_parentCons
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.66673350334153247 0.61655636599479779 1.6653345369377348e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 0 1.8129161684342045e-12 89.999999999999986 ;
-	setAttr ".lr" -type "double3" 1.8948490851153213e-14 -102.43202461318744 3.3735916329145826e-14 ;
+	setAttr ".lr" -type "double3" 1.7991934265579774e-14 -90 8.9959671327898853e-15 ;
 	setAttr ".rst" -type "double3" 0.59243178367614524 1.4244161405940758e-13 0.49123658707557843 ;
 	setAttr ".rsrr" -type "double3" 1.349395069918483e-14 -90 1.349395069918483e-14 ;
 	setAttr ".int" 2;
@@ -1161,7 +604,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG" -p "Ultimate_Be
 	setAttr -k off ".sz";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKC" -p "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG";
 	rename -uid "41FB4917-4D93-2275-B93E-15891CD521C5";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v" no;
 	setAttr ".ove" yes;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -1212,7 +655,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG_parentCon
 		3.361755318564974e-13 ;
 	setAttr ".tg[0].tor" -type "double3" -0.12221083926735142 -0.023801783737599915 
 		5.509120427204997 ;
-	setAttr ".lr" -type "double3" 89.999999999999986 -89.999999999999986 12.432024613187453 ;
+	setAttr ".lr" -type "double3" 90 -89.999999999999986 -6.3611093629270335e-15 ;
 	setAttr ".rst" -type "double3" 0.59243178367614679 0.6667335033416748 -0.12531977891921958 ;
 	setAttr ".rsrr" -type "double3" 90 -89.999999999999986 -6.3611093629270335e-15 ;
 	setAttr ".int" 2;
@@ -1232,7 +675,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG" -p "Ultimate_Bee
 	setAttr -k off ".sz";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKC" -p "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG";
 	rename -uid "3424601D-4DF0-91A1-31CE-E3858ADB2004";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v" no;
 	setAttr ".ove" yes;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -1282,7 +725,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG_parentCons
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.3621744488908336 9.3395885643332566e-16 -1.1102230246251565e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0.03373803793239602 0.0008805976617756293 -5.5214757036160078 ;
-	setAttr ".lr" -type "double3" 95.643206634059482 -88.763301854655111 12.493586094773356 ;
+	setAttr ".lr" -type "double3" 95.509170489097244 -89.976308106502529 0.11992575767939033 ;
 	setAttr ".rst" -type "double3" 0.59189075395295399 1.9691029790283734 0.00029339863920779119 ;
 	setAttr ".rsrr" -type "double3" 95.509170489097244 -89.976308106502529 0.11992575767939033 ;
 	setAttr ".int" 2;
@@ -1290,9 +733,10 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG_parentCons
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "166A1FB8-48DB-9C19-37D8-8F99E332FD4A";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
+	setAttr ".t" -type "double3" -1.1102230246251565e-16 0 0 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
 	setAttr -k off ".rx";
 	setAttr -k off ".ry";
 	setAttr -k off ".rz";
@@ -1306,7 +750,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG" -p "Ultimate_Beef
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lHipFKC" -p "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG";
 	rename -uid "C34070E5-4FD2-22E9-8CE5-F2BFAD909A07";
 	addAttr -ci true -sn "HipOrient" -ln "HipOrient" -dv 1 -min 0 -max 1 -at "double";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v" no;
 	setAttr ".ove" yes;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -1337,33 +781,9 @@ createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCShape" -p "Ultimate
 		-3.3308749299162388 0.71009673548878338 -0.59227240393730751
 		-3.2009675823999575 0.50200423426479557 -0.10713795572172888
 		;
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG";
-	rename -uid "420FB552-4B75-10B7-2B97-66965EE8F329";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_MainHipCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 0.59162528162515249 -0.45179241540083526 1.1102230246251565e-16 ;
-	setAttr ".tg[0].tor" -type "double3" 89.987676182908004 -89.988833690179121 0.087826164908404586 ;
-	setAttr ".lr" -type "double3" 89.987676182908004 -89.988833690179121 0.087826164908404572 ;
-	setAttr ".rst" -type "double3" -1.1102230246251565e-16 0 0 ;
-	setAttr ".rsrr" -type "double3" 89.987676182908004 -89.988833690179121 0.087826164908404572 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG";
 	rename -uid "2DBA5134-4761-973B-8880-57A46E6857FF";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_MainHipCW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -k true -sn "w1" -ln "Arnie_MainCW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -1377,14 +797,10 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConst
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr -s 2 ".tg";
-	setAttr ".tg[0].tot" -type "double3" 0.5916252816251526 -0.45179241540083526 1.1102230246251565e-16 ;
-	setAttr ".tg[0].tor" -type "double3" 89.987676182908004 -89.988833690179106 0.087826164908401394 ;
 	setAttr ".tg[1].tot" -type "double3" 1.7200000000000004 9.6848414953458573 3.226782578563098e-16 ;
 	setAttr ".tg[1].tor" -type "double3" 89.987676182908004 -89.988833690179121 0.087826164908404586 ;
-	setAttr ".lr" -type "double3" 89.98737601106464 -89.991551400709739 12.519850485818395 ;
+	setAttr ".lr" -type "double3" 89.982797015231128 -90.000817573245072 44.243931812004661 ;
 	setAttr ".rsrr" -type "double3" 89.987676182908004 -89.988833690179092 0.087826164908398174 ;
-	setAttr -k on ".w0";
 	setAttr -k on ".w1";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lLegIKFKG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "DB7C361A-4CC2-CADC-9157-4BAC235A6B0B";
@@ -1414,7 +830,6 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lLegIKFKG_parentCons
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 -12.432024613187451 0 ;
 	setAttr ".rst" -type "double3" 0 3.7830697858537161 0 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
@@ -1444,7 +859,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lHipJFK_parentConstr
 		-1.1102230246251565e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -9.5043919192171457e-15 -3.8126423636196634e-14 
 		2.8685559336578417e-14 ;
-	setAttr ".lr" -type "double3" -5.7249984266343308e-14 8.9055531080978469e-14 -6.3611093629270785e-15 ;
+	setAttr ".lr" -type "double3" -6.6791648310733881e-14 1.1131941385122308e-13 -1.9083328088781167e-14 ;
 	setAttr ".rst" -type "double3" 0.59162528162515216 -0.45179241540083481 -2.7816576745388706e-17 ;
 	setAttr ".rsrr" -type "double3" -9.5416640443905598e-15 3.4986101496098681e-14 -3.1805546814635174e-14 ;
 	setAttr ".int" 2;
@@ -1453,14 +868,14 @@ createNode joint -n "Ultimate_Beefy_v1_0_3:Beefy_lHipJIK" -p "Ultimate_Beefy_v1_
 	rename -uid "016F9034-438F-E45D-F58A-97A4FAD4AA14";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0.59162528162515216 -0.45179241540083526 -2.7755575615628914e-17 ;
-	setAttr ".r" -type "double3" 9.5457980680538377 12.443569143599314 31.066732337726563 ;
+	setAttr ".r" -type "double3" -0.010479421849746979 -0.013899204738186462 32.757191357307697 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 90.087823761468556 -0.012340933193344889 -89.988833703038608 ;
 createNode joint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeJIK" -p "Ultimate_Beefy_v1_0_3:Beefy_lHipJIK";
 	rename -uid "7F0CDA52-4CE2-D60D-9D57-818187EDEEE2";
 	setAttr ".t" -type "double3" 1.3621744488908338 -2.017158141909281e-16 -9.9920072216264089e-16 ;
-	setAttr ".r" -type "double3" 5.1040828520663835e-15 0.00018709268178643745 -21.051215232559318 ;
+	setAttr ".r" -type "double3" 1.3420731567258655e-14 0.0004759172421628737 -66.544496678279614 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0.032414643050618815 0.0041268325407815025 -5.5214747186665072 ;
@@ -1468,7 +883,7 @@ createNode joint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeJIK" -p "Ultimate_Beefy_v1
 createNode joint -n "Ultimate_Beefy_v1_0_3:Beefy_lAnkleJIK" -p "Ultimate_Beefy_v1_0_3:Beefy_lKneeJIK";
 	rename -uid "27A4506C-4DCC-42AF-B854-38BFE95CF83D";
 	setAttr ".t" -type "double3" 1.3084132429358593 5.5511151231257827e-16 3.3306690738754696e-16 ;
-	setAttr ".r" -type "double3" -28.937584022112063 4.6756084408903673 -13.423375552599193 ;
+	setAttr ".r" -type "double3" -0.052275568438117162 -0.046433492888072914 33.787222191641469 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -0.096729489852008022 0.07285871430007268 48.269937611481112 ;
@@ -1576,7 +991,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lAnkleJFK_parentCons
 	setAttr ".tg[0].tot" -type "double3" 0 -9.9920072216264089e-16 0 ;
 	setAttr ".tg[0].tor" -type "double3" 2.3625664382271334e-12 -9.4077296140342365e-14 
 		42.760853177702771 ;
-	setAttr ".lr" -type "double3" -2.4458465500454442e-12 1.5743745673244381e-13 -1.2722218725857429e-14 ;
+	setAttr ".lr" -type "double3" -2.4013187845049553e-12 1.0813885916975924e-13 -1.5902773407319849e-14 ;
 	setAttr ".rst" -type "double3" 0.59243178367614668 0.66673350334167458 -0.12531977891922061 ;
 	setAttr ".rsrr" -type "double3" -2.356791018964466e-12 1.0495830448829598e-13 -3.1805546814656759e-15 ;
 	setAttr ".int" 2;
@@ -1618,7 +1033,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lAnkleJFKG2_parentCo
 	setAttr ".tg[0].tot" -type "double3" 2.2204460492503131e-16 4.9960036108132044e-16 
 		-2.2204460492503131e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 5.7729864940941553 90.12109905620467 101.28213242968859 ;
-	setAttr ".lr" -type "double3" -8.6193031867661309e-13 -12.43202461318751 0 ;
+	setAttr ".lr" -type "double3" -8.6193031867661309e-13 0 0 ;
 	setAttr ".rst" -type "double3" 2.2204460492503131e-16 -2.2204460492503131e-16 2.2768245622195593e-17 ;
 	setAttr ".rsrr" -type "double3" -8.5874976399514957e-13 -2.3835094009470858e-29 
 		-3.1805546814635168e-15 ;
@@ -1666,7 +1081,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeJFK_parentConst
 	setAttr ".tg[0].tot" -type "double3" 0 -1.3322676295501878e-15 -2.2204460492503131e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -0.0011668572815830131 -4.918265019329093e-12 
 		-4.8249731891909962e-07 ;
-	setAttr ".lr" -type "double3" -4.452778627129135e-14 -4.9234986467180351e-12 4.824973268704861e-07 ;
+	setAttr ".lr" -type "double3" -3.1805753586968646e-15 -4.9107764281662775e-12 4.8249730778715811e-07 ;
 	setAttr ".rst" -type "double3" 0.59189075395295421 1.9691029790283729 0.00029339863920734889 ;
 	setAttr ".rsrr" -type "double3" -6.3611300133765362e-15 -4.9044153187899577e-12 
 		4.8249731096771272e-07 ;
@@ -1708,7 +1123,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeJFKG2_parentCon
 	setAttr ".tg[0].tot" -type "double3" -8.8817841970012523e-16 1.6263032587282567e-19 
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" 7.2580962708183634 90.08853316677876 97.245763895555939 ;
-	setAttr ".lr" -type "double3" -2.3572684002441778e-12 -12.432024613187506 -7.1652298734035873e-14 ;
+	setAttr ".lr" -type "double3" -2.3726937923717834e-12 -5.7249984266344747e-14 -6.9972202992196176e-14 ;
 	setAttr ".rst" -type "double3" 0 8.8817841970012523e-16 -2.8674543565741568e-20 ;
 	setAttr ".rsrr" -type "double3" -2.3854160110976375e-12 -6.3611093629269018e-15 
 		6.3611093629271661e-15 ;
@@ -1720,9 +1135,10 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr" -p "U
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
 	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
+	setAttr ".r" -type "double3" -177.30700591712008 -0.73704266339284275 -0.0173245254122937 ;
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
@@ -1746,54 +1162,18 @@ createNode pointConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_
 	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr";
 	rename -uid "3E893C16-4B1C-BBB0-452E-A987B8301687";
+	setAttr ".t" -type "double3" 0.00080650205099452865 -2.6645438671112061 -0.12531977891921958 ;
 createNode locator -n "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctrShape" -p "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr";
 	rename -uid "FA2478CC-4633-85F5-5B85-329BA639E8E1";
 	setAttr -k off ".v";
-createNode pointConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr";
-	rename -uid "6EE074C6-4B87-3DB6-62F1-86BE6A890754";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_lFootIKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" 0.00080650205099452865 -2.6645438671112061 -0.12531977891921958 ;
-	setAttr -k on ".w0";
-createNode aimConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr";
-	rename -uid "A9AC4A10-499C-F36A-7043-FB882A9D57DF";
-	addAttr -ci true -sn "w0" -ln "Arnie_lFootIKCW0" -dv 1 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".a" -type "double3" 0 1 0 ;
-	setAttr ".wut" 4;
-	setAttr ".rsrr" -type "double3" -177.30700591712008 -0.73704266339284275 -0.0173245254122937 ;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "5BF3BD5B-4E17-1E01-25AD-C59E2619631D";
+	setAttr ".t" -type "double3" 0 5.5511151231257827e-17 0 ;
 	setAttr ".rp" -type "double3" 0.58708993024546996 0.37364294050009772 1.5636065573565769 ;
 	setAttr ".sp" -type "double3" 0.58708993024546996 0.37364294050009772 1.5636065573565769 ;
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lToeIKC" -p "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG";
 	rename -uid "620DF54E-4896-6C5F-0BD8-4BA258B13C8C";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
 	setAttr -k off ".tz";
@@ -1833,25 +1213,8 @@ createNode ikHandle -n "Ultimate_Beefy_v1_0_3:Beefy_lBallIKHandle" -p "Ultimate_
 createNode ikHandle -n "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle" -p "Ultimate_Beefy_v1_0_3:Beefy_lFootBallPivot";
 	rename -uid "C89080B7-4210-F25E-6226-F08845CCCFED";
 	setAttr ".t" -type "double3" 3.3306690738754696e-16 0.66673350334153159 -0.61655636599479891 ;
+	setAttr ".pv" -type "double3" -0.0026147351308659639 -1.4268225380153887 1.3748210359457513 ;
 	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle";
-	rename -uid "A78CE292-4833-44CD-B06F-7687D1AACC77";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_lKneeIKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" -0.0026147351308659639 -1.4268225380153887 1.3748210359457513 ;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeTargetLockLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_lFootBallPivot";
 	rename -uid "72AD3750-48B3-CF94-2D97-D994FB7BF999";
 createNode locator -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeTargetLockLctrShape" -p "Ultimate_Beefy_v1_0_3:Beefy_lKneeTargetLockLctr";
@@ -1878,33 +1241,13 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeTargetLockLctr_
 	setAttr ".rst" -type "double3" 1.4432899320127035e-15 0.66673350334153203 -0.61655636599479802 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG";
-	rename -uid "23660620-40CD-2CE3-86C0-F58E587D0630";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_lFootIKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -0.005341853430676724 -0.29309056284157681 
-		1.6889263362757965 ;
-	setAttr ".lr" -type "double3" 0 10.793766113591998 0 ;
-	setAttr ".rst" -type "double3" 0 5.5511151231257827e-17 0 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "6D172712-47AC-22F2-A7F4-11811C81C39B";
 	setAttr ".v" no;
+	setAttr ".r" -type "double3" 44.009505109905142 -43.936603065329791 -90.104997724557577 ;
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr";
 	rename -uid "CE187C5F-40A7-DFDC-43F0-A59105738BC3";
+	setAttr ".t" -type "double3" 1.9814041164556586 -8.8817841970012523e-16 2.2204460492503131e-16 ;
 createNode locator -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctrShape" -p "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr";
 	rename -uid "71728062-4A2A-7B1A-7425-1C8B2101C28F";
 	setAttr -k off ".v";
@@ -1932,28 +1275,10 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lAnkleIKLockLctr_par
 	setAttr ".tg[0].tot" -type "double3" 1.3322676295501878e-15 0.66673350334153203 
 		-0.61655636599479791 ;
 	setAttr ".tg[0].tor" -type "double3" 45.819717183311809 34.592702256231206 -107.18581315832434 ;
-	setAttr ".lr" -type "double3" 14.187344001562048 -7.5152802225260968 -42.222384966511967 ;
+	setAttr ".lr" -type "double3" 13.649588008959078 -11.73796441761691 -33.828116479200133 ;
 	setAttr ".rst" -type "double3" 1.8242666453628904 -0.14744945819206318 -0.65779793377723805 ;
 	setAttr ".rsrr" -type "double3" 4.7708320221952744e-15 -4.6346016129526641e-31 1.1131941385122306e-14 ;
 	setAttr ".int" 2;
-	setAttr -k on ".w0";
-createNode pointConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr";
-	rename -uid "31334CB7-4937-FDE9-07DE-A8B2A032E780";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_lKneeIKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" 1.9814041164556586 -8.8817841970012523e-16 2.2204460492503131e-16 ;
 	setAttr -k on ".w0";
 createNode aimConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_aimConstraint1" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr";
@@ -1992,25 +1317,6 @@ createNode pointConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_pointC
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 0.59162528162515216 3.3312773704528809 -2.7755575615628914e-17 ;
 	setAttr -k on ".w0";
-createNode aimConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr";
-	rename -uid "B1363CE1-4A07-C71A-7CCF-729F113CAAF1";
-	addAttr -ci true -sn "w0" -ln "Arnie_lKneeIKCW0" -dv 1 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".wut" 4;
-	setAttr ".rsrr" -type "double3" 44.009505109905142 -43.936603065329791 -90.104997724557577 ;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "3CCE38C3-4049-9D6D-B803-D9B2F0B7388E";
 	setAttr -k off ".v";
@@ -2026,48 +1332,6 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG" -p "Ultimate_
 	setAttr ".rp" -type "double3" 0.59243178367614791 0.6667335033416748 0.12531977891922103 ;
 	setAttr ".rpt" -type "double3" -1.1848635673522958 0 -0.25063955783844211 ;
 	setAttr ".sp" -type "double3" 0.59243178367614791 0.6667335033416748 0.12531977891922103 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC" -p "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG";
-	rename -uid "832AD99E-46B4-65B2-98E3-3F95D2A57F2C";
-	addAttr -ci true -sn "SwitchIkFk" -ln "SwitchIkFk" -min 0 -max 1 -at "double";
-	addAttr -ci true -sn "curve" -ln "curve" -min 0 -max 1 -at "double";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 0.59243178367614791 0.6667335033416748 0.78593763100442593 ;
-	setAttr ".sp" -type "double3" 0.59243178367614791 0.6667335033416748 0.78593763100442593 ;
-	setAttr -k on ".SwitchIkFk";
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:curveShape28" -p "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC";
-	rename -uid "78CFB91A-43E2-2894-07FC-5498051F1866";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		1 14 0 no 3
-		15 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
-		15
-		0.59243178367614791 0.6667335033416748 0.78593763100442593
-		0.76859654423220258 0.6667335033416748 0.9621023915604805
-		0.68051416395417519 0.6667335033416748 0.9621023915604805
-		0.68051416395417519 0.6667335033416748 1.2263495323945628
-		0.50434940339812062 0.6667335033416748 1.2263495323945628
-		0.50434940339812062 0.6667335033416748 0.9621023915604805
-		0.41626702312009323 0.6667335033416748 0.9621023915604805
-		0.59243178367614791 0.6667335033416748 0.78593763100442593
-		0.59243178367614791 0.49056874278562013 0.9621023915604805
-		0.59243178367614791 0.57865112306364752 0.9621023915604805
-		0.59243178367614791 0.57865112306364752 1.2263495323945628
-		0.59243178367614791 0.75481588361970209 1.2263495323945628
-		0.59243178367614791 0.75481588361970209 0.9621023915604805
-		0.59243178367614791 0.84289826389772948 0.9621023915604805
-		0.59243178367614791 0.6667335033416748 0.78593763100442593
-		;
 createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG_parentConstraint1" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG";
 	rename -uid "5BC0A9DA-426C-EA2B-525D-56B596A431E4";
@@ -2086,7 +1350,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG_parentC
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 0 -1.1102230246251565e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -132.76085317769127 -89.999999999980233 0 ;
-	setAttr ".lr" -type "double3" -4.4961455799078621e-05 140.27975387535744 -6.8462609453736229e-06 ;
+	setAttr ".lr" -type "double3" -42.679906700700144 -0.96612711937783535 84.321218521772508 ;
 	setAttr ".rst" -type "double3" 1.1102230246251565e-16 0 -2.7755575615628914e-17 ;
 	setAttr ".rsrr" -type "double3" -2.5444437451708134e-14 -179.99999999999892 -2.793799232197553e-11 ;
 	setAttr ".int" 2;
@@ -2106,56 +1370,6 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG" -p "Ultimate_Bee
 	setAttr ".rp" -type "double3" -0.59243178367614791 -1.7889937943077348e-14 0.12531977891922111 ;
 	setAttr ".rpt" -type "double3" 0 3.5764528639542368e-14 -0.25063955783844222 ;
 	setAttr ".sp" -type "double3" -0.59243178367614791 -1.7889937943077348e-14 0.12531977891922111 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC" -p "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG";
-	rename -uid "9B431A09-4A26-BE7E-3DAE-E7A2B809AA13";
-	addAttr -ci true -sn "Stretch" -ln "Stretch" -min 0 -max 1 -at "double";
-	addAttr -ci true -sn "KneeLock" -ln "KneeLock" -min 0 -max 1 -at "double";
-	addAttr -ci true -sn "footTilt" -ln "footTilt" -min -10 -max 10 -at "double";
-	addAttr -ci true -sn "heelBall" -ln "heelBall" -min -10 -max 10 -at "double";
-	addAttr -ci true -sn "toeUpDn" -ln "toeUpDn" -min -10 -max 10 -at "double";
-	addAttr -ci true -sn "ballSwivel" -ln "ballSwivel" -at "double";
-	setAttr -k off ".v";
-	setAttr ".ro" 1;
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" -0.59243178367614791 -0.6667335033416748 0.12531977891922103 ;
-	setAttr ".sp" -type "double3" -0.59243178367614791 -0.6667335033416748 0.12531977891922103 ;
-	setAttr -k on ".Stretch";
-	setAttr -k on ".KneeLock";
-	setAttr -k on ".footTilt";
-	setAttr -k on ".heelBall";
-	setAttr -k on ".toeUpDn";
-	setAttr -k on ".ballSwivel";
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCShape" -p "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC";
-	rename -uid "A4AA435F-4E19-1124-133E-6585E0AF7E0B";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		3 16 2 no 3
-		21 -2 -1 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
-		19
-		-0.90841327682275086 -1.8032598319472355e-14 0.69382947269290474
-		-0.49013341054913456 -1.8048665633102872e-14 0.77589028051350539
-		-0.1529371502805959 -1.8016048502499487e-14 0.55868996157514417
-		-0.12888184327300822 -1.7946101230338063e-14 0.12746250176915355
-		-0.41251739195053011 -0.1676081864719213 -0.23733773169637726
-		-0.40912522293172826 -0.16760818647192124 -0.57988235409539757
-		-0.12983435726031395 -1.7729475543270043e-14 -0.93791789888194232
-		0.1161351522987748 -1.7659683515776263e-14 -1.2983849825656819
-		-0.080378509368345674 -1.7565879264406724e-14 -1.9244194612176562
-		-0.54942140905033088 -1.7553592879903701e-14 -1.9756066397589767
-		-0.8867908141121017 -1.7577820390187947e-14 -1.8269127695777669
-		-1.1785254548172903 -1.7636513759686268e-14 -1.4875803987961236
-		-1.2884908040270633 -1.7713456384098221e-14 -1.0687242602179108
-		-1.0634617045742361 -0.16760818647192124 -0.56924451919724806
-		-1.0441668909560962 -0.16760818647192133 -0.080575254540078717
-		-1.1209709175599649 -1.7971919036042777e-14 0.33828088403813361
-		-0.90841327682275086 -1.8032598319472355e-14 0.69382947269290474
-		-0.49013341054913456 -1.8048665633102872e-14 0.77589028051350539
-		-0.1529371502805959 -1.8016048502499487e-14 0.55868996157514417
-		;
 createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG_parentConstraint1" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG";
 	rename -uid "68CEDD10-426D-0AC7-BDE0-EEBDB977A947";
@@ -2193,81 +1407,10 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG" -p "Ultimate_Bee
 	setAttr -k off ".sz";
 	setAttr ".rp" -type "double3" 0 0 0.14999999999999997 ;
 	setAttr ".sp" -type "double3" 0 0 0.14999999999999997 ;
-createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC" -p "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG";
-	rename -uid "48B5E2EC-46B3-9A0C-3A70-A9806431E655";
-	addAttr -ci true -sn "Follow" -ln "Follow" -min 0 -max 3 -en "Main:Foot:Hips:Foot and Hips" 
-		-at "enum";
-	setAttr -k off ".v";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".rp" -type "double3" 0 2.2204460492503131e-16 1.5260501096152526 ;
-	setAttr ".sp" -type "double3" 0 2.2204460492503131e-16 1.5260501096152526 ;
-	setAttr -k on ".Follow";
-createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:curveShape26" -p "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC";
-	rename -uid "1D3B3889-4646-630E-2478-FA8B1BA8CF27";
-	setAttr -k off ".v";
-	setAttr ".ove" yes;
-	setAttr ".ovc" 13;
-	setAttr ".cc" -type "nurbsCurve" 
-		1 24 0 no 3
-		25 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24
-		25
-		5.5564847809997213e-05 -0.27250894248071672 1.4742734094675924
-		0.10903691590097268 -0.16348313954930602 1.5260501096152528
-		0.054535127404829346 -0.16349425251886804 1.5260501096152528
-		0.054512901465705352 -0.054490675526581336 1.5614762728741782
-		0.16351647845799203 -0.054468449587457328 1.5260501096152528
-		0.16352759142755405 -0.10897023808360067 1.5260501096152528
-		0.27250894248071672 5.5564847810013862e-05 1.4742734094675924
-		0.16348313954930602 0.10903691590097268 1.5260501096152528
-		0.16349425251886804 0.054535127404829346 1.5260501096152528
-		0.05449067552658135 0.054512901465705338 1.5614762728741782
-		0.054468449587457328 0.16351647845799203 1.5260501096152528
-		0.10897023808360067 0.16352759142755405 1.5260501096152528
-		-5.5564847810030512e-05 0.27250894248071672 1.4742734094675924
-		-0.10903691590097268 0.16348313954930602 1.5260501096152528
-		-0.054535127404829346 0.16349425251886804 1.5260501096152528
-		-0.054512901465705324 0.054490675526581336 1.5614762728741782
-		-0.16351647845799203 0.054468449587457328 1.5260501096152528
-		-0.16352759142755405 0.10897023808360067 1.5260501096152528
-		-0.27250894248071672 -5.5564847810013862e-05 1.4742734094675924
-		-0.16348313954930602 -0.10903691590097268 1.5260501096152528
-		-0.16349425251886804 -0.054535127404829346 1.5260501096152528
-		-0.054490675526581323 -0.054512901465705338 1.5614762728741782
-		-0.054468449587457328 -0.16351647845799203 1.5260501096152528
-		-0.10897023808360067 -0.16352759142755405 1.5260501096152528
-		5.5564847809997213e-05 -0.27250894248071672 1.4742734094675924
-		;
-createNode aimConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC";
-	rename -uid "AA2FDC37-43B0-3AE9-671C-0E964875C823";
-	addAttr -ci true -sn "w0" -ln "Arnie_rKneeIKC_TargetLctrW0" -dv 1 -at "double";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".a" -type "double3" 0 0 -1 ;
-	setAttr ".wut" 0;
-	setAttr -k off ".ox";
-	setAttr -k off ".oy";
-	setAttr -k off ".oz";
-	setAttr ".rsrr" -type "double3" 1.8845823544224973e-18 -5.6556689922631007e-18 0.011682666982221949 ;
 createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG";
 	rename -uid "FDE8A5B5-4314-74B2-13B3-B6A8D01E9E54";
 	addAttr -ci true -k true -sn "w0" -ln "Arnie_MainCW0" -dv 1 -min 0 -at "double";
-	addAttr -ci true -k true -sn "w1" -ln "Arnie_MainHipCW1" -dv 1 -min 0 -at "double";
 	addAttr -ci true -k true -sn "w2" -ln "Arnie_rBallSwivelW2" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2281,11 +1424,9 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentCons
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr -s 3 ".tg";
+	setAttr -s 2 ".tg";
 	setAttr ".tg[0].tot" -type "double3" -0.5918907539529541 1.9691029790283721 0.00029339863920749276 ;
 	setAttr ".tg[0].tor" -type "double3" 2.6927770764881935 0.1206071883810325 -0.011669792651171951 ;
-	setAttr ".tg[1].tot" -type "double3" -0.5918907539529541 -1.8139668068253441 0.00029339863920749276 ;
-	setAttr ".tg[1].tor" -type "double3" 2.6927770764881935 0.1206071883810325 -0.011669792651171951 ;
 	setAttr ".tg[2].tot" -type "double3" 0.00054102972319418634 -1.9691029790283541 
 		0.49094318843623452 ;
 	setAttr ".tg[2].tor" -type "double3" -177.3072229235118 -0.12060718838103252 0.011669792651171941 ;
@@ -2294,8 +1435,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentCons
 	setAttr ".rsrr" -type "double3" 2.6927770764881931 0.12060718838103252 -0.011669792651171955 ;
 	setAttr ".int" 0;
 	setAttr -k on ".w0";
-	setAttr -k on ".w1";
-	setAttr -k on ".w2";
+	setAttr -k on ".w2" 0;
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_TargetLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "852E974E-49F6-B698-D259-7998118EEE01";
 	setAttr ".v" no;
@@ -2340,7 +1480,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG" -p "Ultimate_Bee
 	setAttr -k off ".sz";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rBallFKC" -p "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG";
 	rename -uid "03A45419-4422-8D2D-248A-408F403E306F";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v" no;
 	setAttr ".ove" yes;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -2388,7 +1528,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG_parentCons
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.66673350334165626 -0.61655636599466357 0 ;
 	setAttr ".tg[0].tor" -type "double3" 0 1.4484246019384855e-11 89.999999999999972 ;
-	setAttr ".lr" -type "double3" -179.99999999999997 -77.567975386812577 1.4963981082610912e-14 ;
+	setAttr ".lr" -type "double3" -179.99999999999997 -90 8.9959671327898885e-15 ;
 	setAttr ".rst" -type "double3" -0.59243178367614824 1.7985612998927536e-14 0.49123658707544227 ;
 	setAttr ".rsrr" -type "double3" -179.99999999999997 -90 2.2489917831974728e-14 ;
 	setAttr ".int" 2;
@@ -2409,7 +1549,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG" -p "Ultimate_Be
 	setAttr -k off ".sz";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKC" -p "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG";
 	rename -uid "54D49F43-4DC2-277B-CAA7-0C9A4567219B";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v" no;
 	setAttr ".ove" yes;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -2458,7 +1598,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG_parentCon
 		3.3484326422694721e-13 ;
 	setAttr ".tg[0].tor" -type "double3" -0.12221083926741992 -0.023801783737613585 
 		5.5091204272049481 ;
-	setAttr ".lr" -type "double3" -90 -89.999999999999972 -12.432024613187444 ;
+	setAttr ".lr" -type "double3" -90 -89.999999999999986 -3.1805546814635168e-14 ;
 	setAttr ".rst" -type "double3" -0.59243178367614791 0.66673350334167458 -0.12531977891922111 ;
 	setAttr ".rsrr" -type "double3" -89.999999999999986 -89.999999999999986 -1.272221872585407e-14 ;
 	setAttr ".int" 2;
@@ -2478,7 +1618,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG" -p "Ultimate_Bee
 	setAttr -k off ".sz";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKC" -p "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG";
 	rename -uid "04314CC9-490C-6729-1825-66BF8AD47EEC";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v" no;
 	setAttr ".ove" yes;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -2530,7 +1670,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG_parentCons
 		-3.3306690738754696e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0.029518421982536344 0.00088059766177994746 
 		-5.5214757036160176 ;
-	setAttr ".lr" -type "double3" -84.361989234014658 -91.188200950111593 -12.253788279749141 ;
+	setAttr ".lr" -type "double3" -84.490829510902813 -89.976308106502501 0.11992575767944437 ;
 	setAttr ".rst" -type "double3" -0.59189075395295432 1.9691029790283727 0.00029339863920756036 ;
 	setAttr ".rsrr" -type "double3" -84.490829510902799 -89.976308106502529 0.1199257576794539 ;
 	setAttr ".int" 2;
@@ -2538,9 +1678,10 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG_parentCons
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "D32EF900-4462-3F7F-7534-B3816C9B0535";
 	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
+	setAttr ".t" -type "double3" 0 -4.4408920985006262e-16 0 ;
+	setAttr -l on -k off ".tx";
+	setAttr -l on -k off ".ty";
+	setAttr -l on -k off ".tz";
 	setAttr -k off ".rx";
 	setAttr -k off ".ry";
 	setAttr -k off ".rz";
@@ -2554,7 +1695,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG" -p "Ultimate_Beef
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rHipFKC" -p "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG";
 	rename -uid "52E1EFF5-4A87-4C77-F4F5-8A88A53A9526";
 	addAttr -ci true -sn "HipOrient" -ln "HipOrient" -dv 1 -min 0 -max 1 -at "double";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v" no;
 	setAttr ".ove" yes;
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
@@ -2585,33 +1726,9 @@ createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCShape" -p "Ultimate
 		3.3308613911243756 -0.71005311110295943 0.59227417072191624
 		3.2009580243266202 -0.50195935116421142 0.10713919649415798
 		;
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG";
-	rename -uid "14B2ECA7-4C69-0B99-23D8-DEB7A47B8024";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_MainHipCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" -0.59162528162515216 -0.45179241540083526 6.6613381477509392e-16 ;
-	setAttr ".tg[0].tor" -type "double3" -90.012322994734788 -89.988833688888235 0.092045780778163361 ;
-	setAttr ".lr" -type "double3" -90.012322994734788 -89.988833688888235 0.092045780778163361 ;
-	setAttr ".rst" -type "double3" 0 -4.4408920985006262e-16 0 ;
-	setAttr ".rsrr" -type "double3" -90.012322994734788 -89.988833688888235 0.092045780778163361 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG";
 	rename -uid "75B3A8C3-475D-FD44-5943-49A140F485C3";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_MainHipCW0" -dv 1 -min 0 -at "double";
 	addAttr -ci true -k true -sn "w1" -ln "Arnie_MainCW1" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
 	setAttr -k off ".v";
@@ -2625,15 +1742,11 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConst
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr -s 2 ".tg";
-	setAttr ".tg[0].tot" -type "double3" -0.59162528162515216 -0.45179241540083526 6.6613381477509392e-16 ;
-	setAttr ".tg[0].tor" -type "double3" -90.012322994734788 -89.988833688888235 0.092045780778163361 ;
 	setAttr ".tg[1].tot" -type "double3" -1.7199999999999998 9.6848414953458573 1.9369012000012793e-15 ;
 	setAttr ".tg[1].tor" -type "double3" -90.012322994734788 -89.988833688888235 0.092045780778163361 ;
-	setAttr ".lr" -type "double3" -90.01261441350367 -89.986118039456386 -12.339978540373032 ;
+	setAttr ".lr" -type "double3" -90.017149483536087 -89.976887074282288 -44.064059870412045 ;
 	setAttr ".rst" -type "double3" 0 -4.4408920985006262e-16 0 ;
 	setAttr ".rsrr" -type "double3" -90.012322994734788 -89.988833688888235 0.092045780778163361 ;
-	setAttr -k on ".w0";
 	setAttr -k on ".w1";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rLegIKFKG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "F9D962AA-456D-D65F-F841-AE8EA9EB3D60";
@@ -2663,7 +1776,6 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rLegIKFKG_parentCons
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 -12.432024613187451 0 ;
 	setAttr ".rst" -type "double3" 0 3.7830697858537161 0 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
@@ -2693,7 +1805,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rHipJFK_parentConstr
 		-2.2204460492503131e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -9.5168159609416118e-15 2.8815526460555469e-18 
 		3.1867667023257502e-15 ;
-	setAttr ".lr" -type "double3" -6.3560250691922263e-30 -2.5444437451708128e-14 2.8624992133171648e-14 ;
+	setAttr ".lr" -type "double3" 0 0 2.5444437451708134e-14 ;
 	setAttr ".rst" -type "double3" -0.59162528162515227 -0.45179241540083614 -1.5615282109169336e-17 ;
 	setAttr ".rsrr" -type "double3" 1.5902773407317584e-14 -1.2722218725854067e-14 6.361109362927032e-15 ;
 	setAttr ".int" 2;
@@ -2702,14 +1814,14 @@ createNode joint -n "Ultimate_Beefy_v1_0_3:Beefy_rHipJIK" -p "Ultimate_Beefy_v1_
 	rename -uid "E7393BB0-41FD-0C49-33D2-289615C63D01";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.59162528162515238 -0.4517924154008357 -1.5612511283791264e-17 ;
-	setAttr ".r" -type "double3" 10.14713841471834 -2.5308629344431579 2.041329913234176 ;
+	setAttr ".r" -type "double3" -155.61300370721108 -13.076697565738826 -6.5568893528143875 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -89.907956622581622 0.01234093319335125 89.988833703038495 ;
 createNode joint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeJIK" -p "Ultimate_Beefy_v1_0_3:Beefy_rHipJIK";
 	rename -uid "6E9F522B-42A0-08E4-0342-9193D2E51A23";
 	setAttr ".t" -type "double3" -1.3621744488908334 2.9159617428997642e-16 -2.2204460492503131e-16 ;
-	setAttr ".r" -type "double3" 5.0311594771695471e-19 0.00031178752090305192 -34.415089401715456 ;
+	setAttr ".r" -type "double3" 1.7656233233465076e-19 -0.00099539294233082893 5.5214611529582154 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0.028214605244744572 0.0037208260422308959 -5.5214750063007658 ;
@@ -2717,7 +1829,7 @@ createNode joint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeJIK" -p "Ultimate_Beefy_v1
 createNode joint -n "Ultimate_Beefy_v1_0_3:Beefy_rAnkleJIK" -p "Ultimate_Beefy_v1_0_3:Beefy_rKneeJIK";
 	rename -uid "5E487A68-486C-6415-DCC8-61BD75C9B262";
 	setAttr ".t" -type "double3" -1.308413242935859 6.3837823915946501e-16 0 ;
-	setAttr ".r" -type "double3" -28.072814022781095 26.091503701247891 26.032961455428737 ;
+	setAttr ".r" -type "double3" 158.54576441543389 0.29599042573880874 82.702954919389001 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -0.096729489834627813 0.072858714300133617 48.269937611469601 ;
@@ -2824,7 +1936,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rAnkleJFK_parentCons
 	setAttr ".tg[0].tot" -type "double3" 0 4.7184478546569153e-16 0 ;
 	setAttr ".tg[0].tor" -type "double3" 1.9748181281647518e-11 2.4444757772603123e-15 
 		42.760853177691281 ;
-	setAttr ".lr" -type "double3" -1.9725800134436729e-11 1.2722218725859539e-14 3.1805546814632971e-14 ;
+	setAttr ".lr" -type "double3" -1.9728980689118192e-11 7.1186597993693317e-27 4.1347210859025715e-14 ;
 	setAttr ".rst" -type "double3" -0.59243178367614791 0.6667335033416748 -0.12531977891922158 ;
 	setAttr ".rsrr" -type "double3" -1.9738522353162582e-11 -6.3611093629215533e-15 
 		3.1805546814636253e-14 ;
@@ -2865,7 +1977,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rAnkleJFKG2_parentCo
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 -3.0531133177191805e-16 0 ;
 	setAttr ".tg[0].tor" -type "double3" 5.7729864941162923 89.878900943795358 -78.717867570291034 ;
-	setAttr ".lr" -type "double3" 8.8947821869117672e-13 -12.432024613187444 -9.7707680091869522e-15 ;
+	setAttr ".lr" -type "double3" 8.8737475612832115e-13 -9.5416640443904762e-15 -9.5416640443906245e-15 ;
 	setAttr ".rst" -type "double3" 0 0 1.4094628242311558e-18 ;
 	setAttr ".rsrr" -type "double3" 8.8737475612832115e-13 -3.1805546814634919e-15 -3.1805546814635416e-15 ;
 	setAttr ".int" 2;
@@ -2913,7 +2025,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeJFK_parentConst
 		-4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -0.0011668572816973387 -4.8992686595323809e-12 
 		-4.8249734277325959e-07 ;
-	setAttr ".lr" -type "double3" -6.3611300535540101e-15 -4.91395698283435e-12 4.824973459538143e-07 ;
+	setAttr ".lr" -type "double3" -3.1805754390505871e-15 -4.929859756255059e-12 4.8249734913436902e-07 ;
 	setAttr ".rst" -type "double3" -0.59189075395295443 1.9691029790283732 0.00029339863920728698 ;
 	setAttr ".rsrr" -type "double3" 9.5416432868034792e-15 -4.9298597563086271e-12 4.8249734913436902e-07 ;
 	setAttr ".int" 2;
@@ -2954,7 +2066,7 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeJFKG2_parentCon
 	setAttr ".tg[0].tot" -type "double3" -4.4408920985006262e-16 8.1315162936412833e-20 
 		-1.1102230246251565e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 6.9292255805735694 89.907279386565676 -83.083106383509161 ;
-	setAttr ".lr" -type "double3" -4.2103532440700775e-12 -12.43202461318743 -3.2569226697296045e-15 ;
+	setAttr ".lr" -type "double3" -4.2110543982576963e-12 1.9083328088780984e-14 -3.1805546814642181e-15 ;
 	setAttr ".rst" -type "double3" 1.1102230246251565e-16 -4.4408920985006262e-16 -1.6401552493824227e-19 ;
 	setAttr ".rsrr" -type "double3" -4.2110543982576963e-12 1.9083328088780984e-14 -3.1805546814642181e-15 ;
 	setAttr ".int" 2;
@@ -2965,9 +2077,10 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr" -p "U
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
 	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
+	setAttr ".r" -type "double3" -177.30700591712008 0.73704266339374724 0.01732452541231496 ;
+	setAttr -l on -k off ".rx";
+	setAttr -l on -k off ".ry";
+	setAttr -l on -k off ".rz";
 	setAttr -k off ".sx";
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
@@ -2991,47 +2104,10 @@ createNode pointConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_
 	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr";
 	rename -uid "B2FB9E29-4DDC-34CD-83B3-F2BFD94B1652";
+	setAttr ".t" -type "double3" -0.00080650205099552785 -2.6645438671112056 -0.12531977891922108 ;
 createNode locator -n "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctrShape" -p "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr";
 	rename -uid "5A040A16-4542-EA43-6E95-5ABF3A43F284";
 	setAttr -k off ".v";
-createNode pointConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr";
-	rename -uid "9DA3E571-4E06-F542-0CC8-04BF40BCFB92";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_rFootIKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" -0.00080650205099552785 -2.6645438671112056 -0.12531977891922108 ;
-	setAttr -k on ".w0";
-createNode aimConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr";
-	rename -uid "1918D3E7-43C4-D63F-11FA-4089E5DEC094";
-	addAttr -ci true -sn "w0" -ln "Arnie_rFootIKCW0" -dv 1 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".a" -type "double3" 0 1 0 ;
-	setAttr ".wut" 4;
-	setAttr ".rsrr" -type "double3" -177.30700591712008 0.73704266339374724 0.01732452541231496 ;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "CA3A6A6E-426C-711A-CF50-9CBBD01C8AC1";
 	setAttr ".rp" -type "double3" -0.59243178367614791 -1.7889937943077348e-14 0.12531977891922111 ;
@@ -3039,7 +2115,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG" -p "Ultimate_Beef
 	setAttr ".sp" -type "double3" -0.59243178367614791 -1.7889937943077348e-14 0.12531977891922111 ;
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rToeIKC" -p "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG";
 	rename -uid "3E5CBDA1-4185-8227-83B5-9B9F24D13171";
-	setAttr -k off ".v";
+	setAttr -l on -k off ".v";
 	setAttr -k off ".tx";
 	setAttr -k off ".ty";
 	setAttr -k off ".tz";
@@ -3080,25 +2156,8 @@ createNode ikHandle -n "Ultimate_Beefy_v1_0_3:Beefy_rBallIKHandle" -p "Ultimate_
 createNode ikHandle -n "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle" -p "Ultimate_Beefy_v1_0_3:Beefy_rFootBallPivot";
 	rename -uid "73785C0E-4A9F-A6C2-590D-E9BB024A6DE7";
 	setAttr ".t" -type "double3" 3.3306690738754696e-16 0.66673350334165693 -0.61655636599466379 ;
+	setAttr ".pv" -type "double3" 0.0026147351308661859 -1.4268225380153881 1.3748210359457507 ;
 	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle";
-	rename -uid "4D3DDF93-42AA-D7F8-E400-21993C7F67D0";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_rKneeIKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" 0.0026147351308661859 -1.4268225380153881 1.3748210359457507 ;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeTargetLockLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_rFootBallPivot";
 	rename -uid "513FA4C3-4487-B15A-1F9D-8DA45A491986";
 createNode locator -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeTargetLockLctrShape" -p "Ultimate_Beefy_v1_0_3:Beefy_rKneeTargetLockLctr";
@@ -3125,31 +2184,13 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeTargetLockLctr_
 	setAttr ".rst" -type "double3" 3.3306690738754696e-16 0.66673350334165693 -0.61655636599466335 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG";
-	rename -uid "98434EF7-4CC6-DC37-A668-56B262D4D41B";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_rFootIKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".tg[0].tot" -type "double3" 0 0.66673350334165693 8.3266726846886741e-17 ;
-	setAttr ".lr" -type "double3" 180 -0.27586796362078964 3.3784342930662845e-17 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "3F6CDF21-4DF3-8FF8-EF5F-9DB4DCAF6281";
 	setAttr ".v" no;
+	setAttr ".r" -type "double3" 43.863797161643902 -43.936603065329791 -89.895002275442394 ;
 createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr" -p "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr";
 	rename -uid "A3D352B0-4D8D-5E70-D6F6-7DA772E53921";
+	setAttr ".t" -type "double3" 1.9814041164556575 2.2204460492503131e-16 0 ;
 createNode locator -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctrShape" -p "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr";
 	rename -uid "93184B61-4930-C5CD-9ADC-2B9D2C09041F";
 	setAttr -k off ".v";
@@ -3177,29 +2218,11 @@ createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rAnkleIKLockLctr_par
 	setAttr ".tg[0].tot" -type "double3" 1.1102230246251565e-16 0.66673350334165737 
 		-0.61655636599466312 ;
 	setAttr ".tg[0].tor" -type "double3" 42.053585088237256 34.592702256231199 -72.814186841675664 ;
-	setAttr ".lr" -type "double3" 8.6480825504402254 1.313829510645115 49.190658938525829 ;
+	setAttr ".lr" -type "double3" 76.010766602109683 174.24678738961703 -13.936153542300021 ;
 	setAttr ".rst" -type "double3" 1.82426664536289 -0.65187309528528203 -0.17175835364233188 ;
 	setAttr ".rsrr" -type "double3" -1.1927080055488186e-14 -4.3449390121431231e-31 
 		-4.1744780194208644e-15 ;
 	setAttr ".int" 2;
-	setAttr -k on ".w0";
-createNode pointConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr";
-	rename -uid "0ACC33A5-484C-9EAB-5659-F9808825C5F1";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_rKneeIKCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".rst" -type "double3" 1.9814041164556575 2.2204460492503131e-16 0 ;
 	setAttr -k on ".w0";
 createNode aimConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_aimConstraint1" 
 		-p "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr";
@@ -3238,25 +2261,6 @@ createNode pointConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_pointC
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -0.59162528162515238 3.3312773704528804 -1.5612511283791264e-17 ;
 	setAttr -k on ".w0";
-createNode aimConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr";
-	rename -uid "69A0199C-4A70-C260-8807-D78D48A17CE2";
-	addAttr -ci true -sn "w0" -ln "Arnie_rKneeIKCW0" -dv 1 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".wut" 4;
-	setAttr ".rsrr" -type "double3" 43.863797161643902 -43.936603065329791 -89.895002275442394 ;
-	setAttr -k on ".w0";
 createNode transform -n "Ultimate_Beefy_v1_0_3:BeefyExtraNodes" -p "Ultimate_Beefy_v1_0_3:Beefy_MainC";
 	rename -uid "07B8A0A0-4A4F-31A5-2B6D-D1A941238720";
 	setAttr -k off ".v" no;
@@ -3277,7 +2281,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_spineLengthC" -p "Ultimate_
 createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShape" -p "Ultimate_Beefy_v1_0_3:Beefy_spineLengthC";
 	rename -uid "E7849C80-4BCD-43E4-F948-7099E79D9A86";
 	setAttr -k off ".v";
-	setAttr -s 8 ".iog[0].og";
+	setAttr -s 6 ".iog[0].og";
 	setAttr ".tw" yes;
 createNode nurbsCurve -n "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShapeOrig" -p "Ultimate_Beefy_v1_0_3:Beefy_spineLengthC";
 	rename -uid "8A435ACB-4C27-0DE2-A71C-339482CD2CB0";
@@ -3312,6 +2316,7 @@ createNode joint -n "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ" -p "Ultimate_Beefy_v1_0_
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".uoc" 1;
 	setAttr ".ove" yes;
+	setAttr ".t" -type "double3" 0 3.7830697858537161 0 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "___";
@@ -3374,7 +2379,7 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_lLegUpLctr" -p "Ultimate_Be
 	rename -uid "DBFC4B58-4A8B-051E-664D-6A9C1A9E6BB8";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 1.3621744488908336 -2.01498973756431e-16 -8.8817841970012523e-16 ;
-	setAttr ".r" -type "double3" 0.03241460581646928 0.0039754514709189857 -10.525608062744141 ;
+	setAttr ".r" -type "double3" 0.03241460581646928 0.0039754514709189857 -16.636123657226562 ;
 	setAttr ".s" -type "double3" 1 1 1.0000000000000002 ;
 createNode locator -n "Ultimate_Beefy_v1_0_3:Beefy_lLegUpLctrShape" -p "Ultimate_Beefy_v1_0_3:Beefy_lLegUpLctr";
 	rename -uid "1C17AB8A-4B1D-780F-3BDC-39B0BDA16FA7";
@@ -3437,49 +2442,29 @@ createNode transform -n "Ultimate_Beefy_v1_0_3:Beefy_rLegUpLctr" -p "Ultimate_Be
 	rename -uid "9E2607F3-4ACA-12FE-4B4F-458DFEF55A72";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -1.3621744488908332 2.9156906923566428e-16 -1.1102230246251565e-16 ;
-	setAttr ".r" -type "double3" 0.028214571674527868 0.0035693463059977234 -17.207544326782227 ;
+	setAttr ".r" -type "double3" 0.028214571674527868 0.0035693463059977234 1.3803653717041016 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999989 0.99999999999999989 ;
 createNode locator -n "Ultimate_Beefy_v1_0_3:Beefy_rLegUpLctrShape" -p "Ultimate_Beefy_v1_0_3:Beefy_rLegUpLctr";
 	rename -uid "0E9DE47F-4CE4-3428-F903-63BE6779820F";
 	setAttr -k off ".v";
-createNode parentConstraint -n "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1" 
-		-p "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ";
-	rename -uid "0D22A3DC-43E2-7125-7C14-D28CAFA8131B";
-	addAttr -ci true -k true -sn "w0" -ln "Arnie_MainHipCW0" -dv 1 -min 0 -at "double";
-	setAttr -k on ".nds";
-	setAttr -k off ".v";
-	setAttr -k off ".tx";
-	setAttr -k off ".ty";
-	setAttr -k off ".tz";
-	setAttr -k off ".rx";
-	setAttr -k off ".ry";
-	setAttr -k off ".rz";
-	setAttr -k off ".sx";
-	setAttr -k off ".sy";
-	setAttr -k off ".sz";
-	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 0 -12.432024613187453 0 ;
-	setAttr ".rst" -type "double3" 0 3.7830697858537161 0 ;
-	setAttr ".int" 2;
-	setAttr -k on ".w0";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "3E354A50-44CE-A1D5-FF64-46A308807C60";
+	rename -uid "2F3ECBFF-4428-68A0-925A-629B8B6AE8DC";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "414E73D3-40E0-4CC2-D5F7-8BB1BD78C640";
+	rename -uid "1DD84EF7-4862-F5A6-553E-FC9820261207";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "A34670E8-461E-095B-F0DA-99AFB702D31C";
+	rename -uid "30F7713D-4670-EC70-0612-D0BA5326A245";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "E20CC2B4-4AB8-5F06-1D1E-48BF6B649096";
-	setAttr -s 3 ".dli[1:3]"  4 1 2;
+	rename -uid "B4E38CB3-4FB0-1E45-E09D-809E0C719373";
+	setAttr -s 4 ".dli[1:3]"  4 1 2;
 	setAttr -s 4 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "AD86C33F-B446-9A72-33B8-0B9D3BFC2C83";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "98DF19E2-45E6-A393-645D-65AA5E26E763";
+	rename -uid "B9B0581E-4930-5B96-738A-6995963836CF";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C49CFE41-BF43-AB57-BD30-2E9AA164E5C6";
 	setAttr ".g" yes;
@@ -3513,7 +2498,7 @@ createNode aiAOVDriver -s -n "defaultArnoldDisplayDriver";
 	setAttr ".output_mode" 0;
 createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 	rename -uid "601AD2AF-9F46-F463-A03D-B39A87917D58";
-	setAttr -s 219 ".phl";
+	setAttr -s 207 ".phl";
 	setAttr ".phl[1]" 0;
 	setAttr ".phl[2]" 0;
 	setAttr ".phl[3]" 0;
@@ -3721,22 +2706,12 @@ createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 	setAttr ".phl[205]" 0;
 	setAttr ".phl[206]" 0;
 	setAttr ".phl[207]" 0;
-	setAttr ".phl[208]" 0;
-	setAttr ".phl[209]" 0;
-	setAttr ".phl[210]" 0;
-	setAttr ".phl[211]" 0;
-	setAttr ".phl[212]" 0;
-	setAttr ".phl[213]" 0;
-	setAttr ".phl[214]" 0;
-	setAttr ".phl[215]" 0;
-	setAttr ".phl[216]" 0;
-	setAttr ".phl[217]" 0;
-	setAttr ".phl[218]" 0;
-	setAttr ".phl[219]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"Ultimate_Beefy_v1_0_2RN"
 		"Ultimate_Beefy_v1_0_2RN" 0
-		"Ultimate_Beefy_v1_0_2RN" 251
+		"Ultimate_Beefy_v1_0_2RN" 255
+		2 "|Ultimate_Beefy_v1_0_2:Beefy" "outlinerColor" " -type \"float3\" 0 0 0"
+		
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_Spine01FKCG|Ultimate_Beefy_v1_0_2:Beefy_Spine01FKC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_Spine02FKCG|Ultimate_Beefy_v1_0_2:Beefy_Spine02FKC" 
@@ -3747,12 +2722,26 @@ createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC" 
+		"Stretch" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC" 
+		"KneeLock" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC" 
+		"footTilt" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC" 
+		"heelBall" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC" 
+		"toeUpDn" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC" 
+		"ballSwivel" " -k 1 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristFKC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lElbowFKCG|Ultimate_Beefy_v1_0_2:Beefy_lElbowFKC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKC" 
+		"ShoulderOrient" " -k 1"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lClavicleCG|Ultimate_Beefy_v1_0_2:Beefy_lClavicleC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1C" 
@@ -3775,6 +2764,20 @@ createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC" 
+		"Stretch" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC" 
+		"KneeLock" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC" 
+		"footTilt" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC" 
+		"heelBall" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC" 
+		"toeUpDn" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC" 
+		"ballSwivel" " -k 1 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rArmSwitchCG|Ultimate_Beefy_v1_0_2:Beefy_rArmSwitchC" 
+		"SwitchIkFk" " -k 1"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristFKC" 
@@ -3790,6 +2793,8 @@ createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ2CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ2C" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ3CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ3C" 
+		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
+		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
 		2 "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J2CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J2C" 
 		"rotatePivotTranslate" " -type \"double3\" 0 0 0"
@@ -3885,360 +2890,336 @@ createNode reference -n "Ultimate_Beefy_v1_0_2RN";
 		"Ultimate_Beefy_v1_0_2RN.placeHolderList[41]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lLegSwitchCG|Ultimate_Beefy_v1_0_2:Beefy_lLegSwitchC.SwitchIkFk" 
 		"Ultimate_Beefy_v1_0_2RN.placeHolderList[42]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.Stretch" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[43]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.KneeLock" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[44]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.footTilt" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[45]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.heelBall" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[46]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.toeUpDn" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[47]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.ballSwivel" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[48]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.translateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[49]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[43]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.translateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[50]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[44]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.translateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[51]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[45]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[52]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[46]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[53]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[47]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_lFootIKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[54]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[48]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lKneeIKCG|Ultimate_Beefy_v1_0_2:Beefy_lKneeIKC.Follow" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[55]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[49]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lKneeIKCG|Ultimate_Beefy_v1_0_2:Beefy_lKneeIKC.translateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[56]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[50]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lKneeIKCG|Ultimate_Beefy_v1_0_2:Beefy_lKneeIKC.translateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[57]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[51]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lKneeIKCG|Ultimate_Beefy_v1_0_2:Beefy_lKneeIKC.translateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[58]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[52]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lArmSwitchCG|Ultimate_Beefy_v1_0_2:Beefy_lArmSwitchC.SwitchIkFk" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[59]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[53]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lElbowIKCG|Ultimate_Beefy_v1_0_2:Beefy_lElbowIKC.Follow" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[60]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[54]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lElbowIKCG|Ultimate_Beefy_v1_0_2:Beefy_lElbowIKC.translateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[61]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[55]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lElbowIKCG|Ultimate_Beefy_v1_0_2:Beefy_lElbowIKC.translateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[62]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[56]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lElbowIKCG|Ultimate_Beefy_v1_0_2:Beefy_lElbowIKC.translateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[63]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[57]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.Stretch" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[64]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[58]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.ElbowLock" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[65]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[59]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.Hips" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[66]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[60]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.Chest" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[67]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[61]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.Head" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[68]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[62]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.ControlScale" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[69]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[63]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.translateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[70]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[64]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.translateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[71]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[65]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.translateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[72]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[66]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[73]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[67]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[74]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[68]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristIKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[75]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[69]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristFKC.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[76]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[70]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristFKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[77]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[71]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristFKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[78]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[72]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_lWristFKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[79]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[73]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lElbowFKCG|Ultimate_Beefy_v1_0_2:Beefy_lElbowFKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[80]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[74]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKC.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[81]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[75]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKC.ShoulderOrient" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[82]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[76]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[83]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[77]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[84]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[78]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_lShoulderFKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[85]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[79]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lClavicleCG|Ultimate_Beefy_v1_0_2:Beefy_lClavicleC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[86]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[80]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lClavicleCG|Ultimate_Beefy_v1_0_2:Beefy_lClavicleC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[87]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[81]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lClavicleCG|Ultimate_Beefy_v1_0_2:Beefy_lClavicleC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[88]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[82]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1C.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[89]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[83]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1C.scaleY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[90]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[84]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1C.scaleZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[91]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[85]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[92]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[86]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[93]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[87]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ1C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[94]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[88]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ2CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ2C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[95]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[89]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ2CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ2C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[96]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[90]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ2CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ2C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[97]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[91]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ3CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ3C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[98]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[92]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ3CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ3C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[99]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[93]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lWristJG2|Ultimate_Beefy_v1_0_2:Beefy_lWristJG1|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ3CG|Ultimate_Beefy_v1_0_2:Beefy_lThumbJ3C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[100]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[94]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[101]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[95]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[102]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[96]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[103]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[97]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1C.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[104]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[98]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1C.scaleY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[105]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[99]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1C.scaleZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[106]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[100]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[107]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[101]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[108]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[102]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J1C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[109]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[103]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J2CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J2C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[110]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[104]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J2CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J2C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[111]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[105]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J2CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J2C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[112]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[106]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J3CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J3C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[113]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[107]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J3CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J3C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[114]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[108]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J3CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger1J3C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[115]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[109]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1C.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[116]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[110]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1C.scaleY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[117]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[111]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1C.scaleZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[118]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[112]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[119]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[113]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[120]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[114]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J1C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[121]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[115]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J2CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J2C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[122]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[116]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J2CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J2C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[123]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[117]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J2CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J2C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[124]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[118]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J3CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J3C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[125]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[119]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J3CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J3C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[126]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[120]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lPalmCG|Ultimate_Beefy_v1_0_2:Beefy_lPalmC|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J3CG|Ultimate_Beefy_v1_0_2:Beefy_lFinger2J3C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[127]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[121]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lToeIKCG|Ultimate_Beefy_v1_0_2:Beefy_lToeIKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[128]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[122]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lToeIKCG|Ultimate_Beefy_v1_0_2:Beefy_lToeIKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[129]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[123]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_lToeIKCG|Ultimate_Beefy_v1_0_2:Beefy_lToeIKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[130]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[124]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rLegSwitchCG|Ultimate_Beefy_v1_0_2:Beefy_rLegSwitchC.SwitchIkFk" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[131]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.Stretch" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[132]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.KneeLock" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[133]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.footTilt" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[134]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.heelBall" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[135]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.toeUpDn" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[136]" ""
-		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.ballSwivel" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[137]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[125]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.translateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[138]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[126]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.translateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[139]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[127]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.translateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[140]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[128]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[141]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[129]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[142]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[130]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rFootIKCG|Ultimate_Beefy_v1_0_2:Beefy_rFootIKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[143]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[131]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rKneeIKCG|Ultimate_Beefy_v1_0_2:Beefy_rKneeIKC.Follow" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[144]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[132]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rKneeIKCG|Ultimate_Beefy_v1_0_2:Beefy_rKneeIKC.translateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[145]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[133]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rKneeIKCG|Ultimate_Beefy_v1_0_2:Beefy_rKneeIKC.translateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[146]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[134]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rKneeIKCG|Ultimate_Beefy_v1_0_2:Beefy_rKneeIKC.translateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[147]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[135]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rArmSwitchCG|Ultimate_Beefy_v1_0_2:Beefy_rArmSwitchC.SwitchIkFk" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[148]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[136]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rElbowIKCG|Ultimate_Beefy_v1_0_2:Beefy_rElbowIKC.Follow" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[149]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[137]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rElbowIKCG|Ultimate_Beefy_v1_0_2:Beefy_rElbowIKC.translateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[150]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[138]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rElbowIKCG|Ultimate_Beefy_v1_0_2:Beefy_rElbowIKC.translateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[151]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[139]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rElbowIKCG|Ultimate_Beefy_v1_0_2:Beefy_rElbowIKC.translateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[152]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[140]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.Stretch" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[153]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[141]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.ElbowLock" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[154]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[142]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.Hips" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[155]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[143]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.Chest" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[156]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[144]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.Head" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[157]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[145]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.ControlScale" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[158]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[146]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.translateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[159]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[147]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.translateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[160]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[148]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.translateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[161]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[149]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[162]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[150]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[163]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[151]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristIKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristIKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[164]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[152]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristFKC.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[165]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[153]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristFKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[166]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[154]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristFKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[167]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[155]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristFKCG|Ultimate_Beefy_v1_0_2:Beefy_rWristFKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[168]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[156]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rElbowFKCG|Ultimate_Beefy_v1_0_2:Beefy_rElbowFKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[169]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[157]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKC.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[170]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[158]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKC.ShoulderOrient" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[171]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[159]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[172]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[160]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[173]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[161]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG2|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKCG|Ultimate_Beefy_v1_0_2:Beefy_rShoulderFKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[174]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[162]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rClavicleCG|Ultimate_Beefy_v1_0_2:Beefy_rClavicleC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[175]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[163]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rClavicleCG|Ultimate_Beefy_v1_0_2:Beefy_rClavicleC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[176]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[164]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rClavicleCG|Ultimate_Beefy_v1_0_2:Beefy_rClavicleC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[177]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[165]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1C.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[178]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[166]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1C.scaleY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[179]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[167]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1C.scaleZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[180]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[168]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[181]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[169]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[182]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[170]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ1C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[183]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[171]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ2CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ2C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[184]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[172]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ2CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ2C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[185]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[173]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ2CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ2C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[186]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[174]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ3CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ3C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[187]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[175]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ3CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ3C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[188]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[176]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rWristJG2|Ultimate_Beefy_v1_0_2:Beefy_rWristJG1|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ3CG|Ultimate_Beefy_v1_0_2:Beefy_rThumbJ3C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[189]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[177]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[190]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[178]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[191]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[179]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[192]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[180]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1C.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[193]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[181]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1C.scaleY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[194]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[182]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1C.scaleZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[195]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[183]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[196]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[184]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[197]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[185]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J1C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[198]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[186]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J2CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J2C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[199]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[187]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J2CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J2C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[200]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[188]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J2CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J2C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[201]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[189]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J3CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J3C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[202]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[190]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J3CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J3C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[203]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[191]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J3CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger1J3C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[204]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[192]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1C.scaleX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[205]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[193]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1C.scaleY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[206]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[194]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1C.scaleZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[207]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[195]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[208]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[196]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[209]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[197]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J1C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[210]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[198]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J2CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J2C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[211]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[199]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J2CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J2C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[212]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[200]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J2CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J2C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[213]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[201]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J3CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J3C.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[214]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[202]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J3CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J3C.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[215]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[203]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rPalmCG|Ultimate_Beefy_v1_0_2:Beefy_rPalmC|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J3CG|Ultimate_Beefy_v1_0_2:Beefy_rFinger2J3C.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[216]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[204]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rToeIKCG|Ultimate_Beefy_v1_0_2:Beefy_rToeIKC.rotateX" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[217]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[205]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rToeIKCG|Ultimate_Beefy_v1_0_2:Beefy_rToeIKC.rotateY" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[218]" ""
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[206]" ""
 		5 4 "Ultimate_Beefy_v1_0_2RN" "|Ultimate_Beefy_v1_0_2:Beefy|Ultimate_Beefy_v1_0_2:Beefy_MainC|Ultimate_Beefy_v1_0_2:Beefy_rToeIKCG|Ultimate_Beefy_v1_0_2:Beefy_rToeIKC.rotateZ" 
-		"Ultimate_Beefy_v1_0_2RN.placeHolderList[219]" "";
+		"Ultimate_Beefy_v1_0_2RN.placeHolderList[207]" "";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode script -n "uiConfigurationScriptNode";
@@ -4247,17 +3228,17 @@ createNode script -n "uiConfigurationScriptNode";
 		"// Maya Mel UI Configuration File.\n//\n//  This script is machine generated.  Edit at your own risk.\n//\n//\n\nglobal string $gMainPane;\nif (`paneLayout -exists $gMainPane`) {\n\n\tglobal int $gUseScenePanelConfig;\n\tint    $useSceneConfig = $gUseScenePanelConfig;\n\tint    $nodeEditorPanelVisible = stringArrayContains(\"nodeEditorPanel1\", `getPanel -vis`);\n\tint    $nodeEditorWorkspaceControlOpen = (`workspaceControl -exists nodeEditorPanel1Window` && `workspaceControl -q -visible nodeEditorPanel1Window`);\n\tint    $menusOkayInPanels = `optionVar -q allowMenusInPanels`;\n\tint    $nVisPanes = `paneLayout -q -nvp $gMainPane`;\n\tint    $nPanes = 0;\n\tstring $editorName;\n\tstring $panelName;\n\tstring $itemFilterName;\n\tstring $panelConfig;\n\n\t//\n\t//  get current state of the UI\n\t//\n\tsceneUIReplacement -update $gMainPane;\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Top View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Top View\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|top\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n"
 		+ "            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n"
-		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
+		+ "            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 974\n            -height 298\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Side View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Side View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|side\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n"
 		+ "            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n"
 		+ "            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n"
-		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
+		+ "            -shadows 0\n            -captureSequenceNumber -1\n            -width 973\n            -height 297\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Front View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Front View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"|front\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n"
 		+ "            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n"
 		+ "            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n"
-		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n"
-		+ "            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 1\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
+		+ "            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 974\n            -height 297\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n"
+		+ "        modelEditor -e \n            -camera \"|persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 1\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 0\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 32768\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n"
 		+ "            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n"
-		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1317\n            -height 558\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
+		+ "            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -bluePencil 1\n            -greasePencils 0\n            -excludeObjectPreset \"All\" \n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1587\n            -height 685\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n"
 		+ "            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -showUfeItems 1\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n"
 		+ "            -longNames 0\n            -niceNames 1\n            -selectCommand \"print(\\\"\\\")\" \n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n"
@@ -4279,13 +3260,14 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"UV Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"renderWindowPanel\" (localizedPanelLabel(\"Render View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Render View\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"shapePanel\" (localizedPanelLabel(\"Shape Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tshapePanel -edit -l (localizedPanelLabel(\"Shape Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"posePanel\" (localizedPanelLabel(\"Pose Editor\")) `;\n\tif (\"\" != $panelName) {\n"
 		+ "\t\t$label = `panel -q -label $panelName`;\n\t\tposePanel -edit -l (localizedPanelLabel(\"Pose Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n"
-		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n"
-		+ "                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n"
-		+ "                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n"
-		+ "                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n"
-		+ "                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 1\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 558\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 1\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1317\\n    -height 558\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"motionMakerEditorPanel\" (localizedPanelLabel(\"MotionMaker Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"MotionMaker Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n"
+		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\n{ string $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"|persp\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -holdOuts 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n"
+		+ "                -textureDisplay \"modulate\" \n                -textureMaxSize 32768\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -depthOfFieldPreview 1\n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n"
+		+ "                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -controllers 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -particleInstancers 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n"
+		+ "                -clipGhosts 1\n                -bluePencil 1\n                -greasePencils 0\n                -shadows 0\n                -captureSequenceNumber -1\n                -width 0\n                -height 0\n                -sceneRenderFilter 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName; };\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n"
+		+ "\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 1\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1587\\n    -height 685\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 1\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 32768\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -bluePencil 1\\n    -greasePencils 0\\n    -excludeObjectPreset \\\"All\\\" \\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1587\\n    -height 685\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -4311,406 +3293,413 @@ createNode animCurveTA -n "Beefy_MainC_rotateX";
 	rename -uid "71E89D9E-4FC2-2381-1677-5985709437CD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_MainC_rotateY";
 	rename -uid "9EE4F504-4981-9AA2-71C4-90BFEC93CD6C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_MainC_rotateZ";
 	rename -uid "AB74B645-4A7A-42E7-FAC2-BD9B760A9D20";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_HeadC_rotateX";
 	rename -uid "CF171B2F-4CF3-FFD1-F449-23A49B189A94";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1.0900928728925228 23 1.3077070938918096
-		 38 14.716656989654235 53 1.3077070938918096;
+	setAttr -s 4 ".ktv[0:3]"  1 1.0900928728925228 29 1.3077070938918096
+		 42 14.716656989654235 54 1.3077070938918096;
 createNode animCurveTA -n "Beefy_HeadC_rotateY";
 	rename -uid "C924D768-4B42-BF27-3E3B-5CB7A87E3B8C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 7.4622487133396183 23 34.253748383341637
-		 38 22.022227557623346 53 34.253748383341637;
+	setAttr -s 4 ".ktv[0:3]"  1 7.4622487133396183 29 34.253748383341637
+		 42 22.022227557623346 54 34.253748383341637;
 createNode animCurveTA -n "Beefy_HeadC_rotateZ";
 	rename -uid "39A170EB-4159-5C79-DB9E-6FA795C61542";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -0.43515484945938848 23 0.1593968529482471
-		 38 0.1593968529482471 53 0.1593968529482471;
+	setAttr -s 4 ".ktv[0:3]"  1 -0.43515484945938848 29 0.1593968529482471
+		 42 0.1593968529482471 54 0.1593968529482471;
 createNode animCurveTA -n "Beefy_MainHipC_rotateX";
 	rename -uid "6BB4360B-4C8D-517A-6D5D-A9B77E4030A5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 52 0 57 0;
 createNode animCurveTA -n "Beefy_MainHipC_rotateY";
 	rename -uid "A71FEDA0-4287-61CB-46EE-CCB910C95B11";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -8.2753863869432589 23 -37.722028442513952
-		 38 -44.859391715692539 53 -20.086966489930532 64 -20.086966489930532;
+	setAttr -s 5 ".ktv[0:4]"  1 -8.2753863869432589 29 -37.722028442513952
+		 42 -78.572182662420218 52 -20.086966489930532 57 -20.086966489930532;
 createNode animCurveTA -n "Beefy_MainHipC_rotateZ";
 	rename -uid "1A636E2D-491C-C7C1-1A5B-978F1AF6DDDD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 52 0 57 0;
 createNode animCurveTA -n "Beefy_Neck01C_rotateX";
 	rename -uid "FC96A833-4E18-CEB2-FF46-AE80B2DA5464";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1.0900928728925228 23 1.0900928728925228
-		 38 1.0900928728925228 53 1.0900928728925228 64 1.0900928728925228;
+	setAttr -s 6 ".ktv[0:5]"  1 1.0900928728925228 25 1.0900928728925228
+		 29 1.0900928728925228 42 1.0900928728925228 54 1.0900928728925228 60 1.0900928728925228;
 createNode animCurveTA -n "Beefy_Neck01C_rotateY";
 	rename -uid "44B27CF7-4295-C350-084F-E48D05BA0D1E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 7.4622487133396183 23 7.4622487133396183
-		 38 7.4622487133396183 53 7.4622487133396183 64 7.4622487133396183;
+	setAttr -s 6 ".ktv[0:5]"  1 7.4622487133396183 25 7.4622487133396183
+		 29 7.4622487133396183 42 7.4622487133396183 54 7.4622487133396183 60 7.4622487133396183;
 createNode animCurveTA -n "Beefy_Neck01C_rotateZ";
 	rename -uid "1B359EFB-4576-AE00-47CC-FD8033CE0FEA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.43515484945938848 23 -0.43515484945938848
-		 38 -0.43515484945938848 53 -0.43515484945938848 64 -0.43515484945938848;
+	setAttr -s 6 ".ktv[0:5]"  1 -0.43515484945938848 25 -0.43515484945938848
+		 29 -0.43515484945938848 42 -0.43515484945938848 54 -0.43515484945938848 60 -0.43515484945938848;
 createNode animCurveTA -n "Beefy_ROOTC_rotateX";
 	rename -uid "C82E4C31-44D0-316F-0216-1FB31B258D65";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 23 0 38 0 41 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 29 0 42 0 46 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_ROOTC_rotateY";
 	rename -uid "AFF9CB04-4E5D-6AF4-FB7F-C9AFFFA8504F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 -2.2768941729954282 23 -4.0086589209747565
-		 38 -4.0086589209747565 41 -1.8730474436952711 53 16.526066822097235 64 -4.0086589209747565;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 -2.2768941729954282 29 -4.0086589209747565
+		 42 -4.0086589209747565 46 -1.8730474436952711 54 16.526066822097235 60 -4.0086589209747565;
 createNode animCurveTA -n "Beefy_ROOTC_rotateZ";
 	rename -uid "74731DB5-4DF2-130B-EC69-B7B7F0806265";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 23 0 38 0 41 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 29 0 42 0 46 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_Spine01FKC_rotateX";
 	rename -uid "2494273E-4368-426E-2981-758FEA16934F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_Spine01FKC_rotateY";
 	rename -uid "9E18C1ED-4331-4364-1770-769ED3A8CAFA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_Spine01FKC_rotateZ";
 	rename -uid "FAE15298-45B9-57BB-B31F-AF96B8405962";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_Spine02FKC_rotateX";
 	rename -uid "7B214BAE-48D7-BAEE-8973-46B3C683F076";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_Spine02FKC_rotateY";
 	rename -uid "06D07D60-4D85-67C7-9D3E-23A057583D41";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 -15.63495855975791 38 -15.63495855975791
-		 53 -15.63495855975791 64 -15.63495855975791;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 -15.63495855975791 42 -15.63495855975791
+		 54 -15.63495855975791 60 -15.63495855975791;
 createNode animCurveTA -n "Beefy_Spine02FKC_rotateZ";
 	rename -uid "00B41648-41F8-B3E7-5029-F9B35479E61B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_Spine03FKC_rotateX";
 	rename -uid "3BFFD1C6-4CE6-0290-FCF2-03820642D3F2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_Spine03FKC_rotateY";
 	rename -uid "32E325BC-4B82-02D7-1D1C-ACB7DC9A7EEA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_Spine03FKC_rotateZ";
 	rename -uid "6B9EA92A-4683-567E-68C7-408A538D73D4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_SpineTopIKC_rotateX";
 	rename -uid "6C646735-42A0-95A2-E805-77B171B9EC5A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_SpineTopIKC_rotateY";
 	rename -uid "7A707E22-49BA-8CF2-3C4F-5FA79059E927";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -12.754316324459426 23 -28.389274884217333
-		 38 -28.389274884217333 53 -28.389274884217333 64 -11.604439124905761;
+	setAttr -s 7 ".ktv[0:6]"  1 -12.754316324459426 13 -25.639369124299865
+		 25 -26.871457262457614 29 -28.389274884217333 42 -97.810716965417384 54 -28.389274884217333
+		 60 -11.604439124905761;
 createNode animCurveTA -n "Beefy_SpineTopIKC_rotateZ";
 	rename -uid "ED2C2A02-4124-540B-4E33-0FA15765DC0A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lClavicleC_rotateX";
 	rename -uid "9D570B54-44D3-A559-D12D-C99FD2EBF19E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lClavicleC_rotateY";
 	rename -uid "0C2C29D5-4E64-F839-22CD-9DB5DD54B129";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -5.2329480482464863 23 -5.2329480482464863
-		 38 -5.2329480482464863 53 -16.07053523791248 64 -16.07053523791248;
+	setAttr -s 6 ".ktv[0:5]"  1 -5.2329480482464863 25 -5.2329480482464863
+		 29 -5.2329480482464863 42 -5.2329480482464863 54 -16.07053523791248 60 -16.07053523791248;
 createNode animCurveTA -n "Beefy_lClavicleC_rotateZ";
 	rename -uid "FF577DC1-423B-D5D8-2D5C-93931A4E2422";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFootIKC_rotateX";
 	rename -uid "7B894024-4795-F460-D789-EEBCE28A2F79";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 41 0 53 0;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 27 0 42 0 46 0 54 0;
+	setAttr -s 5 ".kit[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTA -n "Beefy_lFootIKC_rotateY";
 	rename -uid "87514F25-4933-AF61-D0CF-1B9608F60053";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 11.974861996873756 38 11.974861996873756
-		 41 11.852028025012453 53 10.793766113591998;
+	setAttr -s 5 ".ktv[0:4]"  1 11.974861996873756 27 11.974861996873756
+		 42 11.974861996873756 46 3.2616563953628854 54 10.793766113591998;
+	setAttr -s 5 ".kit[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTA -n "Beefy_lFootIKC_rotateZ";
 	rename -uid "CD9A9F56-4AAD-DA1F-292D-AB8DB7DC8B70";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 41 0 53 0;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 27 0 42 0 46 0 54 0;
+	setAttr -s 5 ".kit[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTA -n "Beefy_lPalmC_rotateX";
 	rename -uid "E2593B02-427E-84E3-EE44-E0BDDD22D1F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lPalmC_rotateY";
 	rename -uid "0D477354-4A90-5EE5-F6A4-52A9DDFEFFEF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lPalmC_rotateZ";
 	rename -uid "5765C623-4D3E-1AA0-490E-F6BE7138C56A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger1J1C_rotateX";
 	rename -uid "C125E36A-4F6B-7D51-8D7E-968016589455";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger1J1C_rotateY";
 	rename -uid "3F536F5A-4B17-F1EC-A496-398F68D19354";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger1J1C_rotateZ";
 	rename -uid "E6C7D383-4C19-02F7-DB12-479080308AF7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -72.951409884121631 23 0 38 -62.648659341042503
-		 53 -25.586481521747626 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 -72.951409884121631 25 -9.5916579487011955
+		 27 -12.880080104008835 29 0 42 -62.648659341042503 54 -25.586481521747626 60 0;
 createNode animCurveTA -n "Beefy_lFinger1J2C_rotateX";
 	rename -uid "104C474C-4161-8018-8CB1-9E871E6BC252";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger1J2C_rotateY";
 	rename -uid "F3527910-4642-2008-21C5-7885159FE94C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger1J2C_rotateZ";
 	rename -uid "532A0652-4629-9D90-CBB8-E39EFCB10B3E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -72.951409884121631 23 0 38 -62.648659341042503
-		 53 -25.586481521747626 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 -72.951409884121631 25 -9.5916579487011955
+		 27 -12.880080104008835 29 0 42 -62.648659341042503 54 -25.586481521747626 60 0;
 createNode animCurveTA -n "Beefy_lFinger1J3C_rotateX";
 	rename -uid "6FA75412-40FC-F7CA-9DB5-A4811296541E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger1J3C_rotateY";
 	rename -uid "83C6129E-4184-B524-D37F-099038188D14";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger1J3C_rotateZ";
 	rename -uid "12FCE56C-4960-24E6-E023-FD82E86854A7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -72.951409884121631 23 0 38 -62.648659341042503
-		 53 -25.586481521747626 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 -72.951409884121631 25 -9.5916579487011955
+		 27 -12.880080104008835 29 0 42 -62.648659341042503 54 -25.586481521747626 60 0;
 createNode animCurveTA -n "Beefy_lFinger2J1C_rotateX";
 	rename -uid "6090B2A6-4820-B343-4BC5-8A87864A4E94";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger2J1C_rotateY";
 	rename -uid "E8C53D39-480D-CC64-4190-24903D4FAA09";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger2J1C_rotateZ";
 	rename -uid "220A3606-40BC-4E51-4CC5-DB964BD24755";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -72.951409884121631 23 0 38 -62.648659341042503
-		 53 -25.586481521747626 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 -72.951409884121631 25 -9.5916579487011955
+		 27 -12.880080104008835 29 0 42 -62.648659341042503 54 -25.586481521747626 60 0;
 createNode animCurveTA -n "Beefy_lFinger2J2C_rotateX";
 	rename -uid "4A099F96-46CE-6897-A6BD-818B440FC381";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger2J2C_rotateY";
 	rename -uid "4D586F70-4F1F-B24B-4F27-6DB394958FF2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger2J2C_rotateZ";
 	rename -uid "6C156D79-4DE3-1D5C-E82F-889AC1E761AE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -72.951409884121631 23 0 38 -62.648659341042503
-		 53 -25.586481521747626 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 -72.951409884121631 25 -9.5916579487011955
+		 27 -12.880080104008835 29 0 42 -62.648659341042503 54 -25.586481521747626 60 0;
 createNode animCurveTA -n "Beefy_lFinger2J3C_rotateX";
 	rename -uid "B188B11D-499A-AA17-FBE3-F387CDE4ADAE";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger2J3C_rotateY";
 	rename -uid "43F1F3C3-450F-77DA-3688-12BABA7EDAE7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 25 0 27 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lFinger2J3C_rotateZ";
 	rename -uid "170FD44A-45A3-3F11-0A44-D5AA456845AD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -72.951409884121631 23 0 38 -62.648659341042503
-		 53 -25.586481521747626 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 -72.951409884121631 25 -9.5916579487011955
+		 27 -12.880080104008835 29 0 42 -62.648659341042503 54 -25.586481521747626 60 0;
 createNode animCurveTA -n "Beefy_lToeIKC_rotateX";
 	rename -uid "91B7D6CE-47A3-A7C9-388C-2B8F91CAEB45";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 38 0 53 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_lToeIKC_rotateY";
 	rename -uid "C3B71746-4D95-7B4B-9292-F6BD8FCFF6DB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 38 0 53 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_lToeIKC_rotateZ";
 	rename -uid "8AD61DCE-4E08-9134-CFE1-319FF483403E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 38 0 53 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_lWristIKC_rotateX";
 	rename -uid "11AF68CC-4A46-BCBE-F9D5-6FB3B42E550E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 20.513565559029622 23 -104.76999994704732
-		 39 259.1852426934708;
+	setAttr -s 5 ".ktv[0:4]"  1 20.513565559029622 7 -28.096717244313904
+		 13 -90 23 -104.76999994704732 39 259.1852426934708;
 createNode animCurveTA -n "Beefy_lWristIKC_rotateY";
 	rename -uid "91CDAE67-409C-9F11-B615-8D91467A81B5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -5.4633923232627764 23 -136.06337661902128
-		 39 -136.0633766190214;
+	setAttr -s 5 ".ktv[0:4]"  1 -5.4633923232627764 7 -33.648850992651674
+		 13 -79.643398429644009 23 -136.06337661902128 39 -136.0633766190214;
 createNode animCurveTA -n "Beefy_lWristIKC_rotateZ";
 	rename -uid "14F7F98F-455E-AAFF-75DA-9FB83DC009A0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -75.723160371031213 23 -70.739570861088268
-		 39 -70.739570861088879;
+	setAttr -s 5 ".ktv[0:4]"  1 -75.723160371031213 7 -74.647626121045576
+		 13 -72.892511483340442 23 -70.739570861088268 39 -70.739570861088879;
 createNode animCurveTA -n "Beefy_lThumbJ1C_rotateX";
 	rename -uid "F25D629C-4243-D551-8B71-6D88A2E8FD3E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lThumbJ1C_rotateY";
 	rename -uid "98DE4C96-4736-206F-B1FE-DFB00DE95795";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lThumbJ1C_rotateZ";
 	rename -uid "D4D9A36C-4138-00E5-663C-41B06446698C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -24.2217836215485 23 0 38 -28.448298613736522
-		 53 8.6138792055583799 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 -24.2217836215485 25 -3.1846822943433399
+		 29 0 42 -28.448298613736522 54 8.6138792055583799 60 0;
 createNode animCurveTA -n "Beefy_lThumbJ2C_rotateX";
 	rename -uid "0BA7FFAA-4B28-32BA-446B-269B3F1D71C6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lThumbJ2C_rotateY";
 	rename -uid "A0F66260-4F8C-14AA-BC71-1493CCC49F64";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lThumbJ2C_rotateZ";
 	rename -uid "D379546F-4C9C-311E-3CD6-C293BB8D3D25";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -62.523832126950737 23 0 38 -28.448298613736522
-		 53 8.6138792055583799 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 -62.523832126950737 25 -8.2206390850611548
+		 29 0 42 -28.448298613736522 54 8.6138792055583799 60 0;
 createNode animCurveTA -n "Beefy_lThumbJ3C_rotateX";
 	rename -uid "D454B27B-4572-B4DF-4D98-9AAB4C485B76";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lThumbJ3C_rotateY";
 	rename -uid "92AFD931-4678-AA2F-7C0F-F5BF2599C65E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_lThumbJ3C_rotateZ";
 	rename -uid "FA0B7D23-4E01-9445-2DD6-068C668E996B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -62.523832126950737 23 0 38 -70.067874808138441
-		 53 -33.005696988843617 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 -62.523832126950737 25 -8.2206390850611548
+		 29 0 42 -70.067874808138441 54 -33.005696988843617 60 0;
 createNode animCurveTA -n "Beefy_rClavicleC_rotateX";
 	rename -uid "119BF695-4D77-5094-32D7-46BA8240EE17";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rClavicleC_rotateY";
 	rename -uid "BE3825B9-4BFF-01C9-F1F3-A6B897FC5BC3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 15.690619379781822 23 15.690619379781822
-		 38 15.690619379781822 53 22.713865357930754 64 22.713865357930754;
+	setAttr -s 6 ".ktv[0:5]"  1 15.690619379781822 25 15.690619379781822
+		 29 15.690619379781822 42 15.690619379781822 54 22.713865357930754 60 22.713865357930754;
 createNode animCurveTA -n "Beefy_rClavicleC_rotateZ";
 	rename -uid "F2D3D917-4332-B96D-4083-74B71797D4BF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 6 ".ktv[0:5]"  1 0 24 0 25 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFootIKC_rotateX";
 	rename -uid "9F79D691-463C-4A63-E50B-88A403BF9966";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 29 0 42 0 54 0;
+	setAttr -s 5 ".kit[2:4]"  1 1 18;
+	setAttr -s 5 ".kot[2:4]"  1 1 18;
 	setAttr -s 5 ".kix[2:4]"  1 1 1;
 	setAttr -s 5 ".kiy[2:4]"  0 0 0;
 	setAttr -s 5 ".kox[2:4]"  1 1 1;
@@ -4720,9 +3709,9 @@ createNode animCurveTA -n "Beefy_rFootIKC_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 16.14668809373407 13 16.14668809373407
-		 23 16.14668809373407 38 16.14668809373407 53 0.27586796362078964;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
+		 29 16.14668809373407 42 0.27586796362078964 54 0.27586796362078964;
+	setAttr -s 5 ".kit[2:4]"  1 1 18;
+	setAttr -s 5 ".kot[2:4]"  1 1 18;
 	setAttr -s 5 ".kix[2:4]"  1 1 1;
 	setAttr -s 5 ".kiy[2:4]"  0 0 0;
 	setAttr -s 5 ".kox[2:4]"  1 1 1;
@@ -4731,9 +3720,9 @@ createNode animCurveTA -n "Beefy_rFootIKC_rotateZ";
 	rename -uid "5A27EB56-42F6-1254-FC45-E696BFD780F8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
+	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 29 0 42 0 54 0;
+	setAttr -s 5 ".kit[2:4]"  1 1 18;
+	setAttr -s 5 ".kot[2:4]"  1 1 18;
 	setAttr -s 5 ".kix[2:4]"  1 1 1;
 	setAttr -s 5 ".kiy[2:4]"  0 0 0;
 	setAttr -s 5 ".kox[2:4]"  1 1 1;
@@ -4742,128 +3731,128 @@ createNode animCurveTA -n "Beefy_rPalmC_rotateX";
 	rename -uid "8166ACD1-40D8-BF42-0C3D-00ADC390237F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 102.02294112871708 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rPalmC_rotateY";
 	rename -uid "F9E6EC38-48BE-FF2A-3BF6-C4800C6EAE1C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rPalmC_rotateZ";
 	rename -uid "E2AA5EA1-4F57-34DA-940A-DC82C855213E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFinger1J1C_rotateX";
 	rename -uid "787C35C8-415E-59CF-3A06-29A2389C5567";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFinger1J1C_rotateY";
 	rename -uid "9EDCBFF7-4F34-16D1-6298-50B634A22C50";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFinger1J1C_rotateZ";
 	rename -uid "9C277ACB-4C18-7B3B-7FE6-F2B26E8C1398";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -76.34918324845242 23 -76.34918324845242
-		 38 -76.34918324845242 53 -76.34918324845242 64 -76.34918324845242;
+	setAttr -s 5 ".ktv[0:4]"  1 -76.34918324845242 29 -76.34918324845242
+		 42 -76.34918324845242 54 -76.34918324845242 60 -76.34918324845242;
 createNode animCurveTA -n "Beefy_rFinger1J2C_rotateX";
 	rename -uid "A14E85EA-40C4-F6BE-7322-5B9AD597539D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_rFinger1J2C_rotateY";
 	rename -uid "E49B1859-408D-848E-FC6B-4C808AEBCFF3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_rFinger1J2C_rotateZ";
 	rename -uid "DF9D7A30-4130-FC24-ADC4-AB9DD6B649BB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -76.34918324845242 23 -76.34918324845242
-		 38 -76.34918324845242 53 -76.34918324845242;
+	setAttr -s 4 ".ktv[0:3]"  1 -76.34918324845242 29 -76.34918324845242
+		 42 -76.34918324845242 54 -76.34918324845242;
 createNode animCurveTA -n "Beefy_rFinger1J3C_rotateX";
 	rename -uid "79FB2311-41F9-0B5F-2878-1399155ED0F6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFinger1J3C_rotateY";
 	rename -uid "F5193C03-4854-D346-1C19-DF8E82EF5A1C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFinger1J3C_rotateZ";
 	rename -uid "BAC5FF31-4DB6-0CD1-55E3-F3B162B84634";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -76.34918324845242 23 -76.34918324845242
-		 38 -76.34918324845242 53 -76.34918324845242 64 -76.34918324845242;
+	setAttr -s 5 ".ktv[0:4]"  1 -76.34918324845242 29 -76.34918324845242
+		 42 -76.34918324845242 54 -76.34918324845242 60 -76.34918324845242;
 createNode animCurveTA -n "Beefy_rFinger2J1C_rotateX";
 	rename -uid "2F6C8DA3-489C-BD69-0031-3B99511A56AB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFinger2J1C_rotateY";
 	rename -uid "E206AEEE-4799-302A-CD8E-CB98F04B400A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFinger2J1C_rotateZ";
 	rename -uid "5E2A3063-4971-A973-74D3-41B83CDBE305";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -76.34918324845242 23 -76.34918324845242
-		 38 -76.34918324845242 53 -76.34918324845242 64 -76.34918324845242;
+	setAttr -s 5 ".ktv[0:4]"  1 -76.34918324845242 29 -76.34918324845242
+		 42 -76.34918324845242 54 -76.34918324845242 60 -76.34918324845242;
 createNode animCurveTA -n "Beefy_rFinger2J2C_rotateX";
 	rename -uid "ED39ACA0-4F40-1278-13B2-F6BCC2E6C22C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_rFinger2J2C_rotateY";
 	rename -uid "831212DD-4774-5145-25EA-3DA73D8457D7";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_rFinger2J2C_rotateZ";
 	rename -uid "DFB19043-47AF-86D0-C813-4DB42BE60B7A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 -76.34918324845242 23 -76.34918324845242
-		 38 -76.34918324845242 53 -76.34918324845242;
+	setAttr -s 4 ".ktv[0:3]"  1 -76.34918324845242 29 -76.34918324845242
+		 42 -76.34918324845242 54 -76.34918324845242;
 createNode animCurveTA -n "Beefy_rFinger2J3C_rotateX";
 	rename -uid "9EDE4A02-4AE2-6BFA-3DB7-1895BD8494F0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFinger2J3C_rotateY";
 	rename -uid "1BB04CCC-4EAD-A881-ECD4-6A8C80D81E87";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 54 0 60 0;
 createNode animCurveTA -n "Beefy_rFinger2J3C_rotateZ";
 	rename -uid "CB4C026F-4AE8-F31C-FBFA-A7BE72A13E0A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -76.34918324845242 23 -76.34918324845242
-		 38 -76.34918324845242 53 -76.34918324845242 64 -76.34918324845242;
+	setAttr -s 5 ".ktv[0:4]"  1 -76.34918324845242 29 -76.34918324845242
+		 42 -76.34918324845242 54 -76.34918324845242 60 -76.34918324845242;
 createNode animCurveTA -n "Beefy_rToeIKC_rotateX";
 	rename -uid "ADC12879-4E28-2D29-824A-0382ABF2E293";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 38 0 53 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_rToeIKC_rotateY";
 	rename -uid "D731F5D5-4EB9-DE3C-1772-BC8A0D9D41C2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 38 39.444372376255302 53 39.444372376255302;
+	setAttr -s 3 ".ktv[0:2]"  1 0 42 39.444372376255302 54 39.444372376255302;
 createNode animCurveTA -n "Beefy_rToeIKC_rotateZ";
 	rename -uid "63F57B2F-463D-74D0-D43A-FBB177742EF5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 38 0 53 0;
+	setAttr -s 3 ".ktv[0:2]"  1 0 42 0 54 0;
 createNode animCurveTA -n "Beefy_rWristIKC_rotateX";
 	rename -uid "79EBB81B-49A2-22B9-C87F-BA911ABB4CBB";
 	setAttr ".tan" 18;
@@ -4885,64 +3874,64 @@ createNode animCurveTA -n "Beefy_rThumbJ1C_rotateX";
 	rename -uid "387CBB91-48BF-49DE-3DBC-7E9098B3ABAF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.85026061702006461 23 -0.85026061702006461
-		 38 -0.85026061702006461 53 -0.85026061702006461 64 -0.85026061702006461;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.85026061702006461 29 -0.85026061702006461
+		 42 -0.85026061702006461 54 -0.85026061702006461 60 -0.85026061702006461;
 createNode animCurveTA -n "Beefy_rThumbJ1C_rotateY";
 	rename -uid "664EDFB8-48F4-1B66-FC9A-999521A07E96";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.88535158098031985 23 -0.88535158098031985
-		 38 -0.88535158098031985 53 -0.88535158098031985 64 -0.88535158098031985;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.88535158098031985 29 -0.88535158098031985
+		 42 -0.88535158098031985 54 -0.88535158098031985 60 -0.88535158098031985;
 createNode animCurveTA -n "Beefy_rThumbJ1C_rotateZ";
 	rename -uid "E9F5C7C3-43CE-F777-54AC-58BC68464B58";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -46.155019544228999 23 -46.155019544228999
-		 38 -46.155019544228999 53 -46.155019544228999 64 -46.155019544228999;
+	setAttr -s 5 ".ktv[0:4]"  1 -46.155019544228999 29 -46.155019544228999
+		 42 -46.155019544228999 54 -46.155019544228999 60 -46.155019544228999;
 createNode animCurveTA -n "Beefy_rThumbJ2C_rotateX";
 	rename -uid "EC590079-476C-0268-8A12-F28417103C3B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.85026061702006461 23 -0.85026061702006461
-		 38 -0.85026061702006461 53 -0.85026061702006461 64 -0.85026061702006461;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.85026061702006461 29 -0.85026061702006461
+		 42 -0.85026061702006461 54 -0.85026061702006461 60 -0.85026061702006461;
 createNode animCurveTA -n "Beefy_rThumbJ2C_rotateY";
 	rename -uid "10FEC071-4047-D8F8-5BD7-3AAE8C30F65E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.88535158098031985 23 -0.88535158098031985
-		 38 -0.88535158098031985 53 -0.88535158098031985 64 -0.88535158098031985;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.88535158098031985 29 -0.88535158098031985
+		 42 -0.88535158098031985 54 -0.88535158098031985 60 -0.88535158098031985;
 createNode animCurveTA -n "Beefy_rThumbJ2C_rotateZ";
 	rename -uid "7EEDBD7E-4780-9716-97B5-EBAEE667990F";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -46.155019544228999 23 -46.155019544228999
-		 38 -46.155019544228999 53 -46.155019544228999 64 -46.155019544228999;
+	setAttr -s 5 ".ktv[0:4]"  1 -46.155019544228999 29 -46.155019544228999
+		 42 -46.155019544228999 54 -46.155019544228999 60 -46.155019544228999;
 createNode animCurveTA -n "Beefy_rThumbJ3C_rotateX";
 	rename -uid "13AE3F59-41CA-A207-32BB-F6BFE2914DBC";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.85026061702006461 23 -0.85026061702006461
-		 38 -0.85026061702006461 53 -0.85026061702006461 64 -0.85026061702006461;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.85026061702006461 29 -0.85026061702006461
+		 42 -0.85026061702006461 54 -0.85026061702006461 60 -0.85026061702006461;
 createNode animCurveTA -n "Beefy_rThumbJ3C_rotateY";
 	rename -uid "D4D90D4D-4984-C2C9-93CA-DD89DE383023";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.88535158098031985 23 -0.88535158098031985
-		 38 -0.88535158098031985 53 -0.88535158098031985 64 -0.88535158098031985;
+	setAttr -s 5 ".ktv[0:4]"  1 -0.88535158098031985 29 -0.88535158098031985
+		 42 -0.88535158098031985 54 -0.88535158098031985 60 -0.88535158098031985;
 createNode animCurveTA -n "Beefy_rThumbJ3C_rotateZ";
 	rename -uid "715C09D5-48D4-C914-EDCF-688A6CD0B0A0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -46.155019544228999 23 -46.155019544228999
-		 38 -46.155019544228999 53 -46.155019544228999 64 -46.155019544228999;
+	setAttr -s 5 ".ktv[0:4]"  1 -46.155019544228999 29 -46.155019544228999
+		 42 -46.155019544228999 54 -46.155019544228999 60 -46.155019544228999;
 createNode animCurveTL -n "Beefy_rFootIKC_translateX";
 	rename -uid "BB880E0E-48A0-070C-9705-039B0903D54E";
-	setAttr ".tan" 18;
+	setAttr ".tan" 10;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -0.3542024768332378 13 -0.10890169443153452
-		 23 -0.80403637096697844 38 -0.80253008043245044 53 -0.80253008043245044;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
+		 29 -0.80403637096697844 42 -0.80253008043245044 54 -0.80253008043245044;
+	setAttr -s 5 ".kit[2:4]"  1 1 18;
+	setAttr -s 5 ".kot[2:4]"  1 1 18;
 	setAttr -s 5 ".kix[2:4]"  1 1 1;
 	setAttr -s 5 ".kiy[2:4]"  0 0 0;
 	setAttr -s 5 ".kox[2:4]"  1 1 1;
@@ -4952,9 +3941,9 @@ createNode animCurveTL -n "Beefy_rFootIKC_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 5.3605288536050173e-18 13 -0.47871212682149045
-		 23 0.12473616294753213 38 -1.3164460189138281e-16 53 -1.3164460189138281e-16;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
+		 29 0.12473616294753213 42 0 54 0;
+	setAttr -s 5 ".kit[2:4]"  1 1 18;
+	setAttr -s 5 ".kot[2:4]"  1 1 18;
 	setAttr -s 5 ".kix[2:4]"  1 1 1;
 	setAttr -s 5 ".kiy[2:4]"  0 0 0;
 	setAttr -s 5 ".kox[2:4]"  1 1 1;
@@ -4964,75 +3953,9 @@ createNode animCurveTL -n "Beefy_rFootIKC_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 -0.043772039883966829 13 -0.043772039883966878
-		 23 0.56278672034996025 38 1.0749597515221441 53 1.0749597515221441;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "Beefy_rFootIKC_Stretch";
-	rename -uid "8F846E9D-41CE-E25C-19FD-61B8A5FC64F8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "Beefy_rFootIKC_KneeLock";
-	rename -uid "99272AC2-4143-9F0C-E4C1-A79BC89118B0";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "Beefy_rFootIKC_footTilt";
-	rename -uid "BB75C982-41C0-14BF-E0D1-1CA03A44E962";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "Beefy_rFootIKC_heelBall";
-	rename -uid "4D8E1904-4775-696B-4632-58A12E636922";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "Beefy_rFootIKC_toeUpDn";
-	rename -uid "3937B425-4739-7B9C-70C7-B5857EFCCE88";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "Beefy_rFootIKC_ballSwivel";
-	rename -uid "BF54BD4D-4544-751A-B5BB-6AAA83961810";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 18 18;
-	setAttr -s 5 ".kot[2:4]"  1 18 18;
+		 29 0.56278672034996025 42 1.0749597515221441 54 1.0749597515221441;
+	setAttr -s 5 ".kit[2:4]"  1 1 18;
+	setAttr -s 5 ".kot[2:4]"  1 1 18;
 	setAttr -s 5 ".kix[2:4]"  1 1 1;
 	setAttr -s 5 ".kiy[2:4]"  0 0 0;
 	setAttr -s 5 ".kox[2:4]"  1 1 1;
@@ -5041,90 +3964,90 @@ createNode animCurveTL -n "Beefy_SpineTopIKC_translateX";
 	rename -uid "834D4DA4-4225-63BB-2786-F0A8F45D37DD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTL -n "Beefy_SpineTopIKC_translateY";
 	rename -uid "C8D36635-432B-D077-9B6A-FB8DC0FCADC9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTL -n "Beefy_SpineTopIKC_translateZ";
 	rename -uid "189B1080-461B-3764-6FB5-15AAD405A8F5";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 25 0 29 0 42 0 54 0 60 0;
 createNode animCurveTL -n "Beefy_lWristIKC_translateX";
 	rename -uid "C5912F6A-46E8-DCE6-E229-0988F8A5DD93";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -2.6516843231199543 23 -5.1437580503805558
-		 39 -5.1437580503805558;
+	setAttr -s 5 ".ktv[0:4]"  1 -2.6516843231199543 7 -3.3933754570523278
+		 13 -4.474894826520238 23 -5.1437580503805558 39 -5.1437580503805558;
 createNode animCurveTL -n "Beefy_lWristIKC_translateY";
 	rename -uid "52A23400-4123-54F6-851D-2995F4F91F9E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 -3.6462732202067381 23 -0.88077458588371105
-		 39 -0.88077458588371105;
+	setAttr -s 5 ".ktv[0:4]"  1 -3.6462732202067381 7 -2.197948958953583
+		 13 -1.2476683852631658 23 -0.88077458588371105 39 -0.88077458588371105;
 createNode animCurveTL -n "Beefy_lWristIKC_translateZ";
 	rename -uid "4C2EA898-4964-4FCF-5193-25A6C97A447D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0.70770408498863779 23 4.0295044725374645
-		 39 4.0295044725374645;
+	setAttr -s 5 ".ktv[0:4]"  1 0.70770408498863779 7 2.7221960413032069
+		 13 2.5944667393739964 23 4.0295044725374645 39 4.0295044725374645;
 createNode animCurveTU -n "Beefy_lWristIKC_Stretch";
 	rename -uid "FE7EC83F-490B-AFA9-F74F-708FB11453AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 23 0 39 0;
 createNode animCurveTU -n "Beefy_lWristIKC_ElbowLock";
 	rename -uid "6DC41588-4CA7-4CE5-259F-A9A41BE2D5B4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 23 0 39 0;
 createNode animCurveTU -n "Beefy_lWristIKC_Hips";
 	rename -uid "1FF35CC1-41B0-BE0C-0A0D-EDBEC2E8F926";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 23 0 39 0;
 createNode animCurveTU -n "Beefy_lWristIKC_Chest";
 	rename -uid "64566FC2-46A1-04F3-32F4-C2A2D4391AE4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 23 0 39 0;
 createNode animCurveTU -n "Beefy_lWristIKC_Head";
 	rename -uid "B7800E35-486D-7FDC-D60D-B79344BD1869";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 23 0 39 0;
 createNode animCurveTU -n "Beefy_lWristIKC_ControlScale";
 	rename -uid "0E99D57A-4533-F222-7284-0DA8D58ECA17";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 1 23 1 39 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 23 1 39 1;
 createNode animCurveTU -n "Beefy_lLegSwitchC_SwitchIkFk";
 	rename -uid "B3CB330D-47D7-1F8F-C1DE-4B9E6364AECF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTU -n "Beefy_lArmSwitchC_SwitchIkFk";
 	rename -uid "517B7560-4164-33AF-FB7B-70918D5E2925";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 1 53 1 64 1;
+	setAttr -s 3 ".ktv[0:2]"  42 1 49 1 58 1;
 createNode animCurveTU -n "Beefy_lThumbJ1C_scaleX";
 	rename -uid "4C1C3D61-4342-B905-D26B-6E8CC51AD342";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 25 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_lThumbJ1C_scaleY";
 	rename -uid "0CAB2341-4866-F723-6F83-1EAFEDAB67B2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 25 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_lThumbJ1C_scaleZ";
 	rename -uid "6DC302C2-4823-4243-A7AE-6690D6032C41";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 6 ".ktv[0:5]"  1 1 25 1 29 1 42 1 54 1 60 1;
 createNode animCurveTL -n "Beefy_lElbowIKC_translateX";
 	rename -uid "B05C762C-4191-A4A5-43FD-2DA666A7492C";
 	setAttr ".tan" 18;
@@ -5146,293 +4069,222 @@ createNode animCurveTU -n "Beefy_lElbowIKC_Follow";
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
 	setAttr -s 3 ".kot[0:2]"  5 5 5;
-createNode animCurveTU -n "Beefy_rArmSwitchC_SwitchIkFk";
-	rename -uid "04E50D95-4EAF-6A0C-A094-8D8947CC4D86";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 1 53 1 64 1;
 createNode animCurveTL -n "Beefy_lKneeIKC_translateX";
 	rename -uid "7FCF2579-4C5B-3D74-4F69-999511637E30";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTL -n "Beefy_lKneeIKC_translateY";
 	rename -uid "57DCC92E-4A45-6CEF-5C1F-6DA297039682";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTL -n "Beefy_lKneeIKC_translateZ";
 	rename -uid "D92CDD36-4DBE-ADC7-BAB1-CFA89FD9C276";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTU -n "Beefy_lKneeIKC_Follow";
 	rename -uid "15E86823-4A1A-F98B-0596-6F8E8C16EF5A";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTU -n "Beefy_rFinger2J1C_scaleX";
 	rename -uid "4C93EB50-4A35-E3D1-95F5-B18E61F59969";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_rFinger2J1C_scaleY";
 	rename -uid "0D888B68-4012-76BE-06AC-9D874D75A93D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_rFinger2J1C_scaleZ";
 	rename -uid "FBC2A793-4F09-39F2-EA4B-D99C408DD24D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_lFinger1J1C_scaleX";
 	rename -uid "D2427B81-47A8-8EEC-BB47-6C98FC95548C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 25 1 27 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_lFinger1J1C_scaleY";
 	rename -uid "CF4E7A54-4392-B061-9A5D-7FACB0AB8832";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 25 1 27 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_lFinger1J1C_scaleZ";
 	rename -uid "6CEEC1EC-46CE-292C-A082-A28EF275DA77";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 25 1 27 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_HeadC_HeadOrient";
 	rename -uid "E403D440-4157-7505-C1FA-88B93F321EBF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 23 1 38 1 53 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 29 1 42 1 54 1;
 createNode animCurveTL -n "Beefy_ROOTC_translateX";
 	rename -uid "AB02F744-4E26-ADA7-580E-BAA8B9FAD895";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 23 0 38 0 41 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 29 0 42 0 46 0 54 0 60 0;
 createNode animCurveTL -n "Beefy_ROOTC_translateY";
 	rename -uid "BA8EA1CE-4F06-0632-52FB-5780F8A886AA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 7 ".ktv[0:6]"  1 -0.50259141952571706 13 -0.26579972698153043
-		 23 -0.50259141952571706 38 -0.50259141952571706 41 -0.40916490666843242 53 -0.50259141952571706
-		 64 -0.50259141952571706;
+		 29 -0.50259141952571706 42 -0.50259141952571706 46 -0.40916490666843242 54 -0.50259141952571706
+		 60 -0.50259141952571706;
 createNode animCurveTL -n "Beefy_ROOTC_translateZ";
 	rename -uid "C85FB508-4887-5550-A13A-708B9AA3EB5B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 23 0 38 0 41 0 53 0 64 0;
+	setAttr -s 7 ".ktv[0:6]"  1 0 13 0 29 0 42 0 46 0 54 0 60 0;
 createNode animCurveTL -n "Beefy_lFootIKC_translateX";
 	rename -uid "2B3ADC9E-40BD-2BA0-BD3E-6D99A70150EA";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0.32369319152699294 38 0.32369319152699294
-		 41 0.33621671904036671 53 0.44411172530943333;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 0.98194047384877736 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0.18919013139600716 0;
-	setAttr -s 4 ".kox[1:3]"  1 0.98194047384877736 1;
-	setAttr -s 4 ".koy[1:3]"  0 0.18919013139600716 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0.32369319152699294 27 0.32369319152699294
+		 42 0.32369319152699294 46 0.16059373640072505 54 0.44411172530943333;
+	setAttr -s 5 ".kit[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTL -n "Beefy_lFootIKC_translateY";
 	rename -uid "70DD296D-40D7-160F-5417-2FBD54A40CBD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 41 0.43972740094094154 53 0;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 27 0 42 0 46 0.71842225123501202 54 0;
+	setAttr -s 5 ".kit[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 1 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 1 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0 0;
 createNode animCurveTL -n "Beefy_lFootIKC_translateZ";
 	rename -uid "0786A877-40CE-8E89-88A7-6A9D13554166";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0.94948865958003492 38 0.94948865958003492
-		 41 0.96979966846175747 53 1.1447868219042903;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 0.95448621161507197 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0.29825504494762206 0;
-	setAttr -s 4 ".kox[1:3]"  1 0.95448621161507197 1;
-	setAttr -s 4 ".koy[1:3]"  0 0.29825504494762206 0;
-createNode animCurveTU -n "Beefy_lFootIKC_Stretch";
-	rename -uid "27B612E6-423C-9458-D7C4-C78F53C461EE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 41 0 53 0;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "Beefy_lFootIKC_KneeLock";
-	rename -uid "A675BEEC-4F32-EEDB-CBAB-F58D2879A5E6";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 41 0 53 0;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "Beefy_lFootIKC_footTilt";
-	rename -uid "A0182247-466A-E820-8DBB-FB8175FE57F5";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 41 0 53 0;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "Beefy_lFootIKC_heelBall";
-	rename -uid "343A42DE-4E6F-17AA-A92F-868AAD7D0B02";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 41 0 53 0;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "Beefy_lFootIKC_toeUpDn";
-	rename -uid "6D1CF986-474F-8A0E-8086-20B447501505";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 41 0 53 0;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "Beefy_lFootIKC_ballSwivel";
-	rename -uid "3FE3CB91-4A5C-0D5F-A8CF-99A361E118BC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 41 0 53 0;
-	setAttr -s 4 ".kit[1:3]"  1 18 18;
-	setAttr -s 4 ".kot[1:3]"  1 18 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0.096343939983874194 27 0.096343939983874194
+		 42 0.096343939983874194 46 0.28662497739351878 54 1.1447868219042903;
+	setAttr -s 5 ".kit[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kot[1:4]"  1 1 18 18;
+	setAttr -s 5 ".kix[1:4]"  1 1 0.43045386452836198 1;
+	setAttr -s 5 ".kiy[1:4]"  0 0 0.90261258051979232 0;
+	setAttr -s 5 ".kox[1:4]"  1 1 0.43045386452836193 1;
+	setAttr -s 5 ".koy[1:4]"  0 0 0.90261258051979232 0;
 createNode animCurveTL -n "Beefy_MainHipC_translateX";
 	rename -uid "54AB4CA7-4391-7197-B843-3FA3D050E4C2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 52 0 57 0;
 createNode animCurveTL -n "Beefy_MainHipC_translateY";
 	rename -uid "643BC8CA-4865-D71B-E9BB-78A5E359B1E1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0.23579672449702782 23 0.23579672449702782
-		 38 0.23579672449702782 53 0.23579672449702782 64 0.23579672449702782;
+	setAttr -s 5 ".ktv[0:4]"  1 0.23579672449702782 29 0.23579672449702782
+		 42 0.23579672449702782 52 0.23579672449702782 57 0.23579672449702782;
 createNode animCurveTL -n "Beefy_MainHipC_translateZ";
 	rename -uid "A26E7E3F-4A3B-9459-5572-1B94E6F652EF";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 29 0 42 0 52 0 57 0;
 createNode animCurveTU -n "Beefy_rFinger1J1C_scaleX";
 	rename -uid "611EA000-4154-2E33-6D46-EE82567A1539";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_rFinger1J1C_scaleY";
 	rename -uid "27D69E0D-4A00-271B-9A35-1A8D659A4774";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_rFinger1J1C_scaleZ";
 	rename -uid "E682B80B-4D80-0996-7542-B9B5C30F12E6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_rThumbJ1C_scaleX";
 	rename -uid "0A41DAE9-4F90-8E00-90C6-20B28F99FC28";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_rThumbJ1C_scaleY";
 	rename -uid "8AC34D74-4AF7-0B26-9B0A-109E16ADBE61";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_rThumbJ1C_scaleZ";
 	rename -uid "00CA6949-4478-5D49-2AE0-F187D469729E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 5 ".ktv[0:4]"  1 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_lFinger2J1C_scaleX";
 	rename -uid "D9544589-47DD-BB93-6323-418DDCB8C40E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 25 1 27 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_lFinger2J1C_scaleY";
 	rename -uid "2A55DACB-4793-9567-A4EB-B5BB00855CD3";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 25 1 27 1 29 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_lFinger2J1C_scaleZ";
 	rename -uid "16B22159-4B9C-187F-B9B1-5896C7921A93";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 23 1 38 1 53 1 64 1;
+	setAttr -s 7 ".ktv[0:6]"  1 1 25 1 27 1 29 1 42 1 54 1 60 1;
 createNode animCurveTL -n "Beefy_rKneeIKC_translateX";
 	rename -uid "0200EAE6-4ACF-CDE5-78AB-2AA368E39AF4";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTL -n "Beefy_rKneeIKC_translateY";
 	rename -uid "C805C9A7-4805-C73B-0B1E-2E86CD93CF21";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTL -n "Beefy_rKneeIKC_translateZ";
 	rename -uid "D203422A-44AE-3E18-79F0-D9AD252AB9F6";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTU -n "Beefy_rKneeIKC_Follow";
 	rename -uid "EA3167AA-4DD7-E30B-0218-F49350539A15";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTU -n "Beefy_rLegSwitchC_SwitchIkFk";
 	rename -uid "758186DB-4D23-FF02-B6E5-1292957AC100";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTL -n "Beefy_rElbowIKC_translateX";
 	rename -uid "15841628-4880-FF1A-8B42-13BDD562A811";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 18 0 23 0 39 0;
 createNode animCurveTL -n "Beefy_rElbowIKC_translateY";
 	rename -uid "8A100FF0-4836-6CDF-6EEE-A4BAAD460DB2";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 18 0 23 0 39 0;
 createNode animCurveTL -n "Beefy_rElbowIKC_translateZ";
 	rename -uid "2B927DB7-48EF-60F8-5D70-9ABDD2DF2F44";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 18 0 23 0 39 0;
 createNode animCurveTU -n "Beefy_rElbowIKC_Follow";
 	rename -uid "C57CBDC3-4014-4724-C923-F28D64943DAC";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  1 0 23 0 39 0;
-	setAttr -s 3 ".kot[0:2]"  5 5 5;
+	setAttr -s 4 ".ktv[0:3]"  1 0 18 0 23 0 39 0;
+	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
 createNode animCurveTL -n "Beefy_rWristIKC_translateX";
 	rename -uid "8F1ED375-45C5-A3F6-5A7A-D9845B3291DA";
 	setAttr ".tan" 18;
@@ -5485,142 +4337,142 @@ createNode animCurveTL -n "Beefy_MainC_translateX";
 	rename -uid "B461885C-4BE0-EF79-A3BD-F2A53236976C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTL -n "Beefy_MainC_translateY";
 	rename -uid "E6617F1B-4566-4D45-73A2-54BFAA03CD4D";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTL -n "Beefy_MainC_translateZ";
 	rename -uid "8B29C773-4CF1-0D32-88A0-A48E6F7DF3A0";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 4 ".ktv[0:3]"  1 0 29 0 42 0 54 0;
 createNode animCurveTU -n "Beefy_MainC_GlobalScale";
 	rename -uid "FE28862C-4A76-9BE0-BF38-709A35841EB9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 1 23 1 38 1 53 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 29 1 42 1 54 1;
 createNode animCurveTA -n "Beefy_lElbowFKC_rotateY";
 	rename -uid "A7667A48-4EDA-70DC-195C-9F919A48049E";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 -54.816781388839999 53 -13.165760735639331
-		 64 -13.165760735639331;
+	setAttr -s 6 ".ktv[0:5]"  1 -31.769189367519537 27 -41.278703392315734
+		 42 -54.816781388839999 46 -68.784685489759298 49 -13.165760735639331 58 1.7318347240025116;
 createNode animCurveTA -n "Beefy_lShoulderFKC_rotateX";
 	rename -uid "2F687CFE-4FED-DB62-C951-21B3638C6302";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 -24.794158581000765 53 -164.60137685144434
-		 64 -190.03749335959037;
+	setAttr -s 6 ".ktv[0:5]"  1 -128.09023038497841 17 -260.67659684883932
+		 29 -264.14367524058127 42 -24.794158581000765 47 -164.60137685144434 51 -184.13789203272654;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTA -n "Beefy_lShoulderFKC_rotateY";
 	rename -uid "FF2DEA35-4879-653D-BC9A-469D6CA0422B";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 -115.3272321449396 53 -125.09110522859972
-		 64 -116.38448067784438;
+	setAttr -s 6 ".ktv[0:5]"  1 -170.9050856216399 17 -127.1905044378438
+		 29 -122.82770375760451 42 -115.3272321449396 47 -125.09110522859972 51 -116.02315185815118;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTA -n "Beefy_lShoulderFKC_rotateZ";
 	rename -uid "F8D4B92B-4759-C8C2-8ED4-18B98DB2B440";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 27.069988842944873 53 179.53385637456947
-		 64 200.67568740315872;
+	setAttr -s 6 ".ktv[0:5]"  1 101.98146179705817 17 200.21207569300481
+		 29 202.78076543033927 42 27.069988842944873 47 179.53385637456947 51 194.10176814728484;
+	setAttr -s 6 ".kit[5]"  1;
+	setAttr -s 6 ".kot[5]"  1;
+	setAttr -s 6 ".kix[5]"  1;
+	setAttr -s 6 ".kiy[5]"  0;
+	setAttr -s 6 ".kox[5]"  1;
+	setAttr -s 6 ".koy[5]"  0;
 createNode animCurveTA -n "Beefy_lWristFKC_rotateX";
 	rename -uid "26D39F02-4092-FE6D-E55F-15BD6A5327E1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 -91.04089013070255 27 -95.916681025472315
+		 42 0 49 0 60 0;
 createNode animCurveTA -n "Beefy_lWristFKC_rotateY";
 	rename -uid "2DA7A953-479B-2784-2BC9-8F825B0696A8";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 0 53 0 64 0;
+	setAttr -s 5 ".ktv[0:4]"  1 0 27 0 42 0 49 0 60 0;
 createNode animCurveTA -n "Beefy_lWristFKC_rotateZ";
 	rename -uid "854E586E-4FA5-16D4-6CE8-B8B644862DE9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 0 53 74.303168603640131 64 74.303168603640131;
+	setAttr -s 5 ".ktv[0:4]"  1 0 27 0 42 0 49 74.303168603640131 60 74.303168603640131;
 createNode animCurveTA -n "Beefy_rElbowFKC_rotateY";
 	rename -uid "E739E953-4FF8-8894-DFAF-E18A3DFFFB09";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 -50.739872243536674 53 -50.739872243536674
-		 64 -50.739872243536674;
+	setAttr -s 4 ".ktv[0:3]"  1 -26.563725541902734 42 -50.739872243536674
+		 54 -50.739872243536674 60 -50.739872243536674;
 createNode animCurveTA -n "Beefy_rShoulderFKC_rotateX";
 	rename -uid "8323DBDA-42EC-2B8F-D53A-41B6656770E9";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 67.056428233729704 53 70.619060948350452
-		 64 70.619060948350452;
+	setAttr -s 4 ".ktv[0:3]"  1 9.5003073860821026 42 67.056428233729704
+		 49 70.619060948350452 58 88.528842559020759;
 createNode animCurveTA -n "Beefy_rShoulderFKC_rotateY";
 	rename -uid "444378BB-40C6-49BB-26FE-29817807CFAD";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 38.724367438148327 53 23.585079606243841
-		 64 23.585079606243841;
+	setAttr -s 4 ".ktv[0:3]"  1 10.936647745501514 42 38.724367438148327
+		 49 23.585079606243841 58 -22.94221637826378;
 createNode animCurveTA -n "Beefy_rShoulderFKC_rotateZ";
 	rename -uid "9B4F1FEB-4635-B4D9-FB9C-D6AEA4ECC6F1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 -55.879457110909037 53 -49.059034837129119
-		 64 -49.059034837129119;
+	setAttr -s 4 ".ktv[0:3]"  1 -75.707899295874896 42 -55.879457110909037
+		 49 -49.059034837129119 58 -55.995922510429736;
 createNode animCurveTA -n "Beefy_rWristFKC_rotateX";
 	rename -uid "A50AB4FB-4F38-13C2-1972-74972770B882";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 -84.761132125560309 53 -84.761132125560309
-		 64 -84.761132125560309;
+	setAttr -s 4 ".ktv[0:3]"  1 -84.761132125560309 42 -84.761132125560309
+		 54 -84.761132125560309 60 -28.901797117177914;
 createNode animCurveTA -n "Beefy_rWristFKC_rotateY";
 	rename -uid "077E44E3-4B61-5D4C-C275-449A11454C1A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 -12.5374574476583 53 -12.5374574476583
-		 64 -12.5374574476583;
+	setAttr -s 4 ".ktv[0:3]"  1 -12.5374574476583 42 -12.5374574476583
+		 54 -12.5374574476583 60 -12.537457447658321;
 createNode animCurveTA -n "Beefy_rWristFKC_rotateZ";
 	rename -uid "BC926428-4748-B553-B94A-1199E53292EB";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 16.23586665447959 53 16.23586665447959
-		 64 16.23586665447959;
+	setAttr -s 4 ".ktv[0:3]"  1 16.23586665447959 42 16.23586665447959
+		 54 16.23586665447959 60 16.235866654479615;
 createNode animCurveTU -n "Beefy_rShoulderFKC_scaleX";
 	rename -uid "A1230088-4495-7829-0094-78B5D0104E92";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 1 53 1 64 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 42 1 49 1 58 1;
 createNode animCurveTU -n "Beefy_rShoulderFKC_ShoulderOrient";
 	rename -uid "148FA653-4DD1-233F-3AB0-AE8B7F02670A";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 1 53 1 64 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 42 1 49 1 58 1;
 createNode animCurveTU -n "Beefy_rWristFKC_scaleX";
 	rename -uid "756B3CCF-431B-4468-5CB3-1285D92C0253";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 1 53 1 64 1;
+	setAttr -s 4 ".ktv[0:3]"  1 1 42 1 54 1 60 1;
 createNode animCurveTU -n "Beefy_lWristFKC_scaleX";
 	rename -uid "6E8C828A-4325-D72F-9789-F6A4F067A63C";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 1 53 1 64 1;
-createNode animCurveTU -n "Beefy_lShoulderFKC_scaleX";
-	rename -uid "13A4D000-4CDF-918C-749D-61A38D62459A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 1 53 1 64 1;
-createNode animCurveTU -n "Beefy_lShoulderFKC_ShoulderOrient";
-	rename -uid "5D84179A-4790-E4BF-7C01-3D998F208DC1";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 3 ".ktv[0:2]"  38 1 53 1 64 1;
-createNode condition -n "Ultimate_Beefy_v1_0_3:ArnielLegIKViz";
-	rename -uid "112E134F-4101-C088-5E50-A8A6A28CD562";
-	setAttr ".op" 3;
-	setAttr ".st" 0.69999998807907104;
-createNode animCurveTU -n "pasted__Beefy_lLegSwitchC_SwitchIkFk";
-	rename -uid "0238AAB0-4340-80BB-D9D3-649F3AA9A248";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+	setAttr -s 5 ".ktv[0:4]"  1 1 27 1 42 1 49 1 60 1;
 createNode displayLayer -n "Ultimate_Beefy_v1_0_3:Beefy_Legs";
 	rename -uid "C86223E6-4D25-F325-9EAA-769ED9E5E3BF";
 	setAttr ".ufem" -type "stringArray" 0  ;
@@ -5633,26 +4485,6 @@ createNode blendColors -n "Ultimate_Beefy_v1_0_3:Arnie_lAnkleJIKFK_BlndRotate";
 createNode unitConversion -n "Ultimate_Beefy_v1_0_3:unitConversion13";
 	rename -uid "98E3A250-46A1-AFD0-AFAF-49B0859D05BE";
 	setAttr ".cf" 57.295779513082323;
-createNode condition -n "Ultimate_Beefy_v1_0_3:ArnielLegFKViz";
-	rename -uid "A8EC35E9-4B96-5D3B-F836-B8B9A0F8DC21";
-	setAttr ".op" 5;
-	setAttr ".st" 0.30000001192092896;
-createNode animCurveTL -n "pasted__Beefy_MainHipC_translateX";
-	rename -uid "2B7AA252-403D-4E34-7D08-8E9132C04408";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTL -n "pasted__Beefy_MainHipC_translateY";
-	rename -uid "C0027790-41E7-B19B-D604-4C9F9B883225";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0.23579672449702782 23 0.23579672449702782
-		 38 0.23579672449702782 53 0.23579672449702782 64 0.23579672449702782;
-createNode animCurveTL -n "pasted__Beefy_MainHipC_translateZ";
-	rename -uid "66718D61-4084-A2AB-748C-959057A9F8FF";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
 createNode multiplyDivide -n "Ultimate_Beefy_v1_0_3:ArniespineLength_MD";
 	rename -uid "C1B54EC6-4D35-28F3-B607-2FB416BEBDFD";
 	setAttr ".op" 2;
@@ -5703,84 +4535,6 @@ createNode animCurveTA -n "pasted__Beefy_SpineTopIKC_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_Spine03FKC_rotateX";
-	rename -uid "92F8F8A6-4026-F56A-A3C2-5AB74CA59AB8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_Spine03FKC_rotateY";
-	rename -uid "77CD3AB3-412B-DBEC-1E8A-14BD581EE2A7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_Spine03FKC_rotateZ";
-	rename -uid "F9FC5FF4-4B35-C5FF-A20A-3789614115BF";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_Spine02FKC_rotateX";
-	rename -uid "9D92DA17-4ABD-048E-CC08-44852249A584";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_Spine02FKC_rotateY";
-	rename -uid "D72499EB-48F6-6F80-E7BF-FAB68C3BA2DC";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 -15.63495855975791 38 -15.63495855975791
-		 53 -15.63495855975791 64 -15.63495855975791;
-createNode animCurveTA -n "pasted__Beefy_Spine02FKC_rotateZ";
-	rename -uid "7B012590-4254-CFB9-23EA-DBA3440A981B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_Spine01FKC_rotateX";
-	rename -uid "E23FBA29-4F3C-9111-B91F-ADA004153117";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_Spine01FKC_rotateY";
-	rename -uid "1CBFB3C8-4B14-A506-DE93-E1996F2FCEE3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_Spine01FKC_rotateZ";
-	rename -uid "446E711B-47BC-3D37-3700-F587CA57172F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTL -n "pasted__Beefy_ROOTC_translateX";
-	rename -uid "335198AE-47F1-9E77-1261-E0A0E28BC302";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTL -n "pasted__Beefy_ROOTC_translateY";
-	rename -uid "3596B281-4AF3-BAD5-40DD-24BF2CE4F21D";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.50259141952571706 23 -0.50259141952571706
-		 38 -0.50259141952571706 53 -0.50259141952571706 64 -0.50259141952571706;
-createNode animCurveTL -n "pasted__Beefy_ROOTC_translateZ";
-	rename -uid "2DFEE662-463E-D389-DA26-39A4C265B071";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_ROOTC_rotateX";
-	rename -uid "5C326B74-41B7-6B9E-7E9E-46A854B981FE";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_ROOTC_rotateY";
-	rename -uid "0EF8EDC2-4FD0-43B8-C560-0CBE6617ECC7";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 -4.0086589209747565 38 -4.0086589209747565
-		 53 16.526066822097235 64 -4.0086589209747565;
-createNode animCurveTA -n "pasted__Beefy_ROOTC_rotateZ";
-	rename -uid "BA2AF81B-496B-1026-9802-F3BF726630F8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
 createNode groupId -n "Ultimate_Beefy_v1_0_3:cluster7GroupId";
 	rename -uid "D49286CC-4547-583C-3D75-2ABF2470DBE8";
 	setAttr ".ihi" 0;
@@ -5807,9 +4561,6 @@ createNode blendColors -n "Ultimate_Beefy_v1_0_3:ArniespineMidIKCG_Blnd";
 createNode unitConversion -n "Ultimate_Beefy_v1_0_3:unitConversion37";
 	rename -uid "9CFB1671-4F20-E595-AE3D-CDB4EF6C3DF4";
 	setAttr ".cf" 57.295779513082323;
-createNode unitConversion -n "Ultimate_Beefy_v1_0_3:unitConversion38";
-	rename -uid "1E3F586F-416F-8134-0D5E-CA890BDD015A";
-	setAttr ".cf" 57.295779513082323;
 createNode groupId -n "Ultimate_Beefy_v1_0_3:cluster6GroupId";
 	rename -uid "58946C9D-462E-366F-6A82-31BF1D990CAA";
 	setAttr ".ihi" 0;
@@ -5817,22 +4568,6 @@ createNode groupParts -n "Ultimate_Beefy_v1_0_3:cluster6GroupParts";
 	rename -uid "7F44F9B0-4354-FBB7-F284-C5B95704C96D";
 	setAttr ".ihi" 0;
 	setAttr ".ic" -type "componentList" 1 "cv[2:3]";
-createNode cluster -n "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Cluster";
-	rename -uid "DB8C3DDF-4775-DE36-4FE2-20B6719EF14D";
-	setAttr ".ip[0].gtg" -type "string" "";
-	setAttr ".gm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
-	setAttr ".ait" 0;
-createNode objectSet -n "Ultimate_Beefy_v1_0_3:cluster5Set";
-	rename -uid "D9683271-45DC-1D33-FEFC-9CB3425BA3E5";
-	setAttr ".ihi" 0;
-	setAttr ".vo" yes;
-createNode groupId -n "Ultimate_Beefy_v1_0_3:cluster5GroupId";
-	rename -uid "17DCE3F1-48C0-9683-60D5-26AA0A299D90";
-	setAttr ".ihi" 0;
-createNode groupParts -n "Ultimate_Beefy_v1_0_3:cluster5GroupParts";
-	rename -uid "BD2A47B2-4981-412C-6417-7E9B3B2B13C1";
-	setAttr ".ihi" 0;
-	setAttr ".ic" -type "componentList" 1 "cv[0:1]";
 createNode tweak -n "Ultimate_Beefy_v1_0_3:tweak3";
 	rename -uid "9226130E-4879-2B75-48B7-D9B6D4852933";
 createNode objectSet -n "Ultimate_Beefy_v1_0_3:tweakSet3";
@@ -5850,22 +4585,6 @@ createNode displayLayer -n "Ultimate_Beefy_v1_0_3:Beefy_Pelvis";
 	rename -uid "60C294D9-45C0-465D-D040-DFA1817C083A";
 	setAttr ".ufem" -type "stringArray" 0  ;
 	setAttr ".do" 2;
-createNode animCurveTA -n "pasted__Beefy_MainHipC_rotateX";
-	rename -uid "EDDAC411-42E5-EC3E-05EB-90B9830970E4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
-createNode animCurveTA -n "pasted__Beefy_MainHipC_rotateY";
-	rename -uid "84FBD9B8-4CF8-2E7E-10F2-9483C0865154";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -8.2753863869432589 23 -37.722028442513952
-		 38 -44.859391715692539 53 -20.086966489930532 64 -20.086966489930532;
-createNode animCurveTA -n "pasted__Beefy_MainHipC_rotateZ";
-	rename -uid "AF5E7365-437F-4CD9-6315-C4A8F0457256";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 23 0 38 0 53 0 64 0;
 createNode animCurveUU -n "Ultimate_Beefy_v1_0_3:Arnie_lHipFKCG_parentConstraint2_Arnie_MainHipCW0";
 	rename -uid "71AA48C4-4122-3800-DBDB-E4A15EAEA06D";
 	setAttr ".tan" 9;
@@ -5890,33 +4609,6 @@ createNode multiplyDivide -n "Ultimate_Beefy_v1_0_3:Arnie_lKneeLockLength_MD";
 	rename -uid "DFBC2993-4B96-5D79-C076-BC87398DD4F8";
 	setAttr ".op" 2;
 	setAttr ".i2" -type "float3" 1.3084133 1 1 ;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_lFootBallPivot_rotateX";
-	rename -uid "B14A5290-4F3A-4228-BF16-4DB835FDD996";
-	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 90;
-	setAttr -s 2 ".kwl[0:1]" yes yes;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_lFootHeelPivot_rotateX";
-	rename -uid "0CD7BFF4-4D25-9A7F-2E2D-EABA8EED2EFB";
-	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  -10 -90 0 0;
-	setAttr -s 2 ".kwl[0:1]" yes yes;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_lFootOutTilt_rotateZ";
-	rename -uid "577A7BB7-4401-5C66-B151-43864247A762";
-	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 -90;
-	setAttr -s 2 ".kwl[0:1]" yes yes;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_lFootInTilt_rotateZ";
-	rename -uid "2281429E-48E0-00D2-C052-8794C99F133E";
-	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  -10 90 0 0;
-	setAttr -s 2 ".kwl[0:1]" yes yes;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_lBallSwivel_rotateY";
-	rename -uid "ECB9B8EE-4005-6379-4567-5CA5EF275A33";
-	setAttr ".tan" 9;
-	setAttr -s 3 ".ktv[0:2]"  -10 90 0 0 10 -90;
-	setAttr -s 3 ".kwl[0:2]" yes yes yes;
-	setAttr ".pre" 1;
-	setAttr ".pst" 1;
 createNode animCurveTA -n "pasted__Beefy_lToeIKC_rotateX";
 	rename -uid "99F481F0-46D7-7732-B9E1-A9BBA32344CD";
 	setAttr ".tan" 18;
@@ -5947,42 +4639,6 @@ createNode multiplyDivide -n "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_MD";
 	rename -uid "4F53C671-46D9-388D-BE81-A1A0EE46E280";
 	setAttr ".op" 2;
 	setAttr ".i2" -type "float3" 2.6705878 1 1 ;
-createNode animCurveTU -n "pasted__Beefy_lKneeIKC_Follow";
-	rename -uid "B9EE5371-4696-02E6-FFC0-D4B79129995D";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
-createNode animCurveTL -n "pasted__Beefy_lKneeIKC_translateX";
-	rename -uid "C12A9BC7-47B3-0ED0-F3F9-6D8C77ED6BD2";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
-createNode animCurveTL -n "pasted__Beefy_lKneeIKC_translateY";
-	rename -uid "E3756F54-441E-C49A-B68A-0698C053FEEF";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
-createNode animCurveTL -n "pasted__Beefy_lKneeIKC_translateZ";
-	rename -uid "E07626F4-47F4-9C0F-2579-25A89EB4C457";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
-createNode animCurveUU -n "Ultimate_Beefy_v1_0_3:Arnie_lKneeIKCG_parentConstraint1_Arnie_MainCW0";
-	rename -uid "B53520E2-4187-3D79-E232-D4929D22EE80";
-	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  0 1 1 0 2 0 3 0;
-	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
-createNode animCurveUU -n "Ultimate_Beefy_v1_0_3:Arnie_lKneeIKCG_parentConstraint1_Arnie_MainHipCW1";
-	rename -uid "D3E2CB41-4155-437F-FF17-D29BADA8874D";
-	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  0 0 1 0 2 1 3 1;
-	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
-createNode animCurveUU -n "Ultimate_Beefy_v1_0_3:Arnie_lKneeIKCG_parentConstraint1_Arnie_lBallSwivelW2";
-	rename -uid "A8F623E1-4090-3829-9319-69B1FC66F4DA";
-	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  0 0 1 1 2 0 3 1;
-	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
 createNode multiplyDivide -n "Ultimate_Beefy_v1_0_3:Arnie_lHipVolume_MD";
 	rename -uid "B13794E3-41E0-304D-8D8C-2085397F565A";
 	setAttr ".op" 2;
@@ -6038,15 +4694,6 @@ createNode unitConversion -n "Ultimate_Beefy_v1_0_3:unitConversion68";
 	setAttr ".cf" 57.295779513082323;
 createNode blendColors -n "Ultimate_Beefy_v1_0_3:Arnie_rHipJIKFK_BlndScale";
 	rename -uid "210823DF-401B-D7AA-C5BF-8BA8D24EBF90";
-createNode condition -n "Ultimate_Beefy_v1_0_3:ArnierLegFKViz";
-	rename -uid "48500A65-4763-DB97-83E2-10A38D8589B9";
-	setAttr ".op" 5;
-	setAttr ".st" 0.30000001192092896;
-createNode animCurveTU -n "pasted__Beefy_rLegSwitchC_SwitchIkFk";
-	rename -uid "42E53661-46D8-56D0-AF96-9C9B9EAAB60F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
 createNode animCurveUU -n "Ultimate_Beefy_v1_0_3:Arnie_rHipFKCG_parentConstraint2_Arnie_MainHipCW0";
 	rename -uid "D300631E-4D08-1205-06A7-2DB028AF939C";
 	setAttr ".tan" 9;
@@ -6063,179 +4710,12 @@ createNode multiplyDivide -n "Ultimate_Beefy_v1_0_3:Arnie_rHipLockLength_MD";
 	rename -uid "0B507DC9-4499-7BCB-C278-7382E8A47110";
 	setAttr ".op" 2;
 	setAttr ".i2" -type "float3" 1.3621744 1 1 ;
-createNode condition -n "Ultimate_Beefy_v1_0_3:ArnierLegIKViz";
-	rename -uid "7FE22DE3-4CF0-50D7-93A0-0089991E48C5";
-	setAttr ".op" 3;
-	setAttr ".st" 0.69999998807907104;
 createNode blendColors -n "Ultimate_Beefy_v1_0_3:Arnie_rKneeLock_Blnd";
 	rename -uid "17B67A4C-4B1A-BC78-FFDC-79BF19C75E9E";
 createNode multiplyDivide -n "Ultimate_Beefy_v1_0_3:Arnie_rKneeLockLength_MD";
 	rename -uid "C65527F8-4E9B-2C3E-2A20-61B512D2DD1D";
 	setAttr ".op" 2;
 	setAttr ".i2" -type "float3" 1.3084133 1 1 ;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_rFootBallPivot_rotateX";
-	rename -uid "0A428CE8-4D5E-744F-6BE7-36A4CF2C1CB8";
-	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 90;
-	setAttr -s 2 ".kwl[0:1]" yes yes;
-createNode animCurveTU -n "pasted__Beefy_rFootIKC_Stretch";
-	rename -uid "D9F40844-4281-50CC-D08B-6F8D0E8BFAD3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_rFootIKC_KneeLock";
-	rename -uid "86FC936F-4CB7-9C09-B185-08B8F5A7963A";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_rFootIKC_footTilt";
-	rename -uid "6F023FC6-4C9C-253B-7552-ABABBE771515";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_rFootIKC_heelBall";
-	rename -uid "0DC2D202-46B0-E954-C709-CDAA87F6C260";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_rFootIKC_toeUpDn";
-	rename -uid "58DF0426-4B4C-628C-43D8-4B8A3269E911";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_rFootIKC_ballSwivel";
-	rename -uid "D47F643B-410D-99DB-5050-B19C8AB8603E";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTL -n "pasted__Beefy_rFootIKC_translateX";
-	rename -uid "F845D7D3-4167-FB7D-6B57-01801C85E375";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.3542024768332378 13 -0.10890169443153452
-		 23 -1.4861694998655026 38 -1.4861694998655026 53 -0.80253008043245044;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTL -n "pasted__Beefy_rFootIKC_translateY";
-	rename -uid "17BB4C45-41EB-B66A-C964-E7890CEDC698";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 5.3605288536050173e-18 13 -0.47871212682149045
-		 23 0.12473616294753212 38 0.12473616294753212 53 -1.3164460189138281e-16;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTL -n "pasted__Beefy_rFootIKC_translateZ";
-	rename -uid "E6340B96-442F-479F-AD86-83B9FCD52A0F";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.043772039883966829 13 -0.043772039883966878
-		 23 0.79060543939007932 38 0.79060543939007932 53 1.0749597515221441;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTA -n "pasted__Beefy_rFootIKC_rotateX";
-	rename -uid "91AE9C55-425E-6892-8031-749CE3C87A3B";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTA -n "pasted__Beefy_rFootIKC_rotateY";
-	rename -uid "D8702F55-4E82-AC14-259F-57B79FE470B4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 16.14668809373407 13 16.14668809373407
-		 23 16.14668809373407 38 16.14668809373407 53 0.27586796362078964;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveTA -n "pasted__Beefy_rFootIKC_rotateZ";
-	rename -uid "0D18ADA0-40FE-633B-4404-6CBFB760DB98";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 13 0 23 0 38 0 53 0;
-	setAttr -s 5 ".kit[2:4]"  1 1 18;
-	setAttr -s 5 ".kot[2:4]"  1 1 18;
-	setAttr -s 5 ".kix[2:4]"  1 1 1;
-	setAttr -s 5 ".kiy[2:4]"  0 0 0;
-	setAttr -s 5 ".kox[2:4]"  1 1 1;
-	setAttr -s 5 ".koy[2:4]"  0 0 0;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_rFootHeelPivot_rotateX";
-	rename -uid "17724FE4-491D-BE73-4E6A-91858203181F";
-	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  -10 -90 0 0;
-	setAttr -s 2 ".kwl[0:1]" yes yes;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_rFootOutTilt_rotateZ";
-	rename -uid "D4477A26-41FE-D272-3BA6-AAAFA5EC555E";
-	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  0 0 10 90;
-	setAttr -s 2 ".kwl[0:1]" yes yes;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_rFootInTilt_rotateZ";
-	rename -uid "1AA85B66-485B-1032-8C4A-389747A6D8EF";
-	setAttr ".tan" 9;
-	setAttr -s 2 ".ktv[0:1]"  -10 90 0 0;
-	setAttr -s 2 ".kwl[0:1]" yes yes;
-createNode animCurveUA -n "Ultimate_Beefy_v1_0_3:Arnie_rBallSwivel_rotateY";
-	rename -uid "4A38C438-444D-954F-2540-6F9818E1B597";
-	setAttr ".tan" 9;
-	setAttr -s 3 ".ktv[0:2]"  -10 90 0 0 10 -90;
-	setAttr -s 3 ".kwl[0:2]" yes yes yes;
-	setAttr ".pre" 1;
-	setAttr ".pst" 1;
 createNode animCurveTA -n "pasted__Beefy_rToeIKC_rotateX";
 	rename -uid "06D7C9A6-4201-85A9-2471-0795D894C978";
 	setAttr ".tan" 18;
@@ -6262,42 +4742,6 @@ createNode multiplyDivide -n "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_MD";
 	rename -uid "9C91F952-4897-89A7-103C-3D85525FD09F";
 	setAttr ".op" 2;
 	setAttr ".i2" -type "float3" 2.6705878 1 1 ;
-createNode animCurveTU -n "pasted__Beefy_rKneeIKC_Follow";
-	rename -uid "1F1471BD-4CDB-2C6A-F666-C786F039F1A4";
-	setAttr ".tan" 9;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
-	setAttr -s 4 ".kot[0:3]"  5 5 5 5;
-createNode animCurveTL -n "pasted__Beefy_rKneeIKC_translateX";
-	rename -uid "494138D6-4390-6F97-D935-5EACAEC3695C";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
-createNode animCurveTL -n "pasted__Beefy_rKneeIKC_translateY";
-	rename -uid "B3FE0A37-4B5B-E0CC-5E70-CFB55054F4B5";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
-createNode animCurveTL -n "pasted__Beefy_rKneeIKC_translateZ";
-	rename -uid "D005009F-47FC-D809-4210-02A33F9078F8";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
-createNode animCurveUU -n "Ultimate_Beefy_v1_0_3:Arnie_rKneeIKCG_parentConstraint1_Arnie_MainCW0";
-	rename -uid "1C3D5F3D-43B2-E3A5-0969-72877A3F0842";
-	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  0 1 1 0 2 0 3 0;
-	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
-createNode animCurveUU -n "Ultimate_Beefy_v1_0_3:Arnie_rKneeIKCG_parentConstraint1_Arnie_MainHipCW1";
-	rename -uid "DDDBF10B-409A-111C-FDB9-709AA14AB184";
-	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  0 0 1 0 2 1 3 1;
-	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
-createNode animCurveUU -n "Ultimate_Beefy_v1_0_3:Arnie_rKneeIKCG_parentConstraint1_Arnie_rBallSwivelW2";
-	rename -uid "B4D80CED-4D77-711C-42E0-9B9AFC6F7869";
-	setAttr ".tan" 9;
-	setAttr -s 4 ".ktv[0:3]"  0 0 1 1 2 0 3 1;
-	setAttr -s 4 ".kwl[0:3]" yes yes yes yes;
 createNode multiplyDivide -n "Ultimate_Beefy_v1_0_3:Arnie_rHipVolume_MD";
 	rename -uid "288FF8B9-4031-0046-C307-5A9F49D3053C";
 	setAttr ".op" 2;
@@ -6365,141 +4809,6 @@ createNode unitConversion -n "Ultimate_Beefy_v1_0_3:unitConversion84";
 createNode unitConversion -n "Ultimate_Beefy_v1_0_3:unitConversion14";
 	rename -uid "18EF47B4-4040-CC0C-3B0B-54A7663312D5";
 	setAttr ".cf" 57.295779513082323;
-createNode animCurveTU -n "pasted__Beefy_lFootIKC_Stretch";
-	rename -uid "E965C897-4069-491D-DFA8-EB95D129FD4D";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 40 0 53 0;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_lFootIKC_KneeLock";
-	rename -uid "1301242F-4D62-4911-185C-93B9EBA75D26";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 40 0 53 0;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_lFootIKC_footTilt";
-	rename -uid "3A49000B-481B-68A6-DF25-83A7695DA12D";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 40 0 53 0;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_lFootIKC_heelBall";
-	rename -uid "DC02040E-49FA-9DC1-D4F1-E1B3C4B5D8B0";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 40 0 53 0;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_lFootIKC_toeUpDn";
-	rename -uid "5FF98A62-4BB4-D3C3-D4EB-4EBB3EED0F9E";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 40 0 53 0;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTU -n "pasted__Beefy_lFootIKC_ballSwivel";
-	rename -uid "5729A59B-4230-803E-B8CA-16ABECA6F33C";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 40 0 53 0;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTL -n "pasted__Beefy_lFootIKC_translateX";
-	rename -uid "720F1FC3-45D3-44A1-8D6E-248799BB16D6";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0.32369319152699294 38 0.32369319152699294
-		 40 0.32369319152699294 53 0.44411172530943333;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTL -n "pasted__Beefy_lFootIKC_translateY";
-	rename -uid "438A0A5C-4504-4A27-E762-30A60BA045D3";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 40 0 53 0;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTL -n "pasted__Beefy_lFootIKC_translateZ";
-	rename -uid "55DFFB3A-4AFC-1C40-D3FF-B89A3C7BB9AF";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0.94948865958003492 38 0.94948865958003492
-		 40 0.94948865958003492 53 1.1447868219042903;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTA -n "pasted__Beefy_lFootIKC_rotateX";
-	rename -uid "B7B6E923-4DAF-30C4-8A64-F6AF06BBCDBE";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 40 0 53 0;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTA -n "pasted__Beefy_lFootIKC_rotateY";
-	rename -uid "E236D0D0-4DAA-958D-2263-AC99E9F65458";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 11.974861996873756 38 11.974861996873756
-		 40 11.974861996873756 53 10.793766113591998;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
-createNode animCurveTA -n "pasted__Beefy_lFootIKC_rotateZ";
-	rename -uid "BB69C73F-4F9F-6EFC-1F46-509030EAFC2B";
-	setAttr ".tan" 1;
-	setAttr ".wgt" no;
-	setAttr -s 4 ".ktv[0:3]"  1 0 38 0 40 0 53 0;
-	setAttr -s 4 ".kit[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kot[0:3]"  18 1 1 18;
-	setAttr -s 4 ".kix[1:3]"  1 1 1;
-	setAttr -s 4 ".kiy[1:3]"  0 0 0;
-	setAttr -s 4 ".kox[1:3]"  1 1 1;
-	setAttr -s 4 ".koy[1:3]"  0 0 0;
 createNode animCurveTU -n "pasted__Beefy_MainC_GlobalScale";
 	rename -uid "B97DEDB9-48D3-6B2C-EA7D-54AAA0174F23";
 	setAttr ".tan" 18;
@@ -6535,13 +4844,33 @@ createNode animCurveTA -n "pasted__Beefy_MainC_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
 	setAttr -s 4 ".ktv[0:3]"  1 0 23 0 38 0 53 0;
+createNode timeEditor -s -n "timeEditor";
+	rename -uid "8DC4D27B-463C-0B8E-51F7-C7853A454049";
+	setAttr ".ac" 0;
+createNode timeEditorTracks -n "Composition1";
+	rename -uid "8CB0B07D-40B1-4388-C60C-F0AF6870DEEE";
+createNode animCurveTU -n "Beefy_rArmSwitchC_SwitchIkFk";
+	rename -uid "04E50D95-4EAF-6A0C-A094-8D8947CC4D86";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  42 1 49 1 58 1;
+createNode animCurveTU -n "Beefy_lShoulderFKC_scaleX";
+	rename -uid "2546E995-439E-5134-0757-E2BA354C8DBC";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 1 17 1 29 1;
+createNode animCurveTU -n "Beefy_lShoulderFKC_ShoulderOrient";
+	rename -uid "D64D596C-4313-382F-495E-DD9BCD488189";
+	setAttr ".tan" 18;
+	setAttr ".wgt" no;
+	setAttr -s 3 ".ktv[0:2]"  1 1 17 1 29 1;
 select -ne :time1;
 	setAttr -av -k on ".cch";
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr ".o" 58;
-	setAttr ".unw" 58;
+	setAttr ".o" 52;
+	setAttr ".unw" 52;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -6567,7 +4896,7 @@ select -ne :defaultShaderList1;
 	setAttr -cb on ".ihi";
 	setAttr -k on ".nds";
 	setAttr -cb on ".bnm";
-	setAttr -s 7 ".s";
+	setAttr -s 8 ".s";
 select -ne :postProcessList1;
 	setAttr -k on ".cch";
 	setAttr -cb on ".ihi";
@@ -6577,10 +4906,13 @@ select -ne :postProcessList1;
 select -ne :defaultRenderUtilityList1;
 	setAttr -k on ".cch";
 	setAttr -k on ".nds";
-	setAttr -s 169 ".u";
+	setAttr -s 165 ".u";
 select -ne :defaultRenderingList1;
 	setAttr -s 2 ".r";
 select -ne :standardSurface1;
+	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
+	setAttr ".sr" 0.5;
+select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.40000001 0.40000001 0.40000001 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
@@ -6715,185 +5047,173 @@ connectAttr "Beefy_Neck01C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[39]";
 connectAttr "Beefy_Neck01C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[40]";
 connectAttr "Beefy_Neck01C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[41]";
 connectAttr "Beefy_lLegSwitchC_SwitchIkFk.o" "Ultimate_Beefy_v1_0_2RN.phl[42]";
-connectAttr "Beefy_lFootIKC_Stretch.o" "Ultimate_Beefy_v1_0_2RN.phl[43]";
-connectAttr "Beefy_lFootIKC_KneeLock.o" "Ultimate_Beefy_v1_0_2RN.phl[44]";
-connectAttr "Beefy_lFootIKC_footTilt.o" "Ultimate_Beefy_v1_0_2RN.phl[45]";
-connectAttr "Beefy_lFootIKC_heelBall.o" "Ultimate_Beefy_v1_0_2RN.phl[46]";
-connectAttr "Beefy_lFootIKC_toeUpDn.o" "Ultimate_Beefy_v1_0_2RN.phl[47]";
-connectAttr "Beefy_lFootIKC_ballSwivel.o" "Ultimate_Beefy_v1_0_2RN.phl[48]";
-connectAttr "Beefy_lFootIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[49]";
-connectAttr "Beefy_lFootIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[50]";
-connectAttr "Beefy_lFootIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[51]";
-connectAttr "Beefy_lFootIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[52]";
-connectAttr "Beefy_lFootIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[53]";
-connectAttr "Beefy_lFootIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[54]";
-connectAttr "Beefy_lKneeIKC_Follow.o" "Ultimate_Beefy_v1_0_2RN.phl[55]";
-connectAttr "Beefy_lKneeIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[56]";
-connectAttr "Beefy_lKneeIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[57]";
-connectAttr "Beefy_lKneeIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[58]";
-connectAttr "Beefy_lArmSwitchC_SwitchIkFk.o" "Ultimate_Beefy_v1_0_2RN.phl[59]";
-connectAttr "Beefy_lElbowIKC_Follow.o" "Ultimate_Beefy_v1_0_2RN.phl[60]";
-connectAttr "Beefy_lElbowIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[61]";
-connectAttr "Beefy_lElbowIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[62]";
-connectAttr "Beefy_lElbowIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[63]";
-connectAttr "Beefy_lWristIKC_Stretch.o" "Ultimate_Beefy_v1_0_2RN.phl[64]";
-connectAttr "Beefy_lWristIKC_ElbowLock.o" "Ultimate_Beefy_v1_0_2RN.phl[65]";
-connectAttr "Beefy_lWristIKC_Hips.o" "Ultimate_Beefy_v1_0_2RN.phl[66]";
-connectAttr "Beefy_lWristIKC_Chest.o" "Ultimate_Beefy_v1_0_2RN.phl[67]";
-connectAttr "Beefy_lWristIKC_Head.o" "Ultimate_Beefy_v1_0_2RN.phl[68]";
-connectAttr "Beefy_lWristIKC_ControlScale.o" "Ultimate_Beefy_v1_0_2RN.phl[69]";
-connectAttr "Beefy_lWristIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[70]";
-connectAttr "Beefy_lWristIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[71]";
-connectAttr "Beefy_lWristIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[72]";
-connectAttr "Beefy_lWristIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[73]";
-connectAttr "Beefy_lWristIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[74]";
-connectAttr "Beefy_lWristIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[75]";
-connectAttr "Beefy_lWristFKC_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[76]";
-connectAttr "Beefy_lWristFKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[77]";
-connectAttr "Beefy_lWristFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[78]";
-connectAttr "Beefy_lWristFKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[79]";
-connectAttr "Beefy_lElbowFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[80]";
-connectAttr "Beefy_lShoulderFKC_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[81]";
-connectAttr "Beefy_lShoulderFKC_ShoulderOrient.o" "Ultimate_Beefy_v1_0_2RN.phl[82]"
+connectAttr "Beefy_lFootIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[43]";
+connectAttr "Beefy_lFootIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[44]";
+connectAttr "Beefy_lFootIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[45]";
+connectAttr "Beefy_lFootIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[46]";
+connectAttr "Beefy_lFootIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[47]";
+connectAttr "Beefy_lFootIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[48]";
+connectAttr "Beefy_lKneeIKC_Follow.o" "Ultimate_Beefy_v1_0_2RN.phl[49]";
+connectAttr "Beefy_lKneeIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[50]";
+connectAttr "Beefy_lKneeIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[51]";
+connectAttr "Beefy_lKneeIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[52]";
+connectAttr "Beefy_lArmSwitchC_SwitchIkFk.o" "Ultimate_Beefy_v1_0_2RN.phl[53]";
+connectAttr "Beefy_lElbowIKC_Follow.o" "Ultimate_Beefy_v1_0_2RN.phl[54]";
+connectAttr "Beefy_lElbowIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[55]";
+connectAttr "Beefy_lElbowIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[56]";
+connectAttr "Beefy_lElbowIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[57]";
+connectAttr "Beefy_lWristIKC_Stretch.o" "Ultimate_Beefy_v1_0_2RN.phl[58]";
+connectAttr "Beefy_lWristIKC_ElbowLock.o" "Ultimate_Beefy_v1_0_2RN.phl[59]";
+connectAttr "Beefy_lWristIKC_Hips.o" "Ultimate_Beefy_v1_0_2RN.phl[60]";
+connectAttr "Beefy_lWristIKC_Chest.o" "Ultimate_Beefy_v1_0_2RN.phl[61]";
+connectAttr "Beefy_lWristIKC_Head.o" "Ultimate_Beefy_v1_0_2RN.phl[62]";
+connectAttr "Beefy_lWristIKC_ControlScale.o" "Ultimate_Beefy_v1_0_2RN.phl[63]";
+connectAttr "Beefy_lWristIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[64]";
+connectAttr "Beefy_lWristIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[65]";
+connectAttr "Beefy_lWristIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[66]";
+connectAttr "Beefy_lWristIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[67]";
+connectAttr "Beefy_lWristIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[68]";
+connectAttr "Beefy_lWristIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[69]";
+connectAttr "Beefy_lWristFKC_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[70]";
+connectAttr "Beefy_lWristFKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[71]";
+connectAttr "Beefy_lWristFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[72]";
+connectAttr "Beefy_lWristFKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[73]";
+connectAttr "Beefy_lElbowFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[74]";
+connectAttr "Beefy_lShoulderFKC_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[75]";
+connectAttr "Beefy_lShoulderFKC_ShoulderOrient.o" "Ultimate_Beefy_v1_0_2RN.phl[76]"
 		;
-connectAttr "Beefy_lShoulderFKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[83]";
-connectAttr "Beefy_lShoulderFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[84]";
-connectAttr "Beefy_lShoulderFKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[85]";
-connectAttr "Beefy_lClavicleC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[86]";
-connectAttr "Beefy_lClavicleC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[87]";
-connectAttr "Beefy_lClavicleC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[88]";
-connectAttr "Beefy_lThumbJ1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[89]";
-connectAttr "Beefy_lThumbJ1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[90]";
-connectAttr "Beefy_lThumbJ1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[91]";
-connectAttr "Beefy_lThumbJ1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[92]";
-connectAttr "Beefy_lThumbJ1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[93]";
-connectAttr "Beefy_lThumbJ1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[94]";
-connectAttr "Beefy_lThumbJ2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[95]";
-connectAttr "Beefy_lThumbJ2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[96]";
-connectAttr "Beefy_lThumbJ2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[97]";
-connectAttr "Beefy_lThumbJ3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[98]";
-connectAttr "Beefy_lThumbJ3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[99]";
-connectAttr "Beefy_lThumbJ3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[100]";
-connectAttr "Beefy_lPalmC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[101]";
-connectAttr "Beefy_lPalmC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[102]";
-connectAttr "Beefy_lPalmC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[103]";
-connectAttr "Beefy_lFinger1J1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[104]";
-connectAttr "Beefy_lFinger1J1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[105]";
-connectAttr "Beefy_lFinger1J1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[106]";
-connectAttr "Beefy_lFinger1J1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[107]";
-connectAttr "Beefy_lFinger1J1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[108]";
-connectAttr "Beefy_lFinger1J1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[109]";
-connectAttr "Beefy_lFinger1J2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[110]";
-connectAttr "Beefy_lFinger1J2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[111]";
-connectAttr "Beefy_lFinger1J2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[112]";
-connectAttr "Beefy_lFinger1J3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[113]";
-connectAttr "Beefy_lFinger1J3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[114]";
-connectAttr "Beefy_lFinger1J3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[115]";
-connectAttr "Beefy_lFinger2J1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[116]";
-connectAttr "Beefy_lFinger2J1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[117]";
-connectAttr "Beefy_lFinger2J1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[118]";
-connectAttr "Beefy_lFinger2J1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[119]";
-connectAttr "Beefy_lFinger2J1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[120]";
-connectAttr "Beefy_lFinger2J1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[121]";
-connectAttr "Beefy_lFinger2J2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[122]";
-connectAttr "Beefy_lFinger2J2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[123]";
-connectAttr "Beefy_lFinger2J2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[124]";
-connectAttr "Beefy_lFinger2J3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[125]";
-connectAttr "Beefy_lFinger2J3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[126]";
-connectAttr "Beefy_lFinger2J3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[127]";
-connectAttr "Beefy_lToeIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[128]";
-connectAttr "Beefy_lToeIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[129]";
-connectAttr "Beefy_lToeIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[130]";
-connectAttr "Beefy_rLegSwitchC_SwitchIkFk.o" "Ultimate_Beefy_v1_0_2RN.phl[131]";
-connectAttr "Beefy_rFootIKC_Stretch.o" "Ultimate_Beefy_v1_0_2RN.phl[132]";
-connectAttr "Beefy_rFootIKC_KneeLock.o" "Ultimate_Beefy_v1_0_2RN.phl[133]";
-connectAttr "Beefy_rFootIKC_footTilt.o" "Ultimate_Beefy_v1_0_2RN.phl[134]";
-connectAttr "Beefy_rFootIKC_heelBall.o" "Ultimate_Beefy_v1_0_2RN.phl[135]";
-connectAttr "Beefy_rFootIKC_toeUpDn.o" "Ultimate_Beefy_v1_0_2RN.phl[136]";
-connectAttr "Beefy_rFootIKC_ballSwivel.o" "Ultimate_Beefy_v1_0_2RN.phl[137]";
-connectAttr "Beefy_rFootIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[138]";
-connectAttr "Beefy_rFootIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[139]";
-connectAttr "Beefy_rFootIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[140]";
-connectAttr "Beefy_rFootIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[141]";
-connectAttr "Beefy_rFootIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[142]";
-connectAttr "Beefy_rFootIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[143]";
-connectAttr "Beefy_rKneeIKC_Follow.o" "Ultimate_Beefy_v1_0_2RN.phl[144]";
-connectAttr "Beefy_rKneeIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[145]";
-connectAttr "Beefy_rKneeIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[146]";
-connectAttr "Beefy_rKneeIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[147]";
-connectAttr "Beefy_rArmSwitchC_SwitchIkFk.o" "Ultimate_Beefy_v1_0_2RN.phl[148]";
-connectAttr "Beefy_rElbowIKC_Follow.o" "Ultimate_Beefy_v1_0_2RN.phl[149]";
-connectAttr "Beefy_rElbowIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[150]";
-connectAttr "Beefy_rElbowIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[151]";
-connectAttr "Beefy_rElbowIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[152]";
-connectAttr "Beefy_rWristIKC_Stretch.o" "Ultimate_Beefy_v1_0_2RN.phl[153]";
-connectAttr "Beefy_rWristIKC_ElbowLock.o" "Ultimate_Beefy_v1_0_2RN.phl[154]";
-connectAttr "Beefy_rWristIKC_Hips.o" "Ultimate_Beefy_v1_0_2RN.phl[155]";
-connectAttr "Beefy_rWristIKC_Chest.o" "Ultimate_Beefy_v1_0_2RN.phl[156]";
-connectAttr "Beefy_rWristIKC_Head.o" "Ultimate_Beefy_v1_0_2RN.phl[157]";
-connectAttr "Beefy_rWristIKC_ControlScale.o" "Ultimate_Beefy_v1_0_2RN.phl[158]";
-connectAttr "Beefy_rWristIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[159]";
-connectAttr "Beefy_rWristIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[160]";
-connectAttr "Beefy_rWristIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[161]";
-connectAttr "Beefy_rWristIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[162]";
-connectAttr "Beefy_rWristIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[163]";
-connectAttr "Beefy_rWristIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[164]";
-connectAttr "Beefy_rWristFKC_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[165]";
-connectAttr "Beefy_rWristFKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[166]";
-connectAttr "Beefy_rWristFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[167]";
-connectAttr "Beefy_rWristFKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[168]";
-connectAttr "Beefy_rElbowFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[169]";
-connectAttr "Beefy_rShoulderFKC_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[170]";
-connectAttr "Beefy_rShoulderFKC_ShoulderOrient.o" "Ultimate_Beefy_v1_0_2RN.phl[171]"
+connectAttr "Beefy_lShoulderFKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[77]";
+connectAttr "Beefy_lShoulderFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[78]";
+connectAttr "Beefy_lShoulderFKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[79]";
+connectAttr "Beefy_lClavicleC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[80]";
+connectAttr "Beefy_lClavicleC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[81]";
+connectAttr "Beefy_lClavicleC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[82]";
+connectAttr "Beefy_lThumbJ1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[83]";
+connectAttr "Beefy_lThumbJ1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[84]";
+connectAttr "Beefy_lThumbJ1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[85]";
+connectAttr "Beefy_lThumbJ1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[86]";
+connectAttr "Beefy_lThumbJ1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[87]";
+connectAttr "Beefy_lThumbJ1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[88]";
+connectAttr "Beefy_lThumbJ2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[89]";
+connectAttr "Beefy_lThumbJ2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[90]";
+connectAttr "Beefy_lThumbJ2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[91]";
+connectAttr "Beefy_lThumbJ3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[92]";
+connectAttr "Beefy_lThumbJ3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[93]";
+connectAttr "Beefy_lThumbJ3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[94]";
+connectAttr "Beefy_lPalmC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[95]";
+connectAttr "Beefy_lPalmC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[96]";
+connectAttr "Beefy_lPalmC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[97]";
+connectAttr "Beefy_lFinger1J1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[98]";
+connectAttr "Beefy_lFinger1J1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[99]";
+connectAttr "Beefy_lFinger1J1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[100]";
+connectAttr "Beefy_lFinger1J1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[101]";
+connectAttr "Beefy_lFinger1J1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[102]";
+connectAttr "Beefy_lFinger1J1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[103]";
+connectAttr "Beefy_lFinger1J2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[104]";
+connectAttr "Beefy_lFinger1J2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[105]";
+connectAttr "Beefy_lFinger1J2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[106]";
+connectAttr "Beefy_lFinger1J3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[107]";
+connectAttr "Beefy_lFinger1J3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[108]";
+connectAttr "Beefy_lFinger1J3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[109]";
+connectAttr "Beefy_lFinger2J1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[110]";
+connectAttr "Beefy_lFinger2J1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[111]";
+connectAttr "Beefy_lFinger2J1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[112]";
+connectAttr "Beefy_lFinger2J1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[113]";
+connectAttr "Beefy_lFinger2J1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[114]";
+connectAttr "Beefy_lFinger2J1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[115]";
+connectAttr "Beefy_lFinger2J2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[116]";
+connectAttr "Beefy_lFinger2J2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[117]";
+connectAttr "Beefy_lFinger2J2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[118]";
+connectAttr "Beefy_lFinger2J3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[119]";
+connectAttr "Beefy_lFinger2J3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[120]";
+connectAttr "Beefy_lFinger2J3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[121]";
+connectAttr "Beefy_lToeIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[122]";
+connectAttr "Beefy_lToeIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[123]";
+connectAttr "Beefy_lToeIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[124]";
+connectAttr "Beefy_rLegSwitchC_SwitchIkFk.o" "Ultimate_Beefy_v1_0_2RN.phl[125]";
+connectAttr "Beefy_rFootIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[126]";
+connectAttr "Beefy_rFootIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[127]";
+connectAttr "Beefy_rFootIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[128]";
+connectAttr "Beefy_rFootIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[129]";
+connectAttr "Beefy_rFootIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[130]";
+connectAttr "Beefy_rFootIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[131]";
+connectAttr "Beefy_rKneeIKC_Follow.o" "Ultimate_Beefy_v1_0_2RN.phl[132]";
+connectAttr "Beefy_rKneeIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[133]";
+connectAttr "Beefy_rKneeIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[134]";
+connectAttr "Beefy_rKneeIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[135]";
+connectAttr "Beefy_rArmSwitchC_SwitchIkFk.o" "Ultimate_Beefy_v1_0_2RN.phl[136]";
+connectAttr "Beefy_rElbowIKC_Follow.o" "Ultimate_Beefy_v1_0_2RN.phl[137]";
+connectAttr "Beefy_rElbowIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[138]";
+connectAttr "Beefy_rElbowIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[139]";
+connectAttr "Beefy_rElbowIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[140]";
+connectAttr "Beefy_rWristIKC_Stretch.o" "Ultimate_Beefy_v1_0_2RN.phl[141]";
+connectAttr "Beefy_rWristIKC_ElbowLock.o" "Ultimate_Beefy_v1_0_2RN.phl[142]";
+connectAttr "Beefy_rWristIKC_Hips.o" "Ultimate_Beefy_v1_0_2RN.phl[143]";
+connectAttr "Beefy_rWristIKC_Chest.o" "Ultimate_Beefy_v1_0_2RN.phl[144]";
+connectAttr "Beefy_rWristIKC_Head.o" "Ultimate_Beefy_v1_0_2RN.phl[145]";
+connectAttr "Beefy_rWristIKC_ControlScale.o" "Ultimate_Beefy_v1_0_2RN.phl[146]";
+connectAttr "Beefy_rWristIKC_translateY.o" "Ultimate_Beefy_v1_0_2RN.phl[147]";
+connectAttr "Beefy_rWristIKC_translateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[148]";
+connectAttr "Beefy_rWristIKC_translateX.o" "Ultimate_Beefy_v1_0_2RN.phl[149]";
+connectAttr "Beefy_rWristIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[150]";
+connectAttr "Beefy_rWristIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[151]";
+connectAttr "Beefy_rWristIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[152]";
+connectAttr "Beefy_rWristFKC_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[153]";
+connectAttr "Beefy_rWristFKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[154]";
+connectAttr "Beefy_rWristFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[155]";
+connectAttr "Beefy_rWristFKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[156]";
+connectAttr "Beefy_rElbowFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[157]";
+connectAttr "Beefy_rShoulderFKC_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[158]";
+connectAttr "Beefy_rShoulderFKC_ShoulderOrient.o" "Ultimate_Beefy_v1_0_2RN.phl[159]"
 		;
-connectAttr "Beefy_rShoulderFKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[172]";
-connectAttr "Beefy_rShoulderFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[173]";
-connectAttr "Beefy_rShoulderFKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[174]";
-connectAttr "Beefy_rClavicleC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[175]";
-connectAttr "Beefy_rClavicleC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[176]";
-connectAttr "Beefy_rClavicleC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[177]";
-connectAttr "Beefy_rThumbJ1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[178]";
-connectAttr "Beefy_rThumbJ1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[179]";
-connectAttr "Beefy_rThumbJ1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[180]";
-connectAttr "Beefy_rThumbJ1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[181]";
-connectAttr "Beefy_rThumbJ1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[182]";
-connectAttr "Beefy_rThumbJ1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[183]";
-connectAttr "Beefy_rThumbJ2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[184]";
-connectAttr "Beefy_rThumbJ2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[185]";
-connectAttr "Beefy_rThumbJ2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[186]";
-connectAttr "Beefy_rThumbJ3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[187]";
-connectAttr "Beefy_rThumbJ3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[188]";
-connectAttr "Beefy_rThumbJ3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[189]";
-connectAttr "Beefy_rPalmC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[190]";
-connectAttr "Beefy_rPalmC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[191]";
-connectAttr "Beefy_rPalmC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[192]";
-connectAttr "Beefy_rFinger1J1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[193]";
-connectAttr "Beefy_rFinger1J1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[194]";
-connectAttr "Beefy_rFinger1J1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[195]";
-connectAttr "Beefy_rFinger1J1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[196]";
-connectAttr "Beefy_rFinger1J1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[197]";
-connectAttr "Beefy_rFinger1J1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[198]";
-connectAttr "Beefy_rFinger1J2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[199]";
-connectAttr "Beefy_rFinger1J2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[200]";
-connectAttr "Beefy_rFinger1J2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[201]";
-connectAttr "Beefy_rFinger1J3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[202]";
-connectAttr "Beefy_rFinger1J3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[203]";
-connectAttr "Beefy_rFinger1J3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[204]";
-connectAttr "Beefy_rFinger2J1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[205]";
-connectAttr "Beefy_rFinger2J1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[206]";
-connectAttr "Beefy_rFinger2J1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[207]";
-connectAttr "Beefy_rFinger2J1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[208]";
-connectAttr "Beefy_rFinger2J1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[209]";
-connectAttr "Beefy_rFinger2J1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[210]";
-connectAttr "Beefy_rFinger2J2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[211]";
-connectAttr "Beefy_rFinger2J2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[212]";
-connectAttr "Beefy_rFinger2J2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[213]";
-connectAttr "Beefy_rFinger2J3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[214]";
-connectAttr "Beefy_rFinger2J3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[215]";
-connectAttr "Beefy_rFinger2J3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[216]";
-connectAttr "Beefy_rToeIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[217]";
-connectAttr "Beefy_rToeIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[218]";
-connectAttr "Beefy_rToeIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[219]";
+connectAttr "Beefy_rShoulderFKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[160]";
+connectAttr "Beefy_rShoulderFKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[161]";
+connectAttr "Beefy_rShoulderFKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[162]";
+connectAttr "Beefy_rClavicleC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[163]";
+connectAttr "Beefy_rClavicleC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[164]";
+connectAttr "Beefy_rClavicleC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[165]";
+connectAttr "Beefy_rThumbJ1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[166]";
+connectAttr "Beefy_rThumbJ1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[167]";
+connectAttr "Beefy_rThumbJ1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[168]";
+connectAttr "Beefy_rThumbJ1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[169]";
+connectAttr "Beefy_rThumbJ1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[170]";
+connectAttr "Beefy_rThumbJ1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[171]";
+connectAttr "Beefy_rThumbJ2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[172]";
+connectAttr "Beefy_rThumbJ2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[173]";
+connectAttr "Beefy_rThumbJ2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[174]";
+connectAttr "Beefy_rThumbJ3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[175]";
+connectAttr "Beefy_rThumbJ3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[176]";
+connectAttr "Beefy_rThumbJ3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[177]";
+connectAttr "Beefy_rPalmC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[178]";
+connectAttr "Beefy_rPalmC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[179]";
+connectAttr "Beefy_rPalmC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[180]";
+connectAttr "Beefy_rFinger1J1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[181]";
+connectAttr "Beefy_rFinger1J1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[182]";
+connectAttr "Beefy_rFinger1J1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[183]";
+connectAttr "Beefy_rFinger1J1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[184]";
+connectAttr "Beefy_rFinger1J1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[185]";
+connectAttr "Beefy_rFinger1J1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[186]";
+connectAttr "Beefy_rFinger1J2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[187]";
+connectAttr "Beefy_rFinger1J2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[188]";
+connectAttr "Beefy_rFinger1J2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[189]";
+connectAttr "Beefy_rFinger1J3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[190]";
+connectAttr "Beefy_rFinger1J3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[191]";
+connectAttr "Beefy_rFinger1J3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[192]";
+connectAttr "Beefy_rFinger2J1C_scaleX.o" "Ultimate_Beefy_v1_0_2RN.phl[193]";
+connectAttr "Beefy_rFinger2J1C_scaleY.o" "Ultimate_Beefy_v1_0_2RN.phl[194]";
+connectAttr "Beefy_rFinger2J1C_scaleZ.o" "Ultimate_Beefy_v1_0_2RN.phl[195]";
+connectAttr "Beefy_rFinger2J1C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[196]";
+connectAttr "Beefy_rFinger2J1C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[197]";
+connectAttr "Beefy_rFinger2J1C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[198]";
+connectAttr "Beefy_rFinger2J2C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[199]";
+connectAttr "Beefy_rFinger2J2C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[200]";
+connectAttr "Beefy_rFinger2J2C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[201]";
+connectAttr "Beefy_rFinger2J3C_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[202]";
+connectAttr "Beefy_rFinger2J3C_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[203]";
+connectAttr "Beefy_rFinger2J3C_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[204]";
+connectAttr "Beefy_rToeIKC_rotateX.o" "Ultimate_Beefy_v1_0_2RN.phl[205]";
+connectAttr "Beefy_rToeIKC_rotateY.o" "Ultimate_Beefy_v1_0_2RN.phl[206]";
+connectAttr "Beefy_rToeIKC_rotateZ.o" "Ultimate_Beefy_v1_0_2RN.phl[207]";
 connectAttr "imagePlaneShape1.msg" "RenderCamShape.ip" -na;
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
@@ -6932,48 +5252,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG_parentConstraint1.cry" "Ultimate
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG.rz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Body.di" "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.do"
-		;
-connectAttr "pasted__Beefy_ROOTC_translateX.o" "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.tx"
-		;
-connectAttr "pasted__Beefy_ROOTC_translateY.o" "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.ty"
-		;
-connectAttr "pasted__Beefy_ROOTC_translateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.tz"
-		;
-connectAttr "pasted__Beefy_ROOTC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.rx"
-		;
-connectAttr "pasted__Beefy_ROOTC_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.ry"
-		;
-connectAttr "pasted__Beefy_ROOTC_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.t" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.t"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.crx" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.crz" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.rz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.pim" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.t" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.ct"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.rp" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.rpt" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.ro" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineTargetLctr.t" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineTargetLctr.rp" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineTargetLctr.rpt" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineTargetLctr.pm" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.w0" "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr_aimConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineTopIKC.t" "Ultimate_Beefy_v1_0_3:BeefymidSpineTargetLctr.t"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG_parentConstraint1.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG_parentConstraint1.cpim"
@@ -6998,144 +5276,8 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.pm" "Ultimate_Beefy_v1_0_3:Beefy_
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_ROOTCG_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.tx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.ty"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.tz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.rz"
-		 -l on;
-connectAttr "pasted__Beefy_MainHipC_translateX.o" "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.tx"
-		;
-connectAttr "pasted__Beefy_MainHipC_translateY.o" "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.ty"
-		;
-connectAttr "pasted__Beefy_MainHipC_translateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:ArniespineLength_MD.ox" "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.spineLength"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Pelvis.di" "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.do"
-		;
-connectAttr "pasted__Beefy_MainHipC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rx"
-		;
-connectAttr "pasted__Beefy_MainHipC_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.ry"
-		;
-connectAttr "pasted__Beefy_MainHipC_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.m" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Shape.wn"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr.tx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr.ty"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_spineBtmTX_Lctr_pointConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.t" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.rp" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.r" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.ro" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.s" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.pm" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_MainHipCG_parentConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.tx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.ty"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.tz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.rz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Body.di" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.do"
-		;
-connectAttr "pasted__Beefy_Spine01FKC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.rx"
-		;
-connectAttr "pasted__Beefy_Spine01FKC_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.ry"
-		;
-connectAttr "pasted__Beefy_Spine01FKC_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.t" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.rp" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.r" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.ro" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.s" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTC.pm" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKCG_parentConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.tx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.ty"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.tz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.rz"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:ArnieSpineMid_Blnd.op" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG2.t"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.rx" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG2.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:BeefymidSpineAimLctr.rz" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG2.rz"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion39.o" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG2.ry"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.spineIK" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKC.v"
@@ -7143,30 +5285,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.spineIK" "Ultimate_Beefy_v1_0_3:B
 connectAttr "Ultimate_Beefy_v1_0_3:ArniespineLength_MD.ox" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKC.spineLength"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKC.m" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr02Shape.wn"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.t" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.r" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.ro" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.s" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_SpineMidIKCG_parentConstraint1.tg[0].tw"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineTopIKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_SpineTopIKCG.tx"
 		 -l on;
@@ -7222,130 +5340,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKC.pm" "Ultimate_Beefy_v1_0_3:B
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineTopIKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_SpineTopIKCG_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.tx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.ty"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.tz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.rz"
-		 -l on;
-connectAttr "pasted__Beefy_Spine02FKC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.rx"
-		;
-connectAttr "pasted__Beefy_Spine02FKC_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.ry"
-		;
-connectAttr "pasted__Beefy_Spine02FKC_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Body.di" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.do"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.t" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.r" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.ro" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.s" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine01FKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKCG_parentConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.tx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.ty"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.tz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.rz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Body.di" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.do"
-		;
-connectAttr "pasted__Beefy_Spine03FKC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.rx"
-		;
-connectAttr "pasted__Beefy_Spine03FKC_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.ry"
-		;
-connectAttr "pasted__Beefy_Spine03FKC_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.t" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.r" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.ro" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.s" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine02FKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKCG_parentConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.tx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.ty"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.tz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.rz"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.t" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.r" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.ro" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.s" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine03FKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_Spine04FKCG_parentConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG.tx"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG.ty"
@@ -7358,10 +5352,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG_parentConstraint1.crx" "Ul
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG.rz"
 		 -l on;
-connectAttr "pasted__Beefy_lLegSwitchC_SwitchIkFk.o" "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.SwitchIkFk"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Legs.di" "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.do"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG_parentConstraint1.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchCG_parentConstraint1.cpim"
@@ -7400,34 +5390,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG_parentConstraint1.crx" "Ultim
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG.rz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnielLegIKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.v"
-		 -l on;
-connectAttr "pasted__Beefy_lFootIKC_Stretch.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.Stretch"
-		;
-connectAttr "pasted__Beefy_lFootIKC_KneeLock.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.KneeLock"
-		;
-connectAttr "pasted__Beefy_lFootIKC_footTilt.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.footTilt"
-		;
-connectAttr "pasted__Beefy_lFootIKC_heelBall.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.heelBall"
-		;
-connectAttr "pasted__Beefy_lFootIKC_toeUpDn.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.toeUpDn"
-		;
-connectAttr "pasted__Beefy_lFootIKC_ballSwivel.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.ballSwivel"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Legs.di" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.do"
-		;
-connectAttr "pasted__Beefy_lFootIKC_translateX.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.tx"
-		;
-connectAttr "pasted__Beefy_lFootIKC_translateY.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.ty"
-		;
-connectAttr "pasted__Beefy_lFootIKC_translateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.tz"
-		;
-connectAttr "pasted__Beefy_lFootIKC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.rx"
-		;
-connectAttr "pasted__Beefy_lFootIKC_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.ry"
-		;
-connectAttr "pasted__Beefy_lFootIKC_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.rz"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG_parentConstraint1.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_lFootIKCG_parentConstraint1.cpim"
@@ -7464,44 +5426,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.cry" "Ultim
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG.rz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnielLegIKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.v"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rz"
-		 -l on;
-connectAttr "pasted__Beefy_lKneeIKC_Follow.o" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.Follow"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Legs.di" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.do"
-		;
-connectAttr "pasted__Beefy_lKneeIKC_translateX.o" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.tx"
-		;
-connectAttr "pasted__Beefy_lKneeIKC_translateY.o" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.ty"
-		;
-connectAttr "pasted__Beefy_lKneeIKC_translateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.pim" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.ct"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.ro" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_TargetLctr.t" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_TargetLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_TargetLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_TargetLctr.pm" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_aimConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.cpim"
@@ -7526,22 +5450,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.pm" "Ultimate_Beefy_v1_0_3:Beefy_
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.t" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[1].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[1].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[1].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.r" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[1].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.ro" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[1].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.s" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[1].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[1].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.w1" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[1].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lBallSwivel.t" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[2].tt"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lBallSwivel.rp" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[2].trp"
@@ -7557,12 +5465,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lBallSwivel.s" "Ultimate_Beefy_v1_0_3:B
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lBallSwivel.pm" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[2].tpm"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.w2" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.tg[2].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lKneeIKCG_parentConstraint1_Arnie_MainCW0.o" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.w0"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lKneeIKCG_parentConstraint1_Arnie_MainHipCW1.o" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.w1"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lKneeIKCG_parentConstraint1_Arnie_lBallSwivelW2.o" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKCG_parentConstraint1.w2"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_TargetLctr_pointConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC_TargetLctr.tx"
 		;
@@ -7608,8 +5510,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG_parentConstraint1.cry" "Ultim
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG.rz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnielLegFKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_lBallFKC.v"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG_parentConstraint1.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_lBallFKCG_parentConstraint1.cpim"
@@ -7645,8 +5545,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG_parentConstraint1.crz" "Ulti
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG.rx"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnielLegFKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKC.v"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_lAnkleFKCG_parentConstraint1.cro"
 		;
@@ -7684,8 +5582,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG_parentConstraint1.crx" "Ultim
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG.ry"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnielLegFKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKC.v"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKC.sx" "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKC.sx"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG_parentConstraint1.cro"
@@ -7712,44 +5608,12 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKC.pm" "Ultimate_Beefy_v1_0_3:Beef
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lKneeFKCG_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.tx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.ty"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.tz"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.crx" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.rx"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.cry" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.ry"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.crz" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.rz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnielLegFKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKC.v"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.t" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.r" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.ro" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.s" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.cpim"
@@ -7757,22 +5621,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.pim" "Ultimate_Beefy_v1_0_3:Be
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.crp"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.t" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.r" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.ro" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.s" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.w0" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[0].tw"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.t" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[1].tt"
 		;
@@ -7789,8 +5637,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.s" "Ultimate_Beefy_v1_0_3:Beefy_l
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[1].tpm"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.w1" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.tg[1].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lHipFKCG_parentConstraint2_Arnie_MainHipCW0.o" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.w0"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lHipFKCG_parentConstraint2_Arnie_MainCW1.o" "Ultimate_Beefy_v1_0_3:Beefy_lHipFKCG_parentConstraint2.w1"
 		;
@@ -8148,12 +5994,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_pointConstraint1.c
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_pointConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.tz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.rz"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_pointConstraint1.cpim"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_pointConstraint1.crp"
@@ -8170,62 +6010,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipJIK.pm" "Ultimate_Beefy_v1_0_3:Beef
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_pointConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_pointConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr.tx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr.ty"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr_pointConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.t" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.ct"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr.ro" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthOriginLctr_aimConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.tx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.ty"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.rx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.ry"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnielLegIKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKC.v"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Legs.di" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKC.do"
 		;
 connectAttr "pasted__Beefy_lToeIKC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKC.rx"
@@ -8233,16 +6017,6 @@ connectAttr "pasted__Beefy_lToeIKC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_lToeI
 connectAttr "pasted__Beefy_lToeIKC_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKC.ry"
 		;
 connectAttr "pasted__Beefy_lToeIKC_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKC.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lBallSwivel_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_lBallSwivel.ry"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lFootInTilt_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootInTilt.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lFootOutTilt_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootOutTilt.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lFootHeelPivot_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootHeelPivot.rx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lFootBallPivot_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_lFootBallPivot.rx"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lAnkleJIK.msg" "Ultimate_Beefy_v1_0_3:Beefy_lBallIKHandle.hsj"
 		;
@@ -8255,28 +6029,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipJIK.msg" "Ultimate_Beefy_v1_0_3:Bee
 connectAttr "Ultimate_Beefy_v1_0_3:effector4.hp" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle.hee"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:ikRPsolver.msg" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle.hsv"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle.pvx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle.pvy"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle.pvz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle.pim" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipJIK.pm" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.ps"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipJIK.t" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lLegIKHandle_poleVectorConstraint1.tg[0].tw"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeTargetLockLctr_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_lKneeTargetLockLctr.tx"
 		;
@@ -8314,47 +6066,11 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootBallPivot.pm" "Ultimate_Beefy_v1_0
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeTargetLockLctr_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lKneeTargetLockLctr_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.r" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.ro" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.s" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lToeIKCG_parentConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_pointConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.tx"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_pointConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.ty"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_pointConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.rx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.ry"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.tx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.ty"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.tz"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_aimConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.rx"
 		;
@@ -8398,22 +6114,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootBallPivot.pm" "Ultimate_Beefy_v1_0
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lAnkleIKLockLctr_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lAnkleIKLockLctr_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_pointConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_aimConstraint1.cpim"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.t" "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr_aimConstraint1.ct"
@@ -8450,26 +6150,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipJIK.pm" "Ultimate_Beefy_v1_0_3:Beef
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_pointConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_pointConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.t" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.ct"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr.ro" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_lHipIKLockLctr_aimConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG.tx"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG.ty"
@@ -8482,10 +6162,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG_parentConstraint1.crx" "Ul
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG.rz"
 		 -l on;
-connectAttr "pasted__Beefy_rLegSwitchC_SwitchIkFk.o" "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.SwitchIkFk"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Legs.di" "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.do"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG_parentConstraint1.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchCG_parentConstraint1.cpim"
@@ -8524,34 +6200,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG_parentConstraint1.crx" "Ultim
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG.rz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnierLegIKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.v"
-		 -l on;
-connectAttr "pasted__Beefy_rFootIKC_Stretch.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.Stretch"
-		;
-connectAttr "pasted__Beefy_rFootIKC_KneeLock.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.KneeLock"
-		;
-connectAttr "pasted__Beefy_rFootIKC_footTilt.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.footTilt"
-		;
-connectAttr "pasted__Beefy_rFootIKC_heelBall.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.heelBall"
-		;
-connectAttr "pasted__Beefy_rFootIKC_toeUpDn.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.toeUpDn"
-		;
-connectAttr "pasted__Beefy_rFootIKC_ballSwivel.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.ballSwivel"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Legs.di" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.do"
-		;
-connectAttr "pasted__Beefy_rFootIKC_translateX.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.tx"
-		;
-connectAttr "pasted__Beefy_rFootIKC_translateY.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.ty"
-		;
-connectAttr "pasted__Beefy_rFootIKC_translateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.tz"
-		;
-connectAttr "pasted__Beefy_rFootIKC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.rx"
-		;
-connectAttr "pasted__Beefy_rFootIKC_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.ry"
-		;
-connectAttr "pasted__Beefy_rFootIKC_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.rz"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG_parentConstraint1.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_rFootIKCG_parentConstraint1.cpim"
@@ -8588,44 +6236,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.cry" "Ultim
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG.rz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnierLegIKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.v"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rz"
-		 -l on;
-connectAttr "pasted__Beefy_rKneeIKC_Follow.o" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.Follow"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Legs.di" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.do"
-		;
-connectAttr "pasted__Beefy_rKneeIKC_translateX.o" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.tx"
-		;
-connectAttr "pasted__Beefy_rKneeIKC_translateY.o" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.ty"
-		;
-connectAttr "pasted__Beefy_rKneeIKC_translateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.pim" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.ct"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.ro" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_TargetLctr.t" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_TargetLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_TargetLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_TargetLctr.pm" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_aimConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.cpim"
@@ -8650,22 +6260,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.pm" "Ultimate_Beefy_v1_0_3:Beefy_
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.t" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[1].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[1].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[1].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.r" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[1].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.ro" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[1].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.s" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[1].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[1].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.w1" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[1].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallSwivel.t" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[2].tt"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallSwivel.rp" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[2].trp"
@@ -8681,12 +6275,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallSwivel.s" "Ultimate_Beefy_v1_0_3:B
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallSwivel.pm" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[2].tpm"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.w2" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.tg[2].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rKneeIKCG_parentConstraint1_Arnie_MainCW0.o" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.w0"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rKneeIKCG_parentConstraint1_Arnie_MainHipCW1.o" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.w1"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rKneeIKCG_parentConstraint1_Arnie_rBallSwivelW2.o" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKCG_parentConstraint1.w2"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_TargetLctr_pointConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC_TargetLctr.tx"
 		;
@@ -8732,8 +6320,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG_parentConstraint1.cry" "Ultim
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG.rz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnierLegFKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_rBallFKC.v"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG_parentConstraint1.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_rBallFKCG_parentConstraint1.cpim"
@@ -8769,8 +6355,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG_parentConstraint1.crz" "Ulti
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG.rx"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnierLegFKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKC.v"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_rAnkleFKCG_parentConstraint1.cro"
 		;
@@ -8808,8 +6392,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG_parentConstraint1.crx" "Ultim
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG.ry"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnierLegFKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKC.v"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKC.sx" "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKC.sx"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG_parentConstraint1.cro"
@@ -8836,44 +6418,12 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKC.pm" "Ultimate_Beefy_v1_0_3:Beef
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rKneeFKCG_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.tx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.ty"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.tz"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.crx" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.rx"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.cry" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.ry"
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.crz" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.rz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnierLegFKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKC.v"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.t" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.r" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.ro" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.s" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.cro"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.cpim"
@@ -8881,22 +6431,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.pim" "Ultimate_Beefy_v1_0_3:Be
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.crp"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.t" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.r" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.ro" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.s" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.w0" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[0].tw"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.t" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[1].tt"
 		;
@@ -8913,8 +6447,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.s" "Ultimate_Beefy_v1_0_3:Beefy_r
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[1].tpm"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.w1" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.tg[1].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rHipFKCG_parentConstraint2_Arnie_MainHipCW0.o" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.w0"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rHipFKCG_parentConstraint2_Arnie_MainCW1.o" "Ultimate_Beefy_v1_0_3:Beefy_rHipFKCG_parentConstraint2.w1"
 		;
@@ -9272,12 +6804,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_pointConstraint1.c
 		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_pointConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.tz"
 		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.rx"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.ry"
-		 -l on;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.rz"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_pointConstraint1.cpim"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_pointConstraint1.crp"
@@ -9294,62 +6820,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipJIK.pm" "Ultimate_Beefy_v1_0_3:Beef
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_pointConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_pointConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr.tx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr.ty"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr_pointConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.t" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.ct"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr.ro" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthOriginLctr_aimConstraint1.tg[0].tw"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.tx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.ty"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.rx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.ry"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnierLegIKViz.ocr" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKC.v"
-		 -l on;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_Legs.di" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKC.do"
 		;
 connectAttr "pasted__Beefy_rToeIKC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKC.rx"
@@ -9357,16 +6827,6 @@ connectAttr "pasted__Beefy_rToeIKC_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_rToeI
 connectAttr "pasted__Beefy_rToeIKC_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKC.ry"
 		;
 connectAttr "pasted__Beefy_rToeIKC_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKC.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rBallSwivel_rotateY.o" "Ultimate_Beefy_v1_0_3:Beefy_rBallSwivel.ry"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rFootInTilt_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootInTilt.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rFootOutTilt_rotateZ.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootOutTilt.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rFootHeelPivot_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootHeelPivot.rx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rFootBallPivot_rotateX.o" "Ultimate_Beefy_v1_0_3:Beefy_rFootBallPivot.rx"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rAnkleJIK.msg" "Ultimate_Beefy_v1_0_3:Beefy_rBallIKHandle.hsj"
 		;
@@ -9379,28 +6839,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipJIK.msg" "Ultimate_Beefy_v1_0_3:Bee
 connectAttr "Ultimate_Beefy_v1_0_3:effector8.hp" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle.hee"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:ikRPsolver.msg" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle.hsv"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle.pvx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle.pvy"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle.pvz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle.pim" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipJIK.pm" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.ps"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipJIK.t" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rLegIKHandle_poleVectorConstraint1.tg[0].tw"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeTargetLockLctr_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_rKneeTargetLockLctr.tx"
 		;
@@ -9438,47 +6876,11 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootBallPivot.pm" "Ultimate_Beefy_v1_0
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeTargetLockLctr_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rKneeTargetLockLctr_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.ro" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.pim" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.rp" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.r" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.ro" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.s" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rToeIKCG_parentConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_pointConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.tx"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_pointConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.ty"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_pointConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.rx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.ry"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.rz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.tx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.ty"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.tz"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_aimConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.rx"
 		;
@@ -9522,22 +6924,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootBallPivot.pm" "Ultimate_Beefy_v1_0
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rAnkleIKLockLctr_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rAnkleIKLockLctr_parentConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_pointConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_aimConstraint1.cpim"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.t" "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr_aimConstraint1.ct"
@@ -9574,33 +6960,9 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipJIK.pm" "Ultimate_Beefy_v1_0_3:Beef
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_pointConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_pointConstraint1.tg[0].tw"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.pim" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.t" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.ct"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.rp" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr.ro" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.t" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rp" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.pm" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_rHipIKLockLctr_aimConstraint1.tg[0].tw"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr03Cluster.og[0]" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShape.cr"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:tweak3.pl[0].cp[0]" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShape.twl"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:cluster5GroupId.id" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShape.iog.og[0].gid"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:cluster5Set.mwc" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShape.iog.og[0].gco"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:groupId8.id" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShape.iog.og[1].gid"
 		;
@@ -9613,18 +6975,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:cluster6Set.mwc" "Ultimate_Beefy_v1_0_3:Beefy
 connectAttr "Ultimate_Beefy_v1_0_3:cluster7GroupId.id" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShape.iog.og[3].gid"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:cluster7Set.mwc" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShape.iog.og[3].gco"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.ctx" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.tx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.cty" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.ty"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.ctz" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.tz"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.crx" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.rx"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.cry" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.ry"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.crz" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.rz"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.s" "Ultimate_Beefy_v1_0_3:Beefy_lHipJ.is"
 		;
@@ -9690,32 +7040,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallJ.s" "Ultimate_Beefy_v1_0_3:Beefy_
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion85.o" "Ultimate_Beefy_v1_0_3:Beefy_rLegUpLctr.rz"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.ro" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.cro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.pim" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.cpim"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.rp" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.crp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.rpt" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.crt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ.jo" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.cjo"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.t" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.tg[0].tt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rp" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.tg[0].trp"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.rpt" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.tg[0].trt"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.r" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.tg[0].tr"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.ro" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.tg[0].tro"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.s" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.tg[0].ts"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.pm" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.tg[0].tpm"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.w0" "Ultimate_Beefy_v1_0_3:Beefy_ROOTJ_parentConstraint1.tg[0].tw"
-		;
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -9726,8 +7050,6 @@ connectAttr "_UNKNOWN_REF_NODE_.ur" "Ultimate_Bony_v1_0_5RN.ur";
 connectAttr "sharedReferenceNode.sr" "Ultimate_Bony_v1_0_5RN.sr";
 connectAttr "_UNKNOWN_REF_NODE_.ur" "Ultimate_Beefy_v1_0_2RN.ur";
 connectAttr ":time1.o" "timeToUnitConversion1.i";
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:ArnielLegIKViz.ft"
-		;
 connectAttr "layerManager.dli[1]" "Ultimate_Beefy_v1_0_3:Beefy_Legs.id";
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lAnkleJIKFK_BlndRotate.op" "Ultimate_Beefy_v1_0_3:unitConversion15.i"
 		;
@@ -9735,11 +7057,7 @@ connectAttr "Ultimate_Beefy_v1_0_3:unitConversion13.o" "Ultimate_Beefy_v1_0_3:Ar
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion14.o" "Ultimate_Beefy_v1_0_3:Arnie_lAnkleJIKFK_BlndRotate.c2"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_lAnkleJIKFK_BlndRotate.b"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lAnkleJFK.r" "Ultimate_Beefy_v1_0_3:unitConversion13.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:ArnielLegFKViz.ft"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:ArniespineLengthInfo.al" "Ultimate_Beefy_v1_0_3:ArniespineLength_MD.i1x"
 		;
@@ -9780,39 +7098,15 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr02Cluster.msg" "Ultimat
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineTopIKC.t" "Ultimate_Beefy_v1_0_3:ArnieSpineMid_Blnd.c1"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.t" "Ultimate_Beefy_v1_0_3:ArnieSpineMid_Blnd.c2"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:ArniespineMidIKCG_Blnd.opg" "Ultimate_Beefy_v1_0_3:unitConversion39.i"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion37.o" "Ultimate_Beefy_v1_0_3:ArniespineMidIKCG_Blnd.c1"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:unitConversion38.o" "Ultimate_Beefy_v1_0_3:ArniespineMidIKCG_Blnd.c2"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_SpineTopIKC.r" "Ultimate_Beefy_v1_0_3:unitConversion37.i"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_MainHipC.r" "Ultimate_Beefy_v1_0_3:unitConversion38.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Cluster.og[0]" "Ultimate_Beefy_v1_0_3:cluster6GroupParts.ig"
+connectAttr "Ultimate_Beefy_v1_0_3:tweak3.og[0]" "Ultimate_Beefy_v1_0_3:cluster6GroupParts.ig"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:cluster6GroupId.id" "Ultimate_Beefy_v1_0_3:cluster6GroupParts.gi"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:cluster5GroupParts.og" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Cluster.ip[0].ig"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:cluster5GroupId.id" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Cluster.ip[0].gi"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01.wm" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Cluster.ma"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Shape.x" "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Cluster.x"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:cluster5GroupId.msg" "Ultimate_Beefy_v1_0_3:cluster5Set.gn"
-		 -na;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineLengthCShape.iog.og[0]" "Ultimate_Beefy_v1_0_3:cluster5Set.dsm"
-		 -na;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_spineLengthClstr01Cluster.msg" "Ultimate_Beefy_v1_0_3:cluster5Set.ub[0]"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:tweak3.og[0]" "Ultimate_Beefy_v1_0_3:cluster5GroupParts.ig"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:cluster5GroupId.id" "Ultimate_Beefy_v1_0_3:cluster5GroupParts.gi"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:groupParts6.og" "Ultimate_Beefy_v1_0_3:tweak3.ip[0].ig"
 		;
@@ -9837,13 +7131,9 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipJFK.s" "Ultimate_Beefy_v1_0_3:Arnie
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipJIK.s" "Ultimate_Beefy_v1_0_3:Arnie_lHipJIKFK_BlndScale.c2"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_lHipJIKFK_BlndScale.b"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lHipLockLength_MD.ox" "Ultimate_Beefy_v1_0_3:Arnie_lHipLock_Blnd.c1r"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_Blnd.opr" "Ultimate_Beefy_v1_0_3:Arnie_lHipLock_Blnd.c2r"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.KneeLock" "Ultimate_Beefy_v1_0_3:Arnie_lHipLock_Blnd.b"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKLockLctr.tx" "Ultimate_Beefy_v1_0_3:Arnie_lHipLockLength_MD.i1x"
 		;
@@ -9851,35 +7141,15 @@ connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lKneeLockLength_MD.ox" "Ultimate_Beefy_
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_Blnd.opr" "Ultimate_Beefy_v1_0_3:Arnie_lKneeLock_Blnd.c2r"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.KneeLock" "Ultimate_Beefy_v1_0_3:Arnie_lKneeLock_Blnd.b"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lAnkleIKLockLctr.tx" "Ultimate_Beefy_v1_0_3:Arnie_lKneeLockLength_MD.i1x"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.heelBall" "Ultimate_Beefy_v1_0_3:Arnie_lFootBallPivot_rotateX.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.heelBall" "Ultimate_Beefy_v1_0_3:Arnie_lFootHeelPivot_rotateX.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.footTilt" "Ultimate_Beefy_v1_0_3:Arnie_lFootOutTilt_rotateZ.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.footTilt" "Ultimate_Beefy_v1_0_3:Arnie_lFootInTilt_rotateZ.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.ballSwivel" "Ultimate_Beefy_v1_0_3:Arnie_lBallSwivel_rotateY.i"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_Condition.ocr" "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_Blnd.c1r"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lFootIKC.Stretch" "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_Blnd.b"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_MD.ox" "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_Condition.ft"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_MD.ox" "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_Condition.ctr"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegLengthEndLctr.ty" "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_MD.i1x"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.Follow" "Ultimate_Beefy_v1_0_3:Arnie_lKneeIKCG_parentConstraint1_Arnie_MainCW0.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.Follow" "Ultimate_Beefy_v1_0_3:Arnie_lKneeIKCG_parentConstraint1_Arnie_MainHipCW1.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeIKC.Follow" "Ultimate_Beefy_v1_0_3:Arnie_lKneeIKCG_parentConstraint1_Arnie_lBallSwivelW2.i"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lHipJIKFK_BlndScale.opr" "Ultimate_Beefy_v1_0_3:Arnie_lHipVolume_MD.i2x"
 		;
@@ -9888,8 +7158,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lHipJIKFK_BlndRotate.op" "Ultimate_Beef
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion7.o" "Ultimate_Beefy_v1_0_3:Arnie_lHipJIKFK_BlndRotate.c1"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion8.o" "Ultimate_Beefy_v1_0_3:Arnie_lHipJIKFK_BlndRotate.c2"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_lHipJIKFK_BlndRotate.b"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lHipJFK.r" "Ultimate_Beefy_v1_0_3:unitConversion7.i"
 		;
@@ -9901,8 +7169,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:unitConversion10.o" "Ultimate_Beefy_v1_0_3:Ar
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion11.o" "Ultimate_Beefy_v1_0_3:Arnie_lKneeJIKFK_BlndRotate.c2"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_lKneeJIKFK_BlndRotate.b"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeJFK.r" "Ultimate_Beefy_v1_0_3:unitConversion10.i"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeJIK.r" "Ultimate_Beefy_v1_0_3:unitConversion11.i"
@@ -9911,8 +7177,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeJFK.s" "Ultimate_Beefy_v1_0_3:Arni
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lKneeJIK.s" "Ultimate_Beefy_v1_0_3:Arnie_lKneeJIKFK_BlndScale.c2"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_lKneeJIKFK_BlndScale.b"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lKneeJIKFK_BlndScale.opr" "Ultimate_Beefy_v1_0_3:Arnie_lKneeVolume_MD.i2x"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lBallJIKFK_BlndRotate.op" "Ultimate_Beefy_v1_0_3:unitConversion18.i"
@@ -9920,8 +7184,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lBallJIKFK_BlndRotate.op" "Ultimate_Bee
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion16.o" "Ultimate_Beefy_v1_0_3:Arnie_lBallJIKFK_BlndRotate.c1"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion17.o" "Ultimate_Beefy_v1_0_3:Arnie_lBallJIKFK_BlndRotate.c2"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_lBallJIKFK_BlndRotate.b"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lBallJFK.r" "Ultimate_Beefy_v1_0_3:unitConversion16.i"
 		;
@@ -9937,10 +7199,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipJFK.s" "Ultimate_Beefy_v1_0_3:Arnie
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipJIK.s" "Ultimate_Beefy_v1_0_3:Arnie_rHipJIKFK_BlndScale.c2"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_rHipJIKFK_BlndScale.b"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:ArnierLegFKViz.ft"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKC.HipOrient" "Ultimate_Beefy_v1_0_3:Arnie_rHipFKCG_parentConstraint2_Arnie_MainHipCW0.i"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipFKC.HipOrient" "Ultimate_Beefy_v1_0_3:Arnie_rHipFKCG_parentConstraint2_Arnie_MainCW1.i"
@@ -9949,45 +7207,21 @@ connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rHipLockLength_MD.ox" "Ultimate_Beefy_v
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_Blnd.opr" "Ultimate_Beefy_v1_0_3:Arnie_rHipLock_Blnd.c2r"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.KneeLock" "Ultimate_Beefy_v1_0_3:Arnie_rHipLock_Blnd.b"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKLockLctr.tx" "Ultimate_Beefy_v1_0_3:Arnie_rHipLockLength_MD.i1x"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:ArnierLegIKViz.ft"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rKneeLockLength_MD.ox" "Ultimate_Beefy_v1_0_3:Arnie_rKneeLock_Blnd.c1r"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_Blnd.opr" "Ultimate_Beefy_v1_0_3:Arnie_rKneeLock_Blnd.c2r"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.KneeLock" "Ultimate_Beefy_v1_0_3:Arnie_rKneeLock_Blnd.b"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rAnkleIKLockLctr.tx" "Ultimate_Beefy_v1_0_3:Arnie_rKneeLockLength_MD.i1x"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.heelBall" "Ultimate_Beefy_v1_0_3:Arnie_rFootBallPivot_rotateX.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.heelBall" "Ultimate_Beefy_v1_0_3:Arnie_rFootHeelPivot_rotateX.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.footTilt" "Ultimate_Beefy_v1_0_3:Arnie_rFootOutTilt_rotateZ.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.footTilt" "Ultimate_Beefy_v1_0_3:Arnie_rFootInTilt_rotateZ.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.ballSwivel" "Ultimate_Beefy_v1_0_3:Arnie_rBallSwivel_rotateY.i"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_Condition.ocr" "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_Blnd.c1r"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rFootIKC.Stretch" "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_Blnd.b"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_MD.ox" "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_Condition.ft"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_MD.ox" "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_Condition.ctr"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegLengthEndLctr.ty" "Ultimate_Beefy_v1_0_3:Arnie_rLegLength_MD.i1x"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.Follow" "Ultimate_Beefy_v1_0_3:Arnie_rKneeIKCG_parentConstraint1_Arnie_MainCW0.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.Follow" "Ultimate_Beefy_v1_0_3:Arnie_rKneeIKCG_parentConstraint1_Arnie_MainHipCW1.i"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeIKC.Follow" "Ultimate_Beefy_v1_0_3:Arnie_rKneeIKCG_parentConstraint1_Arnie_rBallSwivelW2.i"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rHipJIKFK_BlndScale.opr" "Ultimate_Beefy_v1_0_3:Arnie_rHipVolume_MD.i2x"
 		;
@@ -9996,8 +7230,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rHipJIKFK_BlndRotate.op" "Ultimate_Beef
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion25.o" "Ultimate_Beefy_v1_0_3:Arnie_rHipJIKFK_BlndRotate.c1"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion26.o" "Ultimate_Beefy_v1_0_3:Arnie_rHipJIKFK_BlndRotate.c2"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_rHipJIKFK_BlndRotate.b"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rHipJFK.r" "Ultimate_Beefy_v1_0_3:unitConversion25.i"
 		;
@@ -10009,8 +7241,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:unitConversion28.o" "Ultimate_Beefy_v1_0_3:Ar
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion29.o" "Ultimate_Beefy_v1_0_3:Arnie_rKneeJIKFK_BlndRotate.c2"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_rKneeJIKFK_BlndRotate.b"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeJFK.r" "Ultimate_Beefy_v1_0_3:unitConversion28.i"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeJIK.r" "Ultimate_Beefy_v1_0_3:unitConversion29.i"
@@ -10019,8 +7249,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeJFK.s" "Ultimate_Beefy_v1_0_3:Arni
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeJIK.s" "Ultimate_Beefy_v1_0_3:Arnie_rKneeJIKFK_BlndScale.c2"
 		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_rKneeJIKFK_BlndScale.b"
-		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rKneeJIKFK_BlndScale.opr" "Ultimate_Beefy_v1_0_3:Arnie_rKneeVolume_MD.i2x"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rAnkleJIKFK_BlndRotate.op" "Ultimate_Beefy_v1_0_3:unitConversion33.i"
@@ -10028,8 +7256,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rAnkleJIKFK_BlndRotate.op" "Ultimate_Be
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion31.o" "Ultimate_Beefy_v1_0_3:Arnie_rAnkleJIKFK_BlndRotate.c1"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion32.o" "Ultimate_Beefy_v1_0_3:Arnie_rAnkleJIKFK_BlndRotate.c2"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_rAnkleJIKFK_BlndRotate.b"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rAnkleJFK.r" "Ultimate_Beefy_v1_0_3:unitConversion31.i"
 		;
@@ -10040,8 +7266,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:Arnie_rBallJIKFK_BlndRotate.op" "Ultimate_Bee
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion34.o" "Ultimate_Beefy_v1_0_3:Arnie_rBallJIKFK_BlndRotate.c1"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:unitConversion35.o" "Ultimate_Beefy_v1_0_3:Arnie_rBallJIKFK_BlndRotate.c2"
-		;
-connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rLegSwitchC.SwitchIkFk" "Ultimate_Beefy_v1_0_3:Arnie_rBallJIKFK_BlndRotate.b"
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rBallJFK.r" "Ultimate_Beefy_v1_0_3:unitConversion34.i"
 		;
@@ -10055,6 +7279,7 @@ connectAttr "Ultimate_Beefy_v1_0_3:Beefy_rKneeJ.rz" "Ultimate_Beefy_v1_0_3:unitC
 		;
 connectAttr "Ultimate_Beefy_v1_0_3:Beefy_lAnkleJIK.r" "Ultimate_Beefy_v1_0_3:unitConversion14.i"
 		;
+connectAttr ":timeEditor.cmp[0]" "Composition1.cmp";
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_MD.msg" ":defaultRenderUtilityList1.u"
 		 -na;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lLegLength_Condition.msg" ":defaultRenderUtilityList1.u"
@@ -10120,14 +7345,6 @@ connectAttr "Ultimate_Beefy_v1_0_3:ArnieSpineMid_Blnd.msg" ":defaultRenderUtilit
 connectAttr "Ultimate_Beefy_v1_0_3:ArniespineMidIKCG_Blnd.msg" ":defaultRenderUtilityList1.u"
 		 -na;
 connectAttr "Ultimate_Beefy_v1_0_3:ArniespineLength_MD.msg" ":defaultRenderUtilityList1.u"
-		 -na;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnielLegIKViz.msg" ":defaultRenderUtilityList1.u"
-		 -na;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnielLegFKViz.msg" ":defaultRenderUtilityList1.u"
-		 -na;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnierLegIKViz.msg" ":defaultRenderUtilityList1.u"
-		 -na;
-connectAttr "Ultimate_Beefy_v1_0_3:ArnierLegFKViz.msg" ":defaultRenderUtilityList1.u"
 		 -na;
 connectAttr "Ultimate_Beefy_v1_0_3:Arnie_lLegUp_MD.msg" ":defaultRenderUtilityList1.u"
 		 -na;
