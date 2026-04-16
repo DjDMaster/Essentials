@@ -15,13 +15,13 @@ MonoBehaviour:
   m_EditorHideFlags: 1
   m_Script:
     fileID: 11500000
-    guid: 52cf3273a5f64814ae4b3d100638dbfe
+    guid: 2116ea16ed914ed397c84832be235be2
     type: 3
   m_Name: tile_4
   m_EditorClassIdentifier: ''
   m_Sprite:
     fileID: 21300008
-    guid: 4381a64995184fd6a03ce774efcd99b1
+    guid: 9170d06e8a4f4c7c9a7d33704ccbe472
     type: 3
   m_Color:
     r: 1
