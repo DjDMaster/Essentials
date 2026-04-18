@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: HeavyJump.ma
-//Last modified: Fri, Apr 17, 2026 03:33:54 PM
+//Last modified: Fri, Apr 17, 2026 06:05:51 PM
 //Codeset: 1252
 file -rdi 1 -ns "Ultimate_Bony_v1_0_5" -dr 1 -rfn "Ultimate_Bony_v1_0_5RN" -op
 		 "v=0;" -typ "mayaAscii" "/Users/anthonyromrell/GitRepos/Essentials/DAGV1100and1200/Maya//scenes/Rigs/Ultimate_Bony_v1.0.5.ma";
@@ -20,24 +20,24 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "36DAEAFC-4FB7-D29B-9EFA-14B956BF39CC";
+fileInfo "UUID" "343FEC9E-4376-D67E-4EB7-F09364DAA63B";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "A99A115B-2B40-A95A-EB94-24A6C71E6B67";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -3.2709580225358081 -3.4240955820322228 173.59853127843868 ;
-	setAttr ".r" -type "double3" 7.7999999999927372 719.19999999992444 -2.5471768421019147e-16 ;
+	setAttr ".t" -type "double3" 6.8073448507862437 25.171482186305159 85.097073472144174 ;
+	setAttr ".r" -type "double3" -15.000000000000098 726.79999999991003 -1.0009646154300487e-16 ;
 	setAttr ".rp" -type "double3" 4.4408920985006262e-16 5.5511151231257827e-17 -4.4408920985006262e-16 ;
 	setAttr ".rpt" -type "double3" -5.0022939313862033e-18 -4.0257164661701394e-17 8.5991377339480859e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "23F191FC-AA4C-36B2-3112-5F83AEC65EF3";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 176.18442791759355;
+	setAttr ".coi" 86.321484983239699;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.833798827523899 20.486874906793123 -0.93879534825013078 ;
+	setAttr ".tp" -type "double3" -3.0651959894196041 2.8298378711111667 2.303458764465347 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "FB5DE252-4A49-177F-FEF4-F186C1F000B1";
@@ -110,21 +110,21 @@ createNode camera -n "RenderCamShape" -p "RenderCam";
 	setAttr ".den" -type "string" "camera1_depth";
 	setAttr ".man" -type "string" "camera1_mask";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "8AC31032-4969-B3E1-877E-9D894E859F93";
+	rename -uid "203E2FC2-4EE9-018E-5A36-1CAC4205483C";
 	setAttr -s 4 ".lnk";
 	setAttr -s 4 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "2B2930E9-444E-2984-6279-28B7D58C0907";
+	rename -uid "AE9E4359-41D7-1C49-7637-F2ACDD9995DB";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 1 0 ;
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "5C06D7D2-4E80-07FD-DBC4-A38E126C5DAC";
+	rename -uid "BF00E1E4-4936-981D-D214-DCAF5E7C13ED";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "EBEE1FA5-42B3-365E-4734-20A532F9ED11";
+	rename -uid "9AA63837-4F83-3217-4C19-E6A3420F5B1A";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "AD86C33F-B446-9A72-33B8-0B9D3BFC2C83";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "830C2B05-42D1-0A8D-C0D5-61922163BB45";
+	rename -uid "08B8657C-4711-ACE5-66AD-AFA545F638AD";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C49CFE41-BF43-AB57-BD30-2E9AA164E5C6";
 	setAttr ".g" yes;
