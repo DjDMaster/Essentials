@@ -863,6 +863,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3907767153754522472, guid: 984139953f26b1a479370a7e487f83c7, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2063795524}
+    - target: {fileID: 3907767153754522472, guid: 984139953f26b1a479370a7e487f83c7, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: UpdateWithFloatData
+      objectReference: {fileID: 0}
     - target: {fileID: 3993887679291668131, guid: 984139953f26b1a479370a7e487f83c7, type: 3}
       propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -11196,6 +11204,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 914899256}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 3dc5988bd48b93940b5d13f4b6799535, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     repeatEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -18205,6 +18225,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 24100000, guid: 436a95b0b95646d4dbc83d9a7fad3bea, type: 2}
+          m_TargetAssemblyTypeName: UnityEditor.Audio.AudioMixerController, UnityEditor.CoreModule
+          m_MethodName: set_TargetSnapshot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: -6485566724966623429, guid: ae3dd37ddde854a96948ba563a338b3c, type: 2}
+            m_ObjectArgumentAssemblyTypeName: UnityEditor.Audio.AudioMixerSnapshotController,
+              UnityEditor.CoreModule
+            m_IntArgument: 100
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     repeatEvent:
       m_PersistentCalls:
         m_Calls: []
@@ -18816,10 +18849,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3993887679291668131, guid: 984139953f26b1a479370a7e487f83c7, type: 3}
-      propertyPath: triggerEnterEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+    - target: {fileID: 3907767153754522472, guid: 984139953f26b1a479370a7e487f83c7, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2063795524}
+    - target: {fileID: 3907767153754522472, guid: 984139953f26b1a479370a7e487f83c7, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 914899256}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20240,6 +20277,104 @@ PrefabInstance:
       addedObject: {fileID: 1332450623}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ae6b20655c53a04c8de4c85b5be65c7, type: 3}
+--- !u!1001 &4451938333635770017
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4566731040899805780, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_Name
+      value: Saw
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2063795524}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 914899256}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_FloatArgument
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 3dc5988bd48b93940b5d13f4b6799535, type: 3}
+    - target: {fileID: 6104063256095624555, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: triggerEnterMatches.Array.data[0].workEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598251033233502070, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6862281337003299608, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9a7228f02367af748b9ba24dffd5cae6, type: 3}
 --- !u!1001 &4791714188004036451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20718,3 +20853,4 @@ SceneRoots:
   - {fileID: 2086611169}
   - {fileID: 1895247175}
   - {fileID: 346851316}
+  - {fileID: 4451938333635770017}
