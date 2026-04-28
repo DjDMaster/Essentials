@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Scene2.ma
-//Last modified: Mon, Apr 27, 2026 06:30:02 PM
+//Last modified: Mon, Apr 27, 2026 06:42:25 PM
 //Codeset: 1252
 file -rdi 1 -ns "Door" -rfn "DoorRN" -op "v=0;" -typ "mayaAscii" "C:/Users/djdma/Github/Essentials/DAGV1100and1200/Maya//assets/Scene2/Door.ma";
 file -rdi 1 -ns "CurvedMoniter" -rfn "CurvedMoniterRN" -op "v=0;" -typ "mayaAscii"
@@ -33,7 +33,7 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "1C00C524-4553-79DB-A806-DF8D015F67C9";
+fileInfo "UUID" "8B8C5FC3-4510-1623-4BF0-51A78E93DD03";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "E1CAA65E-40BD-45D6-026C-74AE1CFAF602";
@@ -664,7 +664,7 @@ createNode mesh -n "polySurfaceShape1" -p "polySurface1";
 	setAttr ".dfgi" 102;
 createNode transform -n "persp1";
 	rename -uid "EAFB369A-474B-1CE0-5856-2DA4486D03E9";
-	setAttr ".t" -type "double3" 2.9752017377305249 11.134885036666681 36.246610891595552 ;
+	setAttr ".t" -type "double3" 3.9769161400317881 12.026235120185724 46.108305436059744 ;
 	setAttr ".r" -type "double3" -5.1383527241896081 365.79999999995766 9.990377028491778e-17 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -2.8727020762175925e-15 0 ;
 	setAttr ".rpt" -type "double3" 2.1224471988013765e-15 7.2911269385730938e-16 3.085701967162423e-16 ;
@@ -672,7 +672,7 @@ createNode camera -n "persp1Shape" -p "persp1";
 	rename -uid "D755DF67-4F88-A330-DB59-3FBE6040F3F0";
 	setAttr -k off ".v";
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 32.174716669857922;
+	setAttr ".coi" 42.127151347035266;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
